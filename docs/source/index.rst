@@ -1,4 +1,4 @@
-Welcome to the Center of Neuroimaging and Neuro-Evaluation of Cognitive Technologies
+Welcome to the WSU's Center of Neuroimaging and Neuro-Evaluation of Cognitive Technologies
 ===================================
 
 **CoNNECT** houses an 3.0-Tesla Philips Ingenia Cx MRI system with focused neuroimaging research applications.
