@@ -24,6 +24,14 @@ Administration
 .. toctree::
    administration
    ...
+ 
+*************************************
+Open Source Neuroimaging Applications
+*************************************
+
+.. toctree::
+   afni
+   ...
   
 *****
 Usage
