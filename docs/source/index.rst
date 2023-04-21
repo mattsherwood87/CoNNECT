@@ -33,6 +33,13 @@ Open Source Neuroimaging Applications
    afni
    ...
   
+****************************
+CoNNECT Broad Analysis Tools
+****************************
+
+.. toctree::
+   ./connect_broad_analysis_tools/connect_neuro_db_update
+  
 *****
 Usage
 *****
