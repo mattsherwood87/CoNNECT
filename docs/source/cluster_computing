@@ -1,1 +1,8 @@
+The KIDR NPC consists of the following elements:
+Master Node: The master is the controller of the cluster. It is a small ec2 instance that is always on and available. 
+The operating system (OS) of the master isUbuntu 18.04. The current IP address for the master is 10.100.30.11.
+Core Node(s): Core nodes describe compute nodes of the cluster. The cores can be larger ec2 instances that are not always running but always accessible. 
+To be fiscally efficient, the cores must be started before a large process/job and stopped after the process/job. Currently, the cores also run Ubuntu 18.04; however, they can utilize different OS’s including Windows or Macintosh. 
+The cores must reside in the 10.100.216.* domain. When cores are started (which takes approximately , they will automatically be recognized by the master and jobs can be sent their way. 
+Custom tools have been developed to start and stop these cores. When starting a core, it takes approximately 1-3 minutes for the master to recognize them.
 
