@@ -19,6 +19,8 @@ Contents
 **************
 Administration
 **************
+
+.. toctree::
    administration
   
 *****
@@ -27,8 +29,9 @@ Usage
 .. tip::
    The :doc:`client` page contains all of the methods you can use to interact with the Random Stuff API, so we recommend reading that first.
 
-.. toctree::
    :maxdepth: 1
    :caption: Documentation
+   
+.. toctree::
    usage
    api
