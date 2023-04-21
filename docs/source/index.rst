@@ -16,6 +16,11 @@ Contents
 
 .. toctree::
 
+Administration
+--------------
    administration
+   
+Usage
+-----
    usage
    api
