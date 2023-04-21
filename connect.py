@@ -1,5 +1,5 @@
 """
-Lumache - Python library for cooks and food lovers.
+CoNNECT - Center of Neuroimaging and Neuro-Evaluation of Cognitive Technologies.
 """
 
 __version__ = "0.1.0"
