@@ -5,3 +5,5 @@ The freesurfer package (installed from ) is located at /usr/share/freesurfer. Th
 3.2.2.	Common Functions
 i.	recon-all
 Main freesurfer command to begin the cortical reconstruction process. The entire process takes 12-24hrs to complete. Preferred command line arguments are provided in Table 3.
+ii.	freeview
+The volume and surface viewer to assess quality of cortical reconstruction.
