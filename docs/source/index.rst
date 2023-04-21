@@ -8,13 +8,14 @@ Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
 
 .. note::
-
    This project is under active development.
+   
 ********
 Contents
 ********
 
 .. toctree::
+   ...
 
 **************
 Administration
@@ -22,6 +23,7 @@ Administration
 
 .. toctree::
    administration
+   ...
   
 *****
 Usage
@@ -29,9 +31,10 @@ Usage
 .. tip::
    The :doc:`client` page contains all of the methods you can use to interact with the Random Stuff API, so we recommend reading that first.
 
-   :maxdepth: 1
-   :caption: Documentation
+   
    
 .. toctree::
+   :maxdepth: 1
+   :caption: Documentation
    usage
    api
