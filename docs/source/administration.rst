@@ -1,6 +1,8 @@
 :topic: CoNNECT Administration
 
-.. index:: pair: CoNNECT Administration
+:raw-latex:`\cleardoublepage\phantomsection`
+
+.. index:: pair: CoNNECT Administration; CoNNECT Manual
    :name: connect-administration
 
 CoNNECT Administration
