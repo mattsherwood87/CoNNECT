@@ -29,7 +29,6 @@ how to :ref:`installation` the project.
       administration
       systems_overview
       cluster_computing
-      ...
 
 .. only:: not html
    .. toctree::
@@ -39,4 +38,3 @@ how to :ref:`installation` the project.
       administration
       systems_overview
       cluster_computing
-      ...
