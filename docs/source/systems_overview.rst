@@ -1,5 +1,8 @@
 :topic: CoNNECT Systems Overview
 
+CoNNECT Systems Overview
+########################
+
 .. include:: /systems_overview/index.rst
 
 .. toctree::
