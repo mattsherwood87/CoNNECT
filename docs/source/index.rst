@@ -31,7 +31,7 @@ how to :ref:`installation` the project.
       cluster_computing
       ...
 
-.. only:: html
+.. only:: not html
    .. toctree::
       :maxdepth: 3
       :caption: Table of Contents
