@@ -9,7 +9,7 @@ CoNNECT Administration
 The WSU CoNNECT is a facility dedicated to collaborative research involving magnetic resonance imaging (MRI). The CoNNECT facility
 is managed by a Governing Board, led by executive and founding director Dr. Matthew Sherwood. 
 
-:raw-latex:`\cleardoublepage\phantomsection`
+- :doc:`/administration/index.rst`
 
 .. toctree::
    :caption: CoNNECT Administration
