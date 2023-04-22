@@ -7,6 +7,7 @@ also external constituents from the US Air Force, US Navy and local clinical fac
 policies and procedures, and to review any safety incidents.
 
 .. _org_chart:
+
 .. figure:: ./_images/connect_org_chart.png
 
    CoNNECT Governing Board active organization chart.
