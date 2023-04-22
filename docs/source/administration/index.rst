@@ -1,5 +1,3 @@
-.. autosummary::
-   :toctree: generated
 
 Governing Board
 ***************
