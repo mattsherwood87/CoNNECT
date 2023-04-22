@@ -1,5 +1,10 @@
 # Configuration file for the Sphinx documentation builder.
 
+import sys, os
+sys.path.append('.')
+from links.link import *
+from links import *
+
 # -- Project information
 
 project = 'CoNNECT'
