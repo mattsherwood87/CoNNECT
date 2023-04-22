@@ -21,20 +21,10 @@ how to :ref:`installation` the project.
 .. note::
    This project is under active development.
    
-.. only:: html
-   .. toctree::
-      :maxdepth: 1
-      :caption: Table of Contents
+.. toctree::
+   :maxdepth: 1
+   :caption: Table of Contents
 
-      administration
-      systems_overview
-      cluster_computing
-
-.. only:: not html
-   .. toctree::
-      :maxdepth: 3
-      :caption: Table of Contents
-
-      administration
-      systems_overview
-      cluster_computing
+   administration
+   systems_overview
+   cluster_computing
