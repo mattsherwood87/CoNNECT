@@ -1,4 +1,4 @@
-:topic: Parts, Chapters, Titles, Sections
+:topic: WSU CoNNECT
 
 .. index::
    triple: Sphinx; Syntax; Header
@@ -11,45 +11,19 @@ Welcome to the WSU's Center of Neuroimaging and Neuro-Evaluation of Cognitive Te
 This documentation describes the Data Management and Analysis pipelines that have been developed to ensure minimal 
 data loss, expedited data processing and rapid project development.
 
+.. figure:: ./_images/WSU_3T_Ingenia_Cx.jpg
+
+   The Philips Ingenia Cx installed in the Neuroscience Engineering Building on Wright State's Dayton campus.
+
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
 
 .. note::
    This project is under active development.
    
-********
-Contents
-********
-
-.. toctree::
-   ...
-
-**********************
-CoNNECT Administration
-**********************
-
-.. toctree::
-   administration
-   ...
- 
-*************************************
-Open Source Neuroimaging Applications
-*************************************
-
-.. toctree::
-   ./open-source_software/afni
-   ...
-  
-*****
-Usage
-*****
-.. tip::
-   The :doc:`client` page contains all of the methods you can use to interact with the Random Stuff API, so we recommend reading that first.
-
-   
-   
 .. toctree::
    :maxdepth: 1
-   :caption: Documentation
-   usage
-   api
+   :caption: Table of Contents
+   ./administration/index
+   ./systems_overview/index
+   ./cluster_computing/index
