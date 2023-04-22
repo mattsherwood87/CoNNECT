@@ -8,7 +8,10 @@ CoNNECT Neuro-Processing Cluster (NPC)
 .. toctree::
    :caption: CoNNECT NPC
    :maxdepth: 2
+   :hidden:
    :titlesonly:
 
-   cluster_computing/data_storage
+   cluster_computing/jumpbox
+   cluster_computing/master
+   cluster_computing/cores
    cluster_computing/MySQL_database

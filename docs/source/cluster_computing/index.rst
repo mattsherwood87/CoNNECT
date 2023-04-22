@@ -8,11 +8,3 @@ campus network.
 .. include:: master.rst
 
 .. include:: cores.rst
-
-.. toctree::
-   :caption: CoNNECT NPC
-   :maxdepth: 2
-   :titlesonly:
-
-   cluster_computing/data_storage
-   cluster_computing/MySQL_database
