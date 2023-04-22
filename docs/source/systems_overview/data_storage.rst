@@ -1,7 +1,3 @@
-:topic: CoNNECT Data Storage
-
-.. index::
-   triple: Sphinx; Syntax; Header
 
 Data Storage
 ************

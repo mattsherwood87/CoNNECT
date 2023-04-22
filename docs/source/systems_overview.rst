@@ -1,12 +1,6 @@
 :topic: CoNNECT Systems Overview
 
-.. index::
-   triple: Sphinx; Syntax; Header
-
-CoNNECT Systems Overview
-########################
-
-
+.. include:: /systems_overview/index.rst
 
 .. toctree::
    :caption: CoNNECT Systems Overview

@@ -1,8 +1,3 @@
-:topic: Governing Board
-
-.. index::
-   triple: Sphinx; Syntax; Header
-
 .. autosummary::
    :toctree: generated
 
