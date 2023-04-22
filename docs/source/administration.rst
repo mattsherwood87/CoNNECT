@@ -10,11 +10,3 @@ is managed by a Governing Board (see :numref:`Fig. %s <org_chart>`), led by CoNN
 
 .. include:: /administration/booking.rst
 
-.. toctree::
-   :caption: CoNNECT Administration
-   :maxdepth: 2
-   :hidden:
-   :titlesonly:
-
-   administration/index
-   administration/booking
