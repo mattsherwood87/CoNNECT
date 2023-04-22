@@ -1,5 +1,4 @@
-.. autosummary::
-   :toctree: generated
+
 
 MRI Scheduling
 **************

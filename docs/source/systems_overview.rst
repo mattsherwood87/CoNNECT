@@ -8,7 +8,6 @@
    :hidden:
    :titlesonly:
 
-   systems_overview/index
    systems_overview/mri
    systems_overview/data_storage
    systems_overview/connect_npc
