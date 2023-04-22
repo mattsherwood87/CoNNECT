@@ -24,6 +24,6 @@ how to :ref:`installation` the project.
 .. toctree::
    :maxdepth: 1
    :caption: Table of Contents
-   ./administration/index
-   ./systems_overview/index
-   ./cluster_computing/index
+   administration
+   systems_overview
+   cluster_computing
