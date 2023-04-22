@@ -5,7 +5,10 @@
 .. toctree::
    :caption: CoNNECT Systems Overview
    :maxdepth: 2
+   :hidden:
    :titlesonly:
 
    systems_overview/index
-   systems_overview/MySQL_database
+   systems_overview/mri
+   systems_overview/data_storage
+   systems_overview/connect_npc

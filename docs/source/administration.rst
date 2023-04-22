@@ -8,9 +8,13 @@ is managed by a Governing Board (see `_org_chart`), led by CoNNECT Founding Dire
 
 .. include:: /administration/index.rst
 
+.. include:: /administration/booking.rst
+
 .. toctree::
    :caption: CoNNECT Administration
    :maxdepth: 2
+   :hidden:
    :titlesonly:
 
    administration/index
+   administration/booking
