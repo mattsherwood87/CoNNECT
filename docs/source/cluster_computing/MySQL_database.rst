@@ -7,8 +7,9 @@ for each independent project.
 
 MySQL can be accessed through the command line:
 
-.. code-block:: bash
-   mysql --login-path=client 
+.. code-block:: shell-session
+   
+   $ mysql --login-path=client 
    
 Each project will have two tables: one main table containing all files except source files and one source table containing files within 
 the BIDS sourcedata directory. The main table (referred to in the project's credentials as searchTable) contains the elements described 
