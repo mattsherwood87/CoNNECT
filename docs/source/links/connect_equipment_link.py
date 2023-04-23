@@ -1,4 +1,6 @@
-import link
+import sys, os
+sys.path.append('.')
+from link import *
 
 link_name = "CoNNECT Equipment"
 user_text = "equipment section of the CoNNECT website"
