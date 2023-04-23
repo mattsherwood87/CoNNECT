@@ -13,5 +13,6 @@ policies and procedures, and to review any safety incidents.
 .. figure:: ./_images/connect_org_chart.png
    :name: org_chart
    :align: center
+   :width: 100%
       
       CoNNECT Governing Board active organization chart.
