@@ -7,4 +7,9 @@
 links==1.0
     # via -r requirements.in
 
+#sphinx==1.6.4
+#sphinx_bootstrap_theme
+#sphinxcontrib-googleanalytics
+#sphinx-autobuild
+#sphinxcontrib-osexample==0.1.1
 
