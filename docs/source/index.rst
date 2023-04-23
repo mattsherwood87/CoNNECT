@@ -15,11 +15,9 @@ data loss, expedited data processing and rapid project development.
 
    The Philips Ingenia Cx installed in the Neuroscience Engineering Building on Wright State's Dayton campus.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
 
 .. note::
-   This project is under active development.
+   This manual is under active initial development.
    
 
 .. toctree::
