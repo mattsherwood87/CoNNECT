@@ -6,3 +6,24 @@ Registration between ASL and structural/standard-space templates are critical fo
 It may be necessary to synchronize the The following example command line input gives an example of synchronizing all of the raw data (including additional files in each directory containing at least one DICOM image). 
 ~$ kaas _syncs3.py -p single_exp -r ASL_RESTING.nii.gz --progress
 NOTE: The search string ‘ASL_RESTING.nii.gz’ is identified in the single_exp_flirt_input.json file within the processing_scripts sub-directory of the project’s scratch directory.
+
+Start Additional Core Resource(s)
+---------------------------------
+If conversion is being perfomed on several datasets, it may be advantageous to utilize core resources to perfom the conversion in parallel. To do this, use the following:
+~$ kaas_ec2_control.py -u -p single_exp
+\
+1.1.1.	) Perform Registration via FSL FLIRT
+
+Registration is performed via FSL’s FLIRT algorithm. The command line below identifies how to perform registration:
+NOTE: The “-s” option should only be supplied with the above option or when additional core resources are already active (i.e., in the event of a large number requiring conversion). To skip this, simply do NOT include the “-s” flag. 
+
+1.1.1.	Quantify CBF
+The following command line demonstrates the quantification function:
+~$kaas_compute_cbf.py -p single_exp -s --progress
+NOTE: The kaas_compute.py program cannot execute FSL’s oxford_asl from nipype as there is no interface option for this function. However, a common oxford_asl class has been created in compute_cbf.py to mimic nipype’s interface functionality. Input options to this class are described in the project’s *_oxford_asl_input.json file within the processing_scripts sub-directory in the project’s scratch directory. These inputs are the same command-line arguments used for FSL’s oxford_asl command line function. In addition to the FLIRT input options, this file contains search information for the ASL images (using the key ‘asl_regexstr’), search information for the ASL M0 images if  (using the key ‘M0_regexstr’), search information for structural images (using the key ‘struc_regexstr’) if it is desired to run fsl_anat, additional inclusion (key ‘inclusionList’) and exclusion (key ‘exclusionList) search characteristics, and a flag to utilize asl to structural registration that has already been produced (using key ‘asl2struc’ as true). 
+
+6.7.5.	Upload Results to AWS S3 Bucket
+It is desirable to maintain the files on the AWS S3 bucket. These files will be used for all future processing. The following describes the function to upload the results of the above step:
+~$ kaas_s3_upload.py -p single_exp --dir /mnt/ss_rhb1/scratch/AFRL-Single_Exposure/processed_data --progress
+NOTE: This function will also copy the files to the local s3 synchronized directory to eliminate the need for future downloads from the AWS S3 bucket. This can be bypassed with the option --skip-copy.
+
