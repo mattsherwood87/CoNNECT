@@ -7,7 +7,7 @@ data integrity and conformity, and to improve data consistency and data processi
 
 
 
-.. function:: get_scan_id.py(inDir, basename)
+.. :pyfunction:: get_scan_id.py(inDir, basename)
     
     test
 
