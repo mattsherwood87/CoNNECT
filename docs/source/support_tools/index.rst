@@ -9,12 +9,6 @@ helper_functions
 
 
 
-.. toctree::
-   :caption: Support Tools
-   :maxdepth: 2
-   :hidden:
-   :titlesonly:
 
-   support_tools/index
 
 

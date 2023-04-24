@@ -3,8 +3,12 @@
 Support Tools
 ######################################
 
-.. include:: /support_tools/index.rst
 
+
+The CoNNECT MRI facility consists of several components described below.
+
+helper_functions
+*****************
 
 
 .. include:: /support_tools/get_scan_id.rst
@@ -17,4 +21,4 @@ Support Tools
    :hidden:
    :titlesonly:
 
-   support_tools/index
+   support_tools/get_scan_id
