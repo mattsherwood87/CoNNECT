@@ -8,3 +8,5 @@ campus network.
 .. include:: master.rst
 
 .. include:: cores.rst
+
+.. include:: open-source_software

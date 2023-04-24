@@ -1,6 +1,6 @@
-:topic: CoNNECT Administration
+:topic: Administration
 
-CoNNECT Administration
+Administration
 ########
 
 .. include:: /administration/index.rst

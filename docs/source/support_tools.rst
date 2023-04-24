@@ -1,6 +1,6 @@
-:topic: CoNNECT Support Tools
+:topic: Support Tools
 
-CoNNECT Support Tools
+Support Tools
 ######################################
 
 .. include:: /support_tools/index.rst

@@ -1,6 +1,6 @@
-:topic: CoNNECT NPC
+:topic: NPC
 
-CoNNECT Neuro-Processing Cluster (NPC)
+Neuro-Processing Cluster (NPC)
 ######################################
 
 .. include:: /cluster_computing/index.rst
@@ -14,4 +14,5 @@ CoNNECT Neuro-Processing Cluster (NPC)
    cluster_computing/jumpbox
    cluster_computing/master
    cluster_computing/cores
+   cluster_computing/open-source_software
    cluster_computing/MySQL_database
