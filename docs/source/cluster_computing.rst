@@ -6,7 +6,7 @@ CoNNECT Neuro-Processing Cluster (NPC)
 .. include:: /cluster_computing/index.rst
 
 .. toctree::
-   :caption: CoNNECT NPC
+   :caption: Neuro-Processing Cluster
    :maxdepth: 2
    :hidden:
    :titlesonly:

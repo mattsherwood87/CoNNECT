@@ -7,3 +7,11 @@ CoNNECT Administration
 
 .. include:: /administration/booking.rst
 
+.. toctree::
+   :caption: Administration
+   :maxdepth: 2
+   :hidden:
+   :titlesonly:
+
+   administration/index
+   administration/booking
