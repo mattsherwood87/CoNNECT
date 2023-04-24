@@ -11,6 +11,4 @@ CoNNECT Support Tools
    :hidden:
    :titlesonly:
 
-   support_tools/convert_dicoms
-   support_tools/get_dir_identifiers
    support_tools/get_scan_id
