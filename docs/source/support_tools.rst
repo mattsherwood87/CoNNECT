@@ -7,4 +7,4 @@ CoNNECT Support Tools
 
 
 
-.. include:: /get_scan_id.rst
+.. include:: /support_tools/get_scan_id.rst
