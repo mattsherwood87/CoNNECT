@@ -14,4 +14,4 @@ policies and procedures, and to review any safety incidents.
    :align: center
    :width: 100%
       
-      CoNNECT Governing Board active organization chart.
+   CoNNECT Governing Board active organization chart.
