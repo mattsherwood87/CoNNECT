@@ -7,6 +7,7 @@
 Welcome to the WSU's Center of Neuroimaging and Neuro-Evaluation of Cognitive Technologies
 ##################################
 
+
 **CoNNECT** houses a 3.0-Tesla Philips Ingenia Cx MRI system with focused neuroimaging research applications.
 This documentation describes the Data Management and Analysis pipelines that have been developed to ensure minimal 
 data loss, expedited data processing and rapid project development.
