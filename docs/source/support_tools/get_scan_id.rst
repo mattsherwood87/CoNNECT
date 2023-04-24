@@ -7,7 +7,7 @@ data integrity and conformity, and to improve data consistency and data processi
 
 
 
-.. :py:function:: get_randomingredients.py(inDir, basename)
+.. py:function:: get_randomingredients.py(inDir, basename)
     
     test
 
