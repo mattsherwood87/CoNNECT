@@ -20,12 +20,12 @@ Any ‘-‘ are illegal characters in the table name and are generally replaced 
 
 .. _mysql_data_table:
 .. list-table:: The main database for each project <searchTable>.
-   :widths: 25 25 50
+   :widths: 25 50 25
    :header-rows: 1
 
-   * - Column Heading
-     - Column Description
-     - Char Size
+   * - **Column Name**
+     - **Column Description**
+     - **Char Size**
    * - fullpath
      - Full path to the local file, including filename and extension
      - 255
@@ -37,11 +37,11 @@ Any ‘-‘ are illegal characters in the table name and are generally replaced 
      - 255
    * - extension
      - Extension, excluding filename and path. NULL if no extension
-     - 255
+     - 48
 
 .. _mysql_sourcedata_table:
 .. list-table:: The main database for each project <searchSourceTable>.
-   :widths: 25 25 50
+   :widths: 25 50 25
    :header-rows: 1
 
    * - Column Heading
@@ -52,10 +52,4 @@ Any ‘-‘ are illegal characters in the table name and are generally replaced 
      - 255
    * - filename
      - Filename and extension, excluding the path
-     - 255
-   * - basename
-     - Filename, excluding extension and path. NULL if no basename
-     - 255
-   * - extension
-     - Extension, excluding filename and path. NULL if no extension
      - 255
