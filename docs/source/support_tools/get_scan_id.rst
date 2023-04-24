@@ -7,7 +7,7 @@ data integrity and conformity, and to improve data consistency and data processi
 
 
 
-.. :pyfunction:: lanache.get_randomingredients.py(inDir, basename)
+.. :pyfunction:: lumache.get_randomingredients.py(inDir, basename)
     
     test
 
