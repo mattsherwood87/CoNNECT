@@ -7,7 +7,7 @@ The CoNNECT NPC is a collection of systems that are centrally and locally manage
 the control of Wright State Computing and Telecommunications (CaTS). The CoNNECT NPC operates on a network isolated from the main WSU
 campus network.
 
-`Jumpbox <../cluster_computing/jumpbox>`_
+:doc:`Jumpbox <../cluster_computing/jumpbox>`
 
 The jumpbox is a user-specific virtual machine (VM) running either windows or linux. The jumpbox is NIST and HIPPA compliant. A user accesses 
 their jumpbox VM via VMware Horizon when connected to WSU's secure network or LAN, or connected to the network via virtual private network 
@@ -18,7 +18,7 @@ their jumpbox VM via VMware Horizon when connected to WSU's secure network or LA
 The master node is the main controller of the CoNNECT NPC. Users access the master node via secure shell (SSH) connections through their 
 jumpbox. The master node has 40 physical cores and 756GB RAM, and is running Ubuntu 20.04. 
 
-:ref:`Core Node(s) <../cluster_computing/cores>`
+:doc:`Core Node(s) <../cluster_computing/cores>`
 
 Core nodes are the workhorse of the CoNNECT NPC. The core nodes run the same operating system as the master, Ubuntu 20.04. Currently, there 
 is a single core node with 40 physical cores and 756GB RAM. Processing can be conducted utilizing the core node(s) by supplying the *submit*
