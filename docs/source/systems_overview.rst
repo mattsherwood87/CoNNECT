@@ -8,9 +8,9 @@ The CoNNECT MRI facility consists of several components described below.
 
 .. note:: FIGURE TO BE INSERTED
 
-.. include:: mri.rst
+.. include:: systems_overview/mri.rst
 
-.. include:: data_storage.rst
+.. include:: systems_overview/data_storage.rst
 
-.. include:: connect_npc.rst
+.. include:: systems_overview/connect_npc.rst
 
