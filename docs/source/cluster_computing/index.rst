@@ -14,15 +14,3 @@ campus network.
 .. include:: cores
 
 .. include:: open-source_software
-
-.. toctree::
-   :caption: Neuro-Processing Cluster
-   :maxdepth: 2
-   :hidden:
-   :titlesonly:
-
-   jumpbox
-   master
-   cores
-   open-source_software
-   MySQL_database

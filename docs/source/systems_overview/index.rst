@@ -14,6 +14,3 @@ The CoNNECT MRI facility consists of several components described below.
 
 .. include:: connect_npc.rst
 
-
-
-

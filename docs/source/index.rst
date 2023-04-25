@@ -27,7 +27,6 @@ data loss, expedited data processing and rapid project development.
    :caption: Table of Contents
 
    administration/index
-   administration/booking
    systems_overview/index
    cluster_computing/index
    support_tools/index
