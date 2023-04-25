@@ -16,13 +16,4 @@ The CoNNECT MRI facility consists of several components described below.
 
 
 
-.. toctree::
-   :caption: Systems Overview
-   :maxdepth: 2
-   :hidden:
-   :titlesonly:
 
-   index
-   mri
-   connect_npc
-   data_storage
