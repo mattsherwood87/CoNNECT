@@ -11,7 +11,7 @@ helper_functions
 *****************
 
 
-.. include:: /support_tools/get_scan_id.rst
+.. include:: get_scan_id
 
 
 
@@ -21,4 +21,4 @@ helper_functions
    :hidden:
    :titlesonly:
 
-   support_tools/get_scan_id
+   get_scan_id

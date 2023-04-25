@@ -26,7 +26,7 @@ data loss, expedited data processing and rapid project development.
    :hidden:
    :caption: Table of Contents
 
-   administration
-   systems_overview
-   cluster_computing
-   support_tools
+   administration/index
+   systems_overview/index
+   cluster_computing/index
+   support_tools/index

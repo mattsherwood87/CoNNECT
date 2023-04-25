@@ -21,8 +21,8 @@ campus network.
    :hidden:
    :titlesonly:
 
-   cluster_computing/jumpbox
-   cluster_computing/master
-   cluster_computing/cores
-   cluster_computing/open-source_software
-   cluster_computing/MySQL_database
+   jumpbox
+   master
+   cores
+   open-source_software
+   MySQL_database
