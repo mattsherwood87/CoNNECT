@@ -13,11 +13,3 @@ The CoNNECT MRI facility consists of several components described below.
 .. include:: data_storage.rst
 
 .. include:: connect_npc.rst
-
-.. toctree::
-   :hidden:
-   :caption: Table of Contents
-
-   mri
-   data_storage
-   connect_npc
