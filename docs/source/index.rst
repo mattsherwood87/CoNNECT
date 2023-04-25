@@ -22,11 +22,10 @@ data loss, expedited data processing and rapid project development.
    
 
 .. toctree::
-   :maxdepth: 3
    :hidden:
    :caption: Table of Contents
 
    administration/index
-   systems_overview
-   cluster_computing
-   support_tools
+   systems_overview/index
+   cluster_computing/index
+   support_tools/index
