@@ -23,12 +23,3 @@ policies and procedures, and to review any safety incidents.
 
 
 .. include:: booking
-
-.. toctree::
-   :caption: Administration
-   :maxdepth: 2
-   :hidden:
-   :titlesonly:
-
-   Governing Board
-   booking
