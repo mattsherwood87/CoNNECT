@@ -47,12 +47,26 @@ The function dcm2niix converts raw DICOM images to NIfTI (or other) formats. The
 Freesurfer
 ----------
 
-Freesurfer Freesurfer is developed by Massachusetts General Hospital/Harvard University to analyze MRI images of the brain. The current version is 7.1.1; however, version 6 is installed.
+Freesurfer Freesurfer is developed by Massachusetts General Hospital/Harvard University to analyze MRI images of the brain. The current '
+version is 7.1.1; however, version 6 is installed.
 
-The freesurfer package (installed from ) is located at /usr/share/freesurfer. This path is stored in the FREESURFER_DIR variable available in bash and c-shell terminals. 
+The freesurfer package (installed from ) is located at /usr/share/freesurfer. This path is stored in the FREESURFER_DIR variable available 
+in bash and c-shell terminals. 
 
-common functions: i. recon-all Main freesurfer command to begin the cortical reconstruction process. The entire process takes 12-24hrs to complete. Preferred command line arguments are provided 
-in Table 3. ii. freeview The volume and surface viewer to assess quality of cortical reconstruction.
+common functions: 
+
+.. code-block:: shell-session
+
+    $ recon-all 
+
+Main freesurfer command to begin the cortical reconstruction process. The entire process takes 12-24hrs to complete. Preferred command 
+line arguments are provided in Table 3. 
+
+.. code-block:: shell-session
+
+    $ freeview
+
+The volume and surface viewer to assess quality of cortical reconstruction.
 
 
 FMRIB Software Library (FSL)
