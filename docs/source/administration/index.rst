@@ -22,4 +22,4 @@ policies and procedures, and to review any safety incidents.
    CoNNECT Governing Board active organization chart.
 
 
-.. include:: booking
+.. include:: booking.rst
