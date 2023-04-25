@@ -23,3 +23,9 @@ policies and procedures, and to review any safety incidents.
 
 
 .. include:: booking.rst
+
+.. toctree::
+   :hidden:
+   :caption: Table of Contents
+
+   booking
