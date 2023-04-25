@@ -24,3 +24,10 @@ policies and procedures, and to review any safety incidents.
 
 .. include:: /administration/booking
 
+.. toctree::
+   :caption: Administration
+   :maxdepth: 2
+   :hidden:
+   :titlesonly:
+
+   administration/booking

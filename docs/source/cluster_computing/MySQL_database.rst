@@ -9,16 +9,20 @@ MySQL can be accessed through the command line:
 
 .. code-block:: shell-session
    
-   $ mysql --login-path=client 
+   $ mysql --login-path=client <database>
    
-Each project will have two tables: one main table containing all files except source files and one source table containing files within 
-the BIDS sourcedata directory. The main table (referred to in the project's credentials as searchTable) contains the elements described 
-in :numref: `mysql_data_table`. The sourcedata table contains the elements described in :numref: `mysql_sourcedata_table`. 
+where <database> is replaced with the MySQL database. Currently, all projects are contained in a single database, "CoNNECT".
+
+Each project will have two tables in the CoNNECT database: one main table containing all files except source files and one source table containing files within 
+the BIDS sourcedata directory. The main table (referred to in the project's `credentials as searchTable <../Developed_Custom_Python_toolkits/credentials:Project Credentials 
+File>` contains the elements described in :numref:`mysql_data_table`. The sourcedata table contains the elements described in 
+:numref:`mysql_sourcedata_table`. 
 
 MySQL allows efficent queries of files contained within a project's directories. This will optimize file searching and data processing.
 Any ‘-‘ are illegal characters in the table name and are generally replaced with an underscore (‘_’).
 
 .. _mysql_data_table:
+
 .. list-table:: The main database for each project <searchTable>.
    :widths: 25 50 25
    :header-rows: 1
@@ -40,6 +44,7 @@ Any ‘-‘ are illegal characters in the table name and are generally replaced 
      - 48
 
 .. _mysql_sourcedata_table:
+
 .. list-table:: The main database for each project <searchSourceTable>.
    :widths: 25 50 25
    :header-rows: 1
