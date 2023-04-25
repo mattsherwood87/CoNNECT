@@ -11,5 +11,5 @@ helper_functions
 *****************
 
 
-.. include:: get_scan_id
+.. include:: get_scan_id.rst
 
