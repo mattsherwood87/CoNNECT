@@ -7,10 +7,10 @@ The CoNNECT NPC is a collection of systems that are centrally and locally manage
 the control of Wright State Computing and Telecommunications (CaTS). The CoNNECT NPC operates on a network isolated from the main WSU
 campus network.
 
-.. include:: jumpbox
+.. include:: /cluster_computing/jumpbox
 
-.. include:: master
+.. include:: /cluster_computing/master
 
-.. include:: cores
+.. include:: /cluster_computing/cores
 
-.. include:: open-source_software
+.. include:: /cluster_computing/open-source_software
