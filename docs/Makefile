@@ -3,7 +3,7 @@
 
 # You can set these variables from the command line, and also
 # from the environment for the first two.
-SPHINXOPTS    ?= https://docs.readthedocs.io/en/stable/objects.inv
+SPHINXOPTS    ?= https://connect-tutorial.readthedocs.io/en/latest/objects.inv
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = source
 BUILDDIR      = build
