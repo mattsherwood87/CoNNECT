@@ -15,11 +15,11 @@ policies and procedures, and to review any safety incidents.
 
 .. _org chart:
 
-.. figure:: ./administration/_images/connect_org_chart.png
+.. figure:: ./_images/connect_org_chart.png
    :align: center
    :width: 100%
       
    CoNNECT Governing Board active organization chart.
 
 
-.. include:: administration/booking.rst
+.. include:: booking.rst
