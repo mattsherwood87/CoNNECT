@@ -26,7 +26,7 @@ Step 2. Select `MRI Calendar <https://science-math.wright.edu/lab/center-of-neur
 
 .. _booking step2:
 
-.. figure:: ./_images/wright.edu.connect.lab.mri.calender2.png
+   .. figure:: ./_images/wright.edu.connect.lab.mri.calender2.png
     :align:  center
     :width:  100%
 
@@ -40,9 +40,9 @@ Step 3. Once into the MRI Calender, select view by week on the drop down menu to
 
     Dropdown menu to access week view.
 
-Step 4: The MRI Calender will show available times for specific days.  If a specific time is available, and with the proper 
-credentials awarded from WSU, continue to www.outlook.office.com/bookings/calender. If you are not affiliated with WSU, 
-please reach out to the CoNNECT Staff and a Booking will be made on your behalf.
+Step 4: The MRI Calender will show available times for specific days.  If a specific time is available, use the link provided 
+by MRI Director Dr. Matt Sherwood to continue to the MRI Bookings Calender. If you have not been given a direct link, 
+please reach out to Dr. Sherwood or CoNNECT Staff to access the MRI Bookings Calender.
 
 .. figure:: ./_images/mri.calender.week.view.PNG
    :align:  center
