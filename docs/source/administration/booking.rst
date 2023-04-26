@@ -57,7 +57,7 @@ please reach out to Dr. Sherwood or CoNNECT Staff to access the MRI Bookings Cal
    MRI calender shown in week view.
 
 Step 5: Once into bookings, select the desired date and time specified by the subject. A menu will be displayed, 
-such as :numref: 'booking step5'. Choose the dropdown menu to specify the duration of the scan. Correct the time in Service Details if necessary. 
+such as :numref:`booking step5`. Choose the dropdown menu to specify the duration of the scan. Correct the time in Service Details if necessary. 
 
 .. _booking step5:
 
@@ -68,7 +68,7 @@ such as :numref: 'booking step5'. Choose the dropdown menu to specify the durati
    Illustrates the drop down menu on the Bookings website. 
 
 Step 6: Complete the Customer Information by stating the IRB number of the current project you are booking, followed by the project 
-3 letter acronym, subject number, and session.  An example shown in :numref: 'booking step6'. 
+3 letter acronym, subject number, and session.  An example shown in :numref:`booking step6`. 
 
 .. _booking step6:
 
