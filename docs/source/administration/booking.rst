@@ -17,7 +17,7 @@ Step 1: Start by going to wright.edu/connect-lab. The introductory CoNNECT page 
 
    CoNNECT lab page on Wright State's campus website.
 
-Step 2: Select MRI Calender on the banner to the right. Shown in Figure 5.
+Step 2: Select MRI Calender on the banner to the right. Shown in Figure 4.
 
 .. figure:: ./_images/wright.edu.connect.lab.mri.calender.png
    :align:  center
