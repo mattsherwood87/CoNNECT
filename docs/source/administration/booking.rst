@@ -26,7 +26,7 @@ Step 2. Select `MRI Calendar <https://science-math.wright.edu/lab/center-of-neur
 
 .. _booking step2:
 
-.. figure:: ./_images/wright.edu.connect.lab.mri.calender 2.png
+.. figure:: ./_images/wright.edu.connect.lab.mri.calender2.png
     :align:  center
     :width:  100%
 
