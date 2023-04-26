@@ -26,7 +26,7 @@ The introductory CoNNECT page should look like :numref:`booking step1`.
     CoNNECT lab page on Wright State's campus website.
 
 Step 2. Select `MRI Calendar <https://science-math.wright.edu/lab/center-of-neuroimaging-and-neuro-evaluation-of-cognitive-technologies/mri-calendar>`__ 
-on the banner to the right, highlighted in :numref:`booking step2`.
+on the banner to the right, highlighted in :numref:`booking step1`.
 
 .. _booking step2:
 
