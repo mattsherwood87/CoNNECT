@@ -35,8 +35,8 @@ Step 2. Select `MRI Calendar <https://science-math.wright.edu/lab/center-of-neur
 Step 3. Once into the MRI Calender, select view by week on the drop down menu to the upper right quadrant of the calender.
 
     .. figure:: ./_images/mri.calender.month.png
-    :align:  center
-    :width:  100%
+      :align:  center
+      :width:  100%
 
     Dropdown menu to access week view.
 
