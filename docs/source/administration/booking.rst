@@ -11,31 +11,31 @@ MRI Scheduling through wright.edu is as follows:
 
 #. Start by going to the `CoNNECT laboratory website <https://science-math.wright.edu/lab/center-of-neuroimaging-and-neuro-evaluation-of-cognitive-technologies>`__. The introductory CoNNECT page should look like :numref:`booking step1`.
 
-.. _booking step1:
+    .. _booking step1:
 
-.. figure:: ./_images/wright.edu.connect.lab.PNG
-   :align:  center
-   :width:  100%
+    .. figure:: ./_images/wright.edu.connect.lab.PNG
+    :align:  center
+    :width:  100%
 
-   CoNNECT lab page on Wright State's campus website.
+    CoNNECT lab page on Wright State's campus website.
 
 #. Select `MRI Calendar <https://science-math.wright.edu/lab/center-of-neuroimaging-and-neuro-evaluation-of-cognitive-technologies/mri-calendar>`__ on the banner to the right, highlighted in :numref:`booking step2`.
 
-.. _booking step2:
+    .. _booking step2:
 
-.. figure:: ./_images/wright.edu.connect.lab.mri.calender.png
-   :align:  center
-   :width:  100%
+    .. figure:: ./_images/wright.edu.connect.lab.mri.calender.png
+    :align:  center
+    :width:  100%
 
-   MRI Calender highlighted on the WSU CoNNECT lab website.
+    MRI Calender highlighted on the WSU CoNNECT lab website.
 
 #. Once into the MRI Calender, select view by week on the drop down menu to the upper right quadrant of the calender.
 
-.. figure:: ./_images/mri.calender.month.png
-   :align:  center
-   :width:  100%
+    .. figure:: ./_images/mri.calender.month.png
+    :align:  center
+    :width:  100%
 
-   Dropdown menu to access week view.
+    Dropdown menu to access week view.
 
 Step 4: The MRI Calender will show available times for specific days.  If a specific time is available, and with the proper 
 credentials awarded from WSU, continue to www.outlook.office.com/bookings/calender. If you are not affiliated with WSU, 
