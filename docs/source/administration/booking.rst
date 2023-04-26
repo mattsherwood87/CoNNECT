@@ -9,7 +9,9 @@ MRI Scheduling
 
 MRI Scheduling through wright.edu is as follows:
 
-Step 1: Start by going to the `CoNNECT laboratory website <https://science-math.wright.edu/lab/center-of-neuroimaging-and-neuro-evaluation-of-cognitive-technologies>`__. The introductory CoNNECT page should look like Figure 3.
+Step 1: Start by going to the `CoNNECT laboratory website <https://science-math.wright.edu/lab/center-of-neuroimaging-and-neuro-evaluation-of-cognitive-technologies>`__. The introductory CoNNECT page should look like :numref:`booking step1`.
+
+.. _booking step1:
 
 .. figure:: ./_images/wright.edu.connect.lab.PNG
    :align:  center
@@ -17,7 +19,9 @@ Step 1: Start by going to the `CoNNECT laboratory website <https://science-math.
 
    CoNNECT lab page on Wright State's campus website.
 
-Step 2: Select MRI Calender on the banner to the right. Shown in Figure 4.
+Step 2: Select `MRI Calendar <https://science-math.wright.edu/lab/center-of-neuroimaging-and-neuro-evaluation-of-cognitive-technologies/mri-calendar>`__ on the banner to the right. Shown in :numref:`booking step2`.
+
+.. _booking step2:
 
 .. figure:: ./_images/wright.edu.connect.lab.mri.calender.png
    :align:  center
