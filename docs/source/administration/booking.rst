@@ -13,21 +13,21 @@ MRI Scheduling
 
 MRI Scheduling through wright.edu is as follows:
 
-Step 1: Start by going to wright.edu/connect-lab. The introductory CoNNECT page should look like Figure 2.
+Step 1: Start by going to wright.edu/connect-lab. The introductory CoNNECT page should look like Figure 4.
 
 .. figure:: ./_images/wright.edu.connect.lab.PNG
    :align:  center
    :width:  100%
 
-   Fig. 2 CoNNECT lab page on Wright State's campus website.
+   CoNNECT lab page on Wright State's campus website.
 
-Step 2: Select MRI Calender on the banner to the right. Shown in Figure 3.
+Step 2: Select MRI Calender on the banner to the right. Shown in Figure 5.
 
 .. figure:: ./_images/wright.edu.connect.lab.mri.calender.png
    :align:  center
    :width:  100%
 
-   Fig. 3 MRI Calender highlighted on the WSU CoNNECT lab website.
+   MRI Calender highlighted on the WSU CoNNECT lab website.
 
 Step 3: Once into the MRI Calender, select view by week on the drop down menu to the upper right quadrant of the calender.
 
@@ -35,7 +35,7 @@ Step 3: Once into the MRI Calender, select view by week on the drop down menu to
    :align:  center
    :width:  100%
 
-   Fig. 4 Dropdown menu to access week view.
+   Dropdown menu to access week view.
 
 Step 4: The MRI Calender will show available times for specific days.  If a specific time is available, and with the proper 
 credentials awarded from WSU, continue to www.outlook.office.com/bookings/calender. If you are not affiliated with WSU, 
@@ -45,7 +45,7 @@ please reach out to the CoNNECT Staff and a Booking will be made on your behalf.
    :align:  center
    :width:  100%
 
-   Fig. 5 MRI calender shown in week view.
+   MRI calender shown in week view.
 
 Step 5: Once into bookings, select the desired date and time specified by the subject. A menu will be displayed, 
 such as Figure 6. Choose the dropdown menu to specify the duration of the scan. Correct the time in Service Details if necessary. 
@@ -54,16 +54,16 @@ such as Figure 6. Choose the dropdown menu to specify the duration of the scan. 
    :align:  center
    :width:  100%
 
-   Fig. 6 Illustrates the drop down menu on the Bookings website. 
+   Illustrates the drop down menu on the Bookings website. 
 
 Step 6: Complete the Customer Information by stating the IRB number of the current project you are booking, followed by the project 
-3 letter acronym, subject number, and session.  An example shown in Figure 7. 
+3 letter acronym, subject number, and session.  An example shown in Figure 9. 
 
 .. figure:: ./_images/create.booking.nomenclature.PNG
    :align:  center
    :width:  100%
 
-   Fig. 7 Showcasing the proper nomenclature when Booking subjects. 
+   Showcasing the proper nomenclature when Booking subjects. 
 
 Step 7: Ensure to choose the Staff member that is available for your specific scan time. 
 
