@@ -6,8 +6,8 @@ MRI Scheduling
 
 
 .. figure:: ./_images/connect_org_chart.png
-   :align: center
-   :width: 100%
+   :align:  center
+   :width:  100%
       
    CoNNECT Governing Board active organization chart.
 
