@@ -9,6 +9,9 @@ MRI Scheduling
 
 MRI Scheduling through wright.edu is as follows:
 
+View Open Appointments on Calendar
+==================================
+
 Step 1. Start by going to the `CoNNECT laboratory website <https://science-math.wright.edu/lab/center-of-neuroimaging-and-neuro-evaluation-of-cognitive-technologies>`__. The introductory CoNNECT page should look like :numref:`booking step1`.
 
 .. _booking step1:
