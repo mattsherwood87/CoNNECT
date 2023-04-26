@@ -14,20 +14,20 @@ Step 1. Start by going to the `CoNNECT laboratory website <https://science-math.
 .. _booking step1:
 
 .. figure:: ./_images/wright.edu.connect.lab.PNG
-:align:  center
-:width:  100%
+    :align:  center
+    :width:  100%
 
-CoNNECT lab page on Wright State's campus website.
+    CoNNECT lab page on Wright State's campus website.
 
 Step 2. Select `MRI Calendar <https://science-math.wright.edu/lab/center-of-neuroimaging-and-neuro-evaluation-of-cognitive-technologies/mri-calendar>`__ on the banner to the right, highlighted in :numref:`booking step2`.
 
 .. _booking step2:
 
 .. figure:: ./_images/wright.edu.connect.lab.mri.calender.png
-:align:  center
-:width:  100%
+    :align:  center
+    :width:  100%
 
-MRI Calender highlighted on the WSU CoNNECT lab website.
+    MRI Calender highlighted on the WSU CoNNECT lab website.
 
 Step 3. Once into the MRI Calender, select view by week on the drop down menu to the upper right quadrant of the calender.
 
