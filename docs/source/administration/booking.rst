@@ -34,6 +34,8 @@ Step 2. Select `MRI Calendar <https://science-math.wright.edu/lab/center-of-neur
 
 Step 3. Once into the MRI Calender, select view by week on the drop down menu to the upper right quadrant of the calender.
 
+.. _booking step3:
+
     .. figure:: ./_images/mri.calender.month.png
       :align:  center
       :width:  100%
@@ -44,6 +46,8 @@ Step 4: The MRI Calender will show available times for specific days.  If a spec
 by MRI Director Dr. Matt Sherwood to continue to the MRI Bookings Calender. If you have not been given a direct link, 
 please reach out to Dr. Sherwood or CoNNECT Staff to access the MRI Bookings Calender.
 
+.. _booking step4:
+
 .. figure:: ./_images/mri.calender.week.view.PNG
    :align:  center
    :width:  100%
@@ -53,6 +57,8 @@ please reach out to Dr. Sherwood or CoNNECT Staff to access the MRI Bookings Cal
 Step 5: Once into bookings, select the desired date and time specified by the subject. A menu will be displayed, 
 such as Figure 6. Choose the dropdown menu to specify the duration of the scan. Correct the time in Service Details if necessary. 
 
+.. _booking step5:
+
 .. figure:: ./_images/create.booking.drop.down.PNG
    :align:  center
    :width:  100%
@@ -61,6 +67,8 @@ such as Figure 6. Choose the dropdown menu to specify the duration of the scan. 
 
 Step 6: Complete the Customer Information by stating the IRB number of the current project you are booking, followed by the project 
 3 letter acronym, subject number, and session.  An example shown in Figure 8. 
+
+.. _booking step6:
 
 .. figure:: ./_images/create.booking.nomenclature.PNG
    :align:  center
