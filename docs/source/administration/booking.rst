@@ -42,7 +42,7 @@ Step 3. Once into the MRI Calender, select view by week on the drop down menu to
       :align:  center
       :width:  100%
 
-    Dropdown menu to access week view.
+      Dropdown menu to access week view.
 
 Step 4: The MRI Calender will show available times for specific days.  If a specific time is available, use the link provided 
 by MRI Director Dr. Matt Sherwood to continue to the MRI Bookings Calender. If you have not been given a direct link, 
