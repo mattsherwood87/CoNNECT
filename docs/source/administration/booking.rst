@@ -9,7 +9,7 @@ MRI Scheduling
 
 MRI Scheduling through wright.edu is as follows:
 
-Step 1: Start by going to wright.edu/connect-lab. The introductory CoNNECT page should look like Figure 4.
+Step 1: Start by going to wright.edu/connect-lab. The introductory CoNNECT page should look like Figure 3.
 
 .. figure:: ./_images/wright.edu.connect.lab.PNG
    :align:  center
@@ -53,7 +53,7 @@ such as Figure 6. Choose the dropdown menu to specify the duration of the scan. 
    Illustrates the drop down menu on the Bookings website. 
 
 Step 6: Complete the Customer Information by stating the IRB number of the current project you are booking, followed by the project 
-3 letter acronym, subject number, and session.  An example shown in Figure 9. 
+3 letter acronym, subject number, and session.  An example shown in Figure 8. 
 
 .. figure:: ./_images/create.booking.nomenclature.PNG
    :align:  center
