@@ -7,7 +7,7 @@ The CoNNECT custom developed support tools utilize JSON control files from each 
 Data types are specified in :numref:`input_data_types` and available processes are flirt and bet. 
 
 
-.. _input_data_tyes:
+.. _input_data_types:
 
 .. list-table:: Data types.
    :widths: 25 75
