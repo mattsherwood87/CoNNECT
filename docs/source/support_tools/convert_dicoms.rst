@@ -7,12 +7,14 @@ data integrity and conformity, and to improve data consistency and data processi
 
 
 
-.. py:function:: convert_dicoms.py(inDir, basename)
+.. py:function:: convert_dicoms.py(source_singleDir, progress)
     
     test
 
-    :param kind: Optional "kind" of ingredients.
-    :type kind: list[str] or None
-    :raise lumache.InvalidKindError: If the kind is invalid.
-    :return: The ingredients list.
-    :rtype: list[str]
+    :param source_singleDir: REQUIRED String or pathlike object of a directory containing DICOM images.
+    :param progress: OPTIONAL operate in verbose mode (default False) 
+    :type source_singleDir: str or None or Pathlike object
+    :type progress: bool
+    :raise Error: If path does not exist.
+    :return: None
+    :rtype: None
