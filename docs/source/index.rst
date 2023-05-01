@@ -29,3 +29,5 @@ data loss, expedited data processing and rapid project development.
    systems_overview/index
    cluster_computing/index
    support_tools/index
+   project-specific_JSON_control_files/index
+   

@@ -1,7 +1,13 @@
 7.	Helpful MySQL Commands
 These helpful commands can be executed on the master node:
 7.1.	Login to MySQL
-~$ mysql --login-path=client <database>
+
+.. _mysql login:
+
+.. code-block:: shell-session
+
+    $ mysql --login-path=client <database>
+    
 7.2.	Exit MySQL
 mysql> exit
 7.3.	Create Database
