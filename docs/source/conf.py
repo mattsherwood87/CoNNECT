@@ -54,7 +54,7 @@ templates_path = ['_templates']
 html_theme = 'sphinx_adc_theme'
 html_theme_path = [sphinx_adc_theme.get_html_theme_path()]
 html_sidebars = {
-    '**': ['localtoc.html', 'sourcelink.html', 'searchbox.html'],
+    '**': ['globaltoc.html', 'sourcelink.html', 'searchbox.html'],
 }
 
 # -- Options for EPUB output
