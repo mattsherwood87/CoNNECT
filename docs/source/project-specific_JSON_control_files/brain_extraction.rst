@@ -1,7 +1,7 @@
 Brain Extraction (BET)
 **********************
 
-Brain extraction parameters for FSL BET or ANTs Brain Extraction can be found in “<project_identifier>_<input-datatype>_bet_input.json” (see :numref:`project-specific_JSON_control_files/index:input_data_types` for a list of 
+Brain extraction parameters for FSL BET or ANTs Brain Extraction can be found in “<project_identifier>_<input-datatype>_bet_input.json” (see :ref:`HERE <project-specific_JSON_control_files/index:input_data_types>` for a list of 
 available input data types). This file contains the inputs described in the nipype python extension manual for `FSL BET 
 <https://nipype.readthedocs.io/en/0.12.0/interfaces/generated/nipype.interfaces.fsl.preprocess.html#bet>`__ or `ANTs Brain Extraction 
 <https://nipype.readthedocs.io/en/latest/api/generated/nipype.interfaces.ants.segmentation.html#brainextraction>`__. The available parameters are provided in :numref:`bet_json_table`.
@@ -48,8 +48,8 @@ BET-Specific parameters
         - Additional parameters to the command. Maps to a command-line argument as %s
     * - center
         - OPTIONAL
-        - string
-        - Full path to an anatomical template
+        - list
+        - 3 integer items specifying the center of gravity in voxels. Maps to command-line argument -c %s
     * - environ
         - OPTIONAL
         - dictionary
@@ -57,7 +57,7 @@ BET-Specific parameters
     * - frac
         - OPTIONAL
         - float
-        - Fractional intensity threshold.
+        - Fractional intensity threshold. Maps to command line -f %.2f
     * - functional
         - OPTIONAL
         - boolean
@@ -65,31 +65,31 @@ BET-Specific parameters
     * - ignore_exception
         - OPTIONAL
         - boolean
-        - **UPDATE**
+        - print an error instead of throwing an exception in case the interface fails to run (default False). 
     * - mask
         - OPTIONAL
         - boolean
-        - **UPDATE**
+        - create binary mask image (default False). Maps to command-line argument -m. 
     * - mesh
         - OPTIONAL
         - boolean
-        - **UPDATE**
+        - generate a vtk mesh brain surface (default False). Maps to command-line argument -e. 
     * - no_output
         - OPTIONAL
         - boolean
-        - **UPDATE**
+        - don't generate segmented output (default False). Maps to command-line argument -n. 
     * - outline
         - OPTIONAL
         - boolean
-        - **UPDATE**
+        - create surface outline image (default False). Maps to command-line argument -o. 
     * - output_type
         - OPTIONAL
         - string
-        - **UPDATE**
+        - FSL output type ('NIFTI_PAIR','NIFTI_PARI_GZ','NIFTI_GZ','NIFTI') (default 'NIFTI_GZ').
     * - padding
         - OPTIONAL
         - boolean
-        - **UPDATE**
+        - improve BET if FOV is very small in Z (default False). Maps to command line -Z. Mutually exclusive  functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
     * - radius
         - OPTIONAL
         - integer
