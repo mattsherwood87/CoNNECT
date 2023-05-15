@@ -5,6 +5,7 @@
 #    pip-compile
 #
 links==1.0
+sphinx_adc_theme
     # via -r requirements.in
 
 #sphinx==1.6.4
