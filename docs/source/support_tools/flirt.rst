@@ -25,3 +25,10 @@ flirt.py
     :raise Error: If path does not exist.
     :return: None
     :rtype: None
+
+
+convert_dicoms.py also supports execution via command-line:
+
+.. code-block:: shell-session
+
+    $ ./flirt.py <IN_FILE> <DATA_DIR> <FLIRT_PARAMS> --overwrite --bet-params <BET_PARAMS> --progress

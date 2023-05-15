@@ -19,6 +19,8 @@ data integrity and conformity, and to improve data consistency and data processi
     :rtype: None
 
 
+convert_dicoms.py also supports execution via command-line:
+
 .. code-block:: shell-session
 
     $ ./convert_dicoms.py <source_singleDir> --progress
