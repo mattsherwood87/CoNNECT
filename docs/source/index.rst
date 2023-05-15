@@ -25,6 +25,7 @@ data loss, expedited data processing and rapid project development.
    
 
 .. toctree::
+   :hidden:
    :caption: Table of Contents
    :titlesonly:
 
