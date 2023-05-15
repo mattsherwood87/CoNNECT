@@ -11,6 +11,7 @@ Picture Archiving and Communication System (PACS)
 The PACS Grabber Service then automatically detects new dicoms arriving to the PACS storage location, moves them to the appropriate project/subject/session's sourcedata
 directory, converts them to NIfTI files and stores them in the project/subject/session's rawdata directory according to BIDS specifications.
 
+
 Image Viewing and Analysis Software
 -----------------------------------
 
