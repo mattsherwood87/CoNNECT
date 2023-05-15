@@ -5,6 +5,7 @@ Custom Support Tools
 ********************
 
 .. toctree::
+    :hidden:
     :titlesonly:
 
     convert_dicoms
