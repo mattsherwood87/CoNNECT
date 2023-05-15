@@ -4,6 +4,13 @@
 Project-Specific JSON Control Files
 ***********************************
 
+.. toctree::
+   :titlesonly:
+
+   brain_extraction
+   flirt
+
+   
 The CoNNECT custom developed support tools utilize JSON control files from each project's **CODE** bids directory. The files are named as <project_identifier>_<data_type>_<process>_input.json. 
 Data types are specified in :numref:`input_data_types` and available processes are flirt and bet. 
 
@@ -28,11 +35,7 @@ Data types are specified in :numref:`input_data_types` and available processes a
      - T2 or T2* image
 
 
-.. toctree::
-   :titlesonly:
 
-   brain_extraction
-   flirt
 
 .. include:: brain_extraction.rst
 .. include:: flirt.rst
