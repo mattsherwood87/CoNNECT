@@ -27,9 +27,4 @@ is a single core node with 40 physical cores and 756GB RAM. Processing can be co
 option to the programs described within this manual
 
 
-.. toctree::
-    :titlesonly:
-
-    open-source_software
-
 .. include:: open-source_software.rst
