@@ -1,7 +1,7 @@
 Brain Extraction (BET)
 **********************
 
-Brain extraction parameters for FSL BET or ANTs Brain Extraction can be found in “<project_identifier>_<input-datatype>_bet_input.json” (see :ref:`HERE <project-specific_JSON_control_files/index:input_data_types>` for a list of 
+Brain extraction parameters for FSL BET or ANTs Brain Extraction can be found in “<project_identifier>_<input-datatype>_bet_input.json” (see :ref:`input_data_types` for a list of 
 available input data types). This file contains the inputs described in the nipype python extension manual for `FSL BET 
 <https://nipype.readthedocs.io/en/0.12.0/interfaces/generated/nipype.interfaces.fsl.preprocess.html#bet>`__ or `ANTs Brain Extraction 
 <https://nipype.readthedocs.io/en/latest/api/generated/nipype.interfaces.ants.segmentation.html#brainextraction>`__. The available parameters are provided in :numref:`bet_json_table`.
@@ -16,17 +16,17 @@ available input data types). This file contains the inputs described in the nipy
     :header-rows: 1
 
     * - **Key Name**
-        - **Required Level**
-        - **Data Type**
-        - **Description**
+      - **Required Level**
+      - **Data Type**
+      - **Description**
     * - ``__general_comment__``
-        - OPTIONAL
-        - string
-        - free text to provide a brief description
+      - OPTIONAL
+      - string
+      - free text to provide a brief description
     * - bet_params
-        - REQUIRED
-        - dictionary
-        - brain extraction parameters as described in :numref:`fsl_bet_inputs` and :numref:`ants_bet_inputs`
+      - REQUIRED
+      - dictionary
+      - brain extraction parameters as described in :numref:`fsl_bet_inputs` and :numref:`ants_bet_inputs`
 
 
 BET-Specific parameters
@@ -39,97 +39,97 @@ BET-Specific parameters
     :header-rows: 1
 
     * - **Key Name**
-        - **Required Level**
-        - **Data Type**
-        - **Description**
+      - **Required Level**
+      - **Data Type**
+      - **Description**
     * - args
-        - OPTIONAL
-        - string
-        - Additional parameters to the command. Maps to a command-line argument as %s
+      - OPTIONAL
+      - string
+      - Additional parameters to the command. Maps to a command-line argument as %s
     * - center
-        - OPTIONAL
-        - list
-        - 3 integer items specifying the center of gravity in voxels. Maps to command-line argument -c %s
+      - OPTIONAL
+      - list
+      - 3 integer items specifying the center of gravity in voxels. Maps to command-line argument -c %s
     * - environ
-        - OPTIONAL
-        - dictionary
-        - Environment variables
+      - OPTIONAL
+      - dictionary
+      - Environment variables
     * - frac
-        - OPTIONAL
-        - float
-        - Fractional intensity threshold. Maps to command line -f %.2f
+      - OPTIONAL
+      - float
+      - Fractional intensity threshold. Maps to command line -f %.2f
     * - functional
-        - OPTIONAL
-        - boolean
-        - **NOT SUPPORTED**
+      - OPTIONAL
+      - boolean
+      - **NOT SUPPORTED**
     * - ignore_exception
-        - OPTIONAL
-        - boolean
-        - print an error instead of throwing an exception in case the interface fails to run (default False). 
+      - OPTIONAL
+      - boolean
+      - print an error instead of throwing an exception in case the interface fails to run (default False). 
     * - mask
-        - OPTIONAL
-        - boolean
-        - create binary mask image (default False). Maps to command-line argument -m. 
+      - OPTIONAL
+      - boolean
+      - create binary mask image (default False). Maps to command-line argument -m. 
     * - mesh
-        - OPTIONAL
-        - boolean
-        - generate a vtk mesh brain surface (default False). Maps to command-line argument -e. 
+      - OPTIONAL
+      - boolean
+      - generate a vtk mesh brain surface (default False). Maps to command-line argument -e. 
     * - no_output
-        - OPTIONAL
-        - boolean
-        - don't generate segmented output (default False). Maps to command-line argument -n. 
+      - OPTIONAL
+      - boolean
+      - don't generate segmented output (default False). Maps to command-line argument -n. 
     * - outline
-        - OPTIONAL
-        - boolean
-        - create surface outline image (default False). Maps to command-line argument -o. 
+      - OPTIONAL
+      - boolean
+      - create surface outline image (default False). Maps to command-line argument -o. 
     * - output_type
-        - OPTIONAL
-        - string
-        - FSL output type ('NIFTI_PAIR','NIFTI_PARI_GZ','NIFTI_GZ','NIFTI') (default 'NIFTI_GZ').
+      - OPTIONAL
+      - string
+      - FSL output type ('NIFTI_PAIR','NIFTI_PARI_GZ','NIFTI_GZ','NIFTI') (default 'NIFTI_GZ').
     * - padding
-        - OPTIONAL
-        - boolean
-        - improve BET if FOV is very small in Z (default False). Maps to command line -Z. Mutually exclusive  functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
+      - OPTIONAL
+      - boolean
+      - improve BET if FOV is very small in Z (default False). Maps to command line -Z. Mutually exclusive  functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
     * - radius
-        - OPTIONAL
-        - integer
-        - Head radius. Maps to command-line argument -r %d.
+      - OPTIONAL
+      - integer
+      - Head radius. Maps to command-line argument -r %d.
     * - reduce_bias
-        - OPTIONAL
-        - boolean
-        - Bias field and neck cleanup. Maps to command-line argument -B. Mutually exclusive  functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
+      - OPTIONAL
+      - boolean
+      - Bias field and neck cleanup. Maps to command-line argument -B. Mutually exclusive  functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
     * - remove_eyes
-        - OPTIONAL
-        - boolean
-        - eye & optic nerve cleanup (can be useful in SIENA). Maps to command-line argument -S. Mutually exclusive  functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
+      - OPTIONAL
+      - boolean
+      - eye & optic nerve cleanup (can be useful in SIENA). Maps to command-line argument -S. Mutually exclusive  functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
     * - robust
-        - OPTIONAL
-        - boolean
-        - Robust brain centre estimation (iterates BET several times). Maps to command-line argument -R. Mutually exclusive: functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
+      - OPTIONAL
+      - boolean
+      - Robust brain centre estimation (iterates BET several times). Maps to command-line argument -R. Mutually exclusive: functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
     * - skull
-        - OPTIONAL
-        - boolean
-        - Creates a skull image. Maps to command-line argument -s.
+      - OPTIONAL
+      - boolean
+      - Creates a skull image. Maps to command-line argument -s.
     * - surfaces
-        - OPTIONAL
-        - boolean
-        - run bet2 and then betsurf to get additional skull and scalp surfaces (includes registrations). Maps to command-line arguments -A. Mutually_exclusive: functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
+      - OPTIONAL
+      - boolean
+      - run bet2 and then betsurf to get additional skull and scalp surfaces (includes registrations). Maps to command-line arguments -A. Mutually_exclusive: functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
     * - t2_guided
-        - OPTIONAL
-        - boolean
-        - Requires a dictionary titled T2 as described in :numref:`t2_input` as with creating surfaces, when also feeding in non-brain-extracted T2 (includes registrations). Maps to command-line arguments -A2 %s. Mutually exclusive functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
+      - OPTIONAL
+      - boolean
+      - Requires a dictionary titled T2 as described in :numref:`t2_input` as with creating surfaces, when also feeding in non-brain-extracted T2 (includes registrations). Maps to command-line arguments -A2 %s. Mutually exclusive functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
     * - terminal_output
-        - OPTIONAL
-        - string
-        - Control terminal output: **stream** - displays to terminal immediately (default), **allatonce** - waits till command is finished to display output, **file** - writes output to file, **none** - output is ignored
+      - OPTIONAL
+      - string
+      - Control terminal output: **stream** - displays to terminal immediately (default), **allatonce** - waits till command is finished to display output, **file** - writes output to file, **none** - output is ignored
     * - threshold
-        - OPTIONAL
-        - boolean
-        - apply thresholding to segmented brain image and mask. Maps to a command-line arguemtn -t
+      - OPTIONAL
+      - boolean
+      - apply thresholding to segmented brain image and mask. Maps to a command-line arguemtn -t
     * - vertical gradient
-        - OPTIONAL
-        - float
-        - Vertical gradient in fractional intensity threshold (-1, 1). Maps to a command-line argument -g %.2f
+      - OPTIONAL
+      - float
+      - Vertical gradient in fractional intensity threshold (-1, 1). Maps to a command-line argument -g %.2f
 
 
 .. _ants_bet_inputs:
@@ -139,45 +139,45 @@ BET-Specific parameters
     :header-rows: 1
 
     * - **Key Name**
-        - **Required Level**
-        - **Data Type**
-        - **Description**
+      - **Required Level**
+      - **Data Type**
+      - **Description**
     * - brain_probability_template
-        - REQUIRED
-        - string
-        - full path to an existing brain probability mask
+      - REQUIRED
+      - string
+      - full path to an existing brain probability mask
     * - brain_template
-        - REQUIRED
-        - string
-        - full path to an anatomical template
+      - REQUIRED
+      - string
+      - full path to an anatomical template
     * - args
-        - OPTIONAL
-        - string
-        - additional parameters to the command. Maps to a command-line argument as %s
+      - OPTIONAL
+      - string
+      - additional parameters to the command. Maps to a command-line argument as %s
     * - debug
-        - OPTIONAL
-        - boolean
-        - if True, runs a faster version of the script. Only for testing. Implies -u 0. Requires single thread computation for complete reproducibility. Mapts to a command-line argument -z 1
+      - OPTIONAL
+      - boolean
+      - if True, runs a faster version of the script. Only for testing. Implies -u 0. Requires single thread computation for complete reproducibility. Mapts to a command-line argument -z 1
     * - dimension
-        - OPTIONAL
-        - integer
-        - image dimension (2 or 3). Maps to command-line argument -d %d
+      - OPTIONAL
+      - integer
+      - image dimension (2 or 3). Maps to command-line argument -d %d
     * - environ
-        - OPTIONAL
-        - dictionary
-        - Environment variables
+      - OPTIONAL
+      - dictionary
+      - Environment variables
     * - extraction_registration_mask
-        - OPTIONAL
-        - string
-        - full path to a mask (in template space) used during registration for brain extraction. To limit the metric computation to a specific region. Maps to a command-line argument -f %s
+      - OPTIONAL
+      - string
+      - full path to a mask (in template space) used during registration for brain extraction. To limit the metric computation to a specific region. Maps to a command-line argument -f %s
     * - image_suffix
-        - OPTIONAL
-        - string
-        - Any of standard ITK formats, nii.gz is default. Maps to a command-line argument -s %s
+      - OPTIONAL
+      - string
+      - Any of standard ITK formats, nii.gz is default. Maps to a command-line argument -s %s
     * - keep_temporary_files
-        - OPTIONAL
-        - integer
-        - Keep brain extraction/segmentation warps, etc (default = 0). Maps to a command-line argument -k %d
+      - OPTIONAL
+      - integer
+      - Keep brain extraction/segmentation warps, etc (default = 0). Maps to a command-line argument -k %d
 
 
 Optional Parameters
@@ -192,14 +192,14 @@ Optional Parameters
     :header-rows: 1
 
     * - **Key Name**
-        - **Required Level**
-        - **Data Type**
-        - **Description**
+      - **Required Level**
+      - **Data Type**
+      - **Description**
     * - input_bids_location
-        - REQUIRED
-        - string
-        - Location of original, non-brain extracted T2 or T2 FLAIR image: 'rawdata' or 'derivatives'
+      - REQUIRED
+      - string
+      - Location of original, non-brain extracted T2 or T2 FLAIR image: 'rawdata' or 'derivatives'
     * - input_bids_parameters
-        - REQUIRED
-        - dictionary
-        - A bids filename dictionary as explained in **NEEDS REFERENCE**
+      - REQUIRED
+      - dictionary
+      - A bids filename dictionary as explained in **NEEDS REFERENCE**
