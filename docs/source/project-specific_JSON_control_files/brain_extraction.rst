@@ -1,17 +1,15 @@
 Brain Extraction (BET)
 **********************
 
-Brain extraction parameters for FSL BET or ANTs Brain Extraction can be found in “<project_identifier>_<input-datatype>_bet_input.json” (see :ref:`input_data_types` for a list of 
-available input data types). This file contains the inputs described in the nipype python extension manual for `FSL BET 
+Brain extraction parameters (:numref:`bet_json_table`) for FSL BET or ANTs Brain Extraction can be found in “<project_identifier>_<input-datatype>_bet_input.json". This file contains the inputs described in the nipype python extension manual for `FSL BET 
 <https://nipype.readthedocs.io/en/0.12.0/interfaces/generated/nipype.interfaces.fsl.preprocess.html#bet>`__ or `ANTs Brain Extraction 
-<https://nipype.readthedocs.io/en/latest/api/generated/nipype.interfaces.ants.segmentation.html#brainextraction>`__. The available parameters are provided in :numref:`bet_json_table`.
-
+<https://nipype.readthedocs.io/en/latest/api/generated/nipype.interfaces.ants.segmentation.html#brainextraction>`__. 
 
 
 
 .. _bet_json_table:
 
-    .. list-table:: Available Keys in the bet control JSON file.
+.. list-table:: Available Keys in the bet control JSON file.
     :widths: 20 20 20 40
     :header-rows: 1
 
@@ -34,7 +32,7 @@ BET-Specific parameters
 
 .. _fsl_bet_inputs:
 
-    .. list-table:: Available Keys in the bet control JSON file. Input and output files doe not need specified here.
+.. list-table:: Available Keys in the bet control JSON file. Input and output files doe not need specified here.
     :widths: 20 20 20 40
     :header-rows: 1
 
@@ -134,7 +132,7 @@ BET-Specific parameters
 
 .. _ants_bet_inputs:
 
-    .. list-table:: Available Keys in the bet control JSON file.
+.. list-table:: Available Keys in the bet control JSON file.
     :widths: 20 20 20 40
     :header-rows: 1
 
@@ -187,7 +185,7 @@ Optional Parameters
 
 .. _t2_input:
 
-    .. list-table:: T2 input dictionary keys.
+.. list-table:: T2 input dictionary keys.
     :widths: 20 20 20 40
     :header-rows: 1
 
