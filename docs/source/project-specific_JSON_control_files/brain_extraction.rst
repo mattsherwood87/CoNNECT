@@ -181,11 +181,14 @@ BET-Specific parameters
 Optional Parameters
 ===================
 
-**T2** 
+**T2/T2 FLAIR** 
 
+.. note:: 
+    T2 functionality has not been implemented or evaluated.
+    
 .. _t2_input:
 
-.. list-table:: T2 input dictionary keys.
+.. list-table:: T2/T2 FLAIR input dictionary keys.
     :widths: 30 15 15 40
     :header-rows: 1
 
@@ -201,3 +204,4 @@ Optional Parameters
       - REQUIRED
       - dictionary
       - A bids filename dictionary as explained in **NEEDS REFERENCE**
+
