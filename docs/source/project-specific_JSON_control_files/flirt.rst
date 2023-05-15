@@ -11,11 +11,11 @@ available input data types). This file contains the inputs described in the nipy
 .. _flirt_json_table:
 
 .. list-table:: Available Keys in the bet control JSON file.
-   :widths: 20 20 20 40
+   :widths: 30 15 15 40
    :header-rows: 1
 
    * - **Key Name**
-     - **Required Level**
+     - **Required?**
      - **Data Type**
      - **Description**
    * - ``__general_comment__``
@@ -34,17 +34,17 @@ FLIRT-Specific parameters
 .. _fsl_bet_inputs:
 
 .. list-table:: Available Keys in the bet control JSON file. Input and output files doe not need specified here.
-   :widths: 20 20 20 40
+   :widths: 30 15 15 40
    :header-rows: 1
 
    * - **Key Name**
-     - **Required Level**
+     - **Required?**
      - **Data Type**
      - **Description**
    * - args
      - OPTIONAL
      - string
-     - Additional parameters to the command. Maps to a command-line argument as %s
+     - Additional parameters to the command
    * - center
      - OPTIONAL
      - string
@@ -96,15 +96,15 @@ FLIRT-Specific parameters
    * - reduce_bias
      - OPTIONAL
      - boolean
-     - Bias field and neck cleanup. Maps to command-line argument -B. Mutually exclusive  functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
+     - Bias field and neck cleanup
    * - remove_eyes
      - OPTIONAL
      - boolean
-     - eye & optic nerve cleanup (can be useful in SIENA). Maps to command-line argument -S. Mutually exclusive  functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
+     - eye & optic nerve cleanup (can be useful in SIENA)
    * - robust
      - OPTIONAL
      - boolean
-     - Robust brain centre estimation (iterates BET several times). Maps to command-line argument -R. Mutually exclusive: functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
+     - Robust brain centre estimation (iterates BET several times)
    * - skull
      - OPTIONAL
      - boolean
@@ -141,11 +141,11 @@ Optional Parameters
 .. _std_reference_input:
 
 .. list-table:: T2 input dictionary keys.
-   :widths: 20 20 20 40
+   :widths: 30 15 15 40
    :header-rows: 1
 
    * - **Key Name**
-     - **Required Level**
+     - **Required?**
      - **Data Type**
      - **Description**
    * - input_bids_location

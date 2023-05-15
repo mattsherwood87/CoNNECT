@@ -10,11 +10,11 @@ Brain extraction parameters (:numref:`bet_json_table`) for FSL BET or ANTs Brain
 .. _bet_json_table:
 
 .. list-table:: Available Keys in the bet control JSON file.
-    :widths: 20 20 20 40
+    :widths: 30 15 15 40
     :header-rows: 1
 
     * - **Key Name**
-      - **Required Level**
+      - **Required?**
       - **Data Type**
       - **Description**
     * - ``__general_comment__``
@@ -33,7 +33,7 @@ BET-Specific parameters
 .. _fsl_bet_inputs:
 
 .. list-table:: Available Keys in the bet control JSON file. Input and output files doe not need specified here.
-    :widths: 20 20 20 40
+    :widths: 30 15 15 40
     :header-rows: 1
 
     * - **Key Name**
@@ -43,11 +43,11 @@ BET-Specific parameters
     * - args
       - OPTIONAL
       - string
-      - Additional parameters to the command. Maps to a command-line argument as %s
+      - Additional parameters to the command
     * - center
       - OPTIONAL
       - list
-      - 3 integer items specifying the center of gravity in voxels. Maps to command-line argument -c %s
+      - 3 integer items specifying the center of gravity in voxels
     * - environ
       - OPTIONAL
       - dictionary
@@ -55,7 +55,7 @@ BET-Specific parameters
     * - frac
       - OPTIONAL
       - float
-      - Fractional intensity threshold. Maps to command line -f %.2f
+      - Fractional intensity threshold
     * - functional
       - OPTIONAL
       - boolean
@@ -63,81 +63,81 @@ BET-Specific parameters
     * - ignore_exception
       - OPTIONAL
       - boolean
-      - print an error instead of throwing an exception in case the interface fails to run (default False). 
+      - print an error instead of throwing an exception in case the interface fails to run
     * - mask
       - OPTIONAL
       - boolean
-      - create binary mask image (default False). Maps to command-line argument -m. 
+      - create binary mask image
     * - mesh
       - OPTIONAL
       - boolean
-      - generate a vtk mesh brain surface (default False). Maps to command-line argument -e. 
+      - generate a vtk mesh brain surface
     * - no_output
       - OPTIONAL
       - boolean
-      - don't generate segmented output (default False). Maps to command-line argument -n. 
+      - don't generate segmented output
     * - outline
       - OPTIONAL
       - boolean
-      - create surface outline image (default False). Maps to command-line argument -o. 
+      - create surface outline image
     * - output_type
       - OPTIONAL
       - string
-      - FSL output type ('NIFTI_PAIR','NIFTI_PARI_GZ','NIFTI_GZ','NIFTI') (default 'NIFTI_GZ').
+      - FSL output type ('NIFTI_PAIR', 'NIFTI_PARI_GZ', 'NIFTI_GZ', 'NIFTI')
     * - padding
       - OPTIONAL
       - boolean
-      - improve BET if FOV is very small in Z (default False). Maps to command line -Z. Mutually exclusive  functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
+      - improve BET if FOV is very small in Z
     * - radius
       - OPTIONAL
       - integer
-      - Head radius. Maps to command-line argument -r %d.
+      - Head radius
     * - reduce_bias
       - OPTIONAL
       - boolean
-      - Bias field and neck cleanup. Maps to command-line argument -B. Mutually exclusive  functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
+      - Bias field and neck cleanup
     * - remove_eyes
       - OPTIONAL
       - boolean
-      - eye & optic nerve cleanup (can be useful in SIENA). Maps to command-line argument -S. Mutually exclusive  functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
+      - eye & optic nerve cleanup (can be useful in SIENA)
     * - robust
       - OPTIONAL
       - boolean
-      - Robust brain centre estimation (iterates BET several times). Maps to command-line argument -R. Mutually exclusive: functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
+      - Robust brain centre estimation (iterates BET several times)
     * - skull
       - OPTIONAL
       - boolean
-      - Creates a skull image. Maps to command-line argument -s.
+      - Creates a skull image
     * - surfaces
       - OPTIONAL
       - boolean
-      - run bet2 and then betsurf to get additional skull and scalp surfaces (includes registrations). Maps to command-line arguments -A. Mutually_exclusive: functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
+      - run bet2 and then betsurf to get additional skull and scalp surfaces (includes registrations)
     * - t2_guided
       - OPTIONAL
       - boolean
-      - Requires a dictionary titled T2 as described in :numref:`t2_input` as with creating surfaces, when also feeding in non-brain-extracted T2 (includes registrations). Maps to command-line arguments -A2 %s. Mutually exclusive functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
+      - Requires a dictionary titled T2 as described in :numref:`t2_input` as with creating surfaces, when also feeding in non-brain-extracted T2 (includes registrations)
     * - terminal_output
       - OPTIONAL
       - string
-      - Control terminal output: **stream** - displays to terminal immediately (default), **allatonce** - waits till command is finished to display output, **file** - writes output to file, **none** - output is ignored
+      - Control terminal output (stream, allatonce, file, none)
     * - threshold
       - OPTIONAL
       - boolean
-      - apply thresholding to segmented brain image and mask. Maps to a command-line arguemtn -t
+      - apply thresholding to segmented brain image and mask
     * - vertical gradient
       - OPTIONAL
       - float
-      - Vertical gradient in fractional intensity threshold (-1, 1). Maps to a command-line argument -g %.2f
+      - Vertical gradient in fractional intensity threshold (-1, 1)
 
 
 .. _ants_bet_inputs:
 
 .. list-table:: Available Keys in the bet control JSON file.
-    :widths: 20 20 20 40
+    :widths: 30 15 15 40
     :header-rows: 1
 
     * - **Key Name**
-      - **Required Level**
+      - **Required?**
       - **Data Type**
       - **Description**
     * - brain_probability_template
@@ -151,15 +151,15 @@ BET-Specific parameters
     * - args
       - OPTIONAL
       - string
-      - additional parameters to the command. Maps to a command-line argument as %s
+      - additional parameters to the command
     * - debug
       - OPTIONAL
       - boolean
-      - if True, runs a faster version of the script. Only for testing. Implies -u 0. Requires single thread computation for complete reproducibility. Mapts to a command-line argument -z 1
+      - if True, runs a faster version of the script. Only for testing. Implies -u 0
     * - dimension
       - OPTIONAL
       - integer
-      - image dimension (2 or 3). Maps to command-line argument -d %d
+      - image dimension (2 or 3)
     * - environ
       - OPTIONAL
       - dictionary
@@ -167,15 +167,15 @@ BET-Specific parameters
     * - extraction_registration_mask
       - OPTIONAL
       - string
-      - full path to a mask (in template space) used during registration for brain extraction. To limit the metric computation to a specific region. Maps to a command-line argument -f %s
+      - full path to a mask (in template space) used during registration for brain extraction
     * - image_suffix
       - OPTIONAL
       - string
-      - Any of standard ITK formats, nii.gz is default. Maps to a command-line argument -s %s
+      - Any of standard ITK formats, nii.gz is default
     * - keep_temporary_files
       - OPTIONAL
       - integer
-      - Keep brain extraction/segmentation warps, etc (default = 0). Maps to a command-line argument -k %d
+      - Keep brain extraction/segmentation warps, etc (default = 0)
 
 
 Optional Parameters
@@ -186,11 +186,11 @@ Optional Parameters
 .. _t2_input:
 
 .. list-table:: T2 input dictionary keys.
-    :widths: 20 20 20 40
+    :widths: 30 15 15 40
     :header-rows: 1
 
     * - **Key Name**
-      - **Required Level**
+      - **Required?**
       - **Data Type**
       - **Description**
     * - input_bids_location
