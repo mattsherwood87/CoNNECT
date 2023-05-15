@@ -1,5 +1,5 @@
 Brain Extraction (BET)
-**********************
+======================
 
 Brain extraction parameters (:numref:`bet_json_table`) for FSL BET or ANTs Brain Extraction can be found in “<project_identifier>_<input-datatype>_bet_input.json". This file contains the inputs described in the nipype python extension manual for `FSL BET 
 <https://nipype.readthedocs.io/en/0.12.0/interfaces/generated/nipype.interfaces.fsl.preprocess.html#bet>`__ or `ANTs Brain Extraction 
@@ -28,7 +28,7 @@ Brain extraction parameters (:numref:`bet_json_table`) for FSL BET or ANTs Brain
 
 
 BET-Specific parameters
-=======================
+-----------------------
 
 .. _fsl_bet_inputs:
 
@@ -179,13 +179,13 @@ BET-Specific parameters
 
 
 Optional Parameters
-===================
+-------------------
 
 **T2/T2 FLAIR** 
 
 .. note:: 
     T2 functionality has not been implemented or evaluated.
-    
+
 .. _t2_input:
 
 .. list-table:: T2/T2 FLAIR input dictionary keys.

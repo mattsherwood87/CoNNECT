@@ -1,7 +1,8 @@
 :topic: Custom Support Tools
 
+********************
 Custom Support Tools
-########################
+********************
 
 
 Several custom support tools have been created to aid in the batch processing. These tools support parallel processing via HTCondor and SGE implemented in the custom batch processing 

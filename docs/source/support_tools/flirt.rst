@@ -1,6 +1,6 @@
 
 flirt.py
-===============
+========
 
 
 .. py:function:: flirt.py(IN_FILE,DATA_DIR,FLIRT_PARAMS,*args,**kwargs)

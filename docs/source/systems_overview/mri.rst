@@ -1,7 +1,7 @@
 
 
 Philips 3.0T Ingenia Cx
-***********************
+=======================
 
 The CoNNECT MRI facility was created when Dr. Sherwood received funding from the Air Force Office of Scientific Research and State of Ohio
 Department of Higher Education to purchase and install a 3-Tesla (T) MRI for the enhancement of defense-related research. The MRI scanner 

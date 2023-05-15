@@ -1,10 +1,10 @@
 
 
 Open-Source Software
-********************
+====================
 
 Picture Archiving and Communication System (PACS)
-=================================================
+-------------------------------------------------
 
 `Orthanc <https://www.orthanc-server.com/>`__ is the official open-source PACS system in place at the WSU CoNNECT. Using this system, which runs on the 
 :doc:`master node of the CoNNECT NPC </cluster_computing/master.rst>`, DICOM images can be sent directly from the MRI scanner to the CoNNECT NPC centralized storage.
@@ -12,11 +12,11 @@ The PACS Grabber Service then automatically detects new dicoms arriving to the P
 directory, converts them to NIfTI files and stores them in the project/subject/session's rawdata directory according to BIDS specifications.
 
 Image Viewing and Analysis Software
-===================================
+-----------------------------------
 
 
 AFNI
-----
+^^^^
 
 AFNI is an NIH developed suite to visualize and analyze functional imaging.
 
@@ -31,7 +31,7 @@ can be used as the background image for the statistics, which can be viewed in 3
 
 
 dcm2niix
---------
+^^^^^^^^
 
 Dcm2niix is a conversion software package developed at Chris Rorden’s Neuropsychology Lab at University of South Carolina and is the distributed by NeuroImaging and Resources Collaboratory (NITRC).
 
@@ -45,7 +45,7 @@ The function dcm2niix converts raw DICOM images to NIfTI (or other) formats. The
 
 
 Freesurfer
-----------
+^^^^^^^^^^
 
 Freesurfer Freesurfer is developed by Massachusetts General Hospital/Harvard University to analyze MRI images of the brain. The current '
 version is 7.1.1; however, version 6 is installed.
@@ -55,22 +55,23 @@ in bash and c-shell terminals.
 
 common functions: 
 
-.. code-block:: shell-session
-
-    $ recon-all 
-
 Main freesurfer command to begin the cortical reconstruction process. The entire process takes 12-24hrs to complete. Preferred command 
 line arguments are provided in Table 3. 
 
 .. code-block:: shell-session
 
-    $ freeview
+    $ recon-all 
+
 
 The volume and surface viewer to assess quality of cortical reconstruction.
 
+.. code-block:: shell-session
+
+    $ freeview
+
 
 FMRIB Software Library (FSL)
-----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 FSL FMRIB Software Library (FSL) is a library of fMRI, MRI and DTI analysis tools developed by Oxford University, UK. The current installed version is 6.0.4. 
 
@@ -80,6 +81,6 @@ Common Functions i. fsl Main GUI for FSL. This GUI can be used to create individ
 
 
 LCModel
--------
+^^^^^^^
 
 .. note:: To be developed

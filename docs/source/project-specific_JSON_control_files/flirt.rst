@@ -1,5 +1,5 @@
 FMRIB's Linear Image Registration Tool (FLIRT)
-**********************
+==============================================
 
 FLIRT parameters can be found in “<project_identifier>_<input-datatype>_bet_input.json” (see :numref:`BET_input_data_types` for a list of 
 available input data types). This file contains the inputs described in the nipype python extension manual for `FSL BET 
@@ -29,7 +29,7 @@ available input data types). This file contains the inputs described in the nipy
 
 
 FLIRT-Specific parameters
-=======================
+-------------------------
 
 .. _fsl_bet_inputs:
 
@@ -134,7 +134,7 @@ FLIRT-Specific parameters
 
 
 Optional Parameters
-===================
+-------------------
 
 **standard_reference_image** 
 
