@@ -6,7 +6,6 @@ Data collected and produced for each project will follow `BIDS specifications <h
 data integrity and conformity, and to improve data consistency and data processing optimization.
 
 
-
 .. py:function:: convert_dicoms.py(source_singleDir, progress)
     
     test
@@ -18,3 +17,8 @@ data integrity and conformity, and to improve data consistency and data processi
     :raise Error: If path does not exist.
     :return: None
     :rtype: None
+
+
+.. code-block:: shell-session
+
+    $ ./convert_dicoms.py <source_singleDir> --progress
