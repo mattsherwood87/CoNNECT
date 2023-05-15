@@ -26,6 +26,13 @@ Data types are specified in :numref:`input_data_types` and available processes a
    * - T2
      - T2 or T2* image
 
+.. toctree::
+   :caption: Table of Contents
+   :titlesonly:
+
+   brain_extraction
+   flirt
+
 .. include:: brain_extraction.rst
 .. include:: flirt.rst
 
