@@ -23,6 +23,8 @@ data loss, expedited data processing and rapid project development.
 .. note::
    This manual is under active initial development.
    
+.. sidebar::
+   * :ref:`Administration <administration/index>`
 
 .. toctree::
    :caption: Table of Contents
