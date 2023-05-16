@@ -28,7 +28,6 @@ data loss, expedited data processing and rapid project development.
 
 .. toctree::
    :caption: Table of Contents
-   :hidden:
    :maxdepth: 2
 
    administration/index
