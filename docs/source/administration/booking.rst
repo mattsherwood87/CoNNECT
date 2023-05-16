@@ -54,7 +54,10 @@ Schedule Appointment
 --------------------
 
 **Step 5.** Once in the CoNNECT Bookings webpage, select the desired date and time specified by the subject. A menu will be displayed, 
-such as Figure 6. Choose the dropdown menu to specify the duration of the scan. Correct the time in Service Details if necessary. 
+such as Figure 6. Choose the dropdown menu to specify the duration of the scan. Correct the time in Service Details if necessary. Subject 
+names should follow the following structure:
+
+    <project_identifier> <subject identifier> <OPTIONAL session identifier>
 
 .. figure:: ./_images/create.booking.drop.down.PNG
    :align:  center
