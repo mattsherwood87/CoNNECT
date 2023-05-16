@@ -25,7 +25,11 @@ available input data types). This file contains the inputs described in the nipy
    * - flirt_params
      - REQUIRED
      - dictionary
-     - brain extraction parameters as described in :numref:`fsl_flirt_inputs`.
+     - FLIRT parameters as described in :numref:`fsl_flirt_inputs`
+   * - std_reference_image
+     - OPTIONAL
+     - dictionary
+     - parameters as described in :numref:`std_reference_inputs`.
 
 
 FLIRT-Specific parameters
@@ -45,18 +49,18 @@ FLIRT-Specific parameters
      - OPTIONAL
      - string
      - Additional parameters to the command
-   * - center
+   * - angle_rep
      - OPTIONAL
      - string
-     - Full path to an anatomical template
-   * - environ
-     - OPTIONAL
-     - dictionary
-     - Environment variables
-   * - frac
+     - representation of rotation angles ('quaternion' or 'euler')
+   * - apply_isoxfm
      - OPTIONAL
      - float
-     - Fractional intensity threshold.
+     - as applyxfm but forces isotropic resampling (NOT SUPPORTED)
+   * - apply_xfm
+     - OPTIONAL
+     - boolean
+     - apply transformation supplied by in_matrix_file (NOT SUPPORTED)
    * - functional
      - OPTIONAL
      - boolean
@@ -138,7 +142,7 @@ Optional Parameters
 
 **standard_reference_image** 
 
-.. _std_reference_input:
+.. _std_reference_inputs:
 
 .. list-table:: Standard reference image input dictionary keys.
    :widths: 30 15 15 40
