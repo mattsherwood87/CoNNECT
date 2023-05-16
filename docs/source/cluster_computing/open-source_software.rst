@@ -11,6 +11,43 @@ Picture Archiving and Communication System (PACS)
 The PACS Grabber Service then automatically detects new dicoms arriving to the PACS storage location, moves them to the appropriate project/subject/session's sourcedata
 directory, converts them to NIfTI files and stores them in the project/subject/session's rawdata directory according to BIDS specifications.
 
+.. uml::
+    @startuml
+    title Activity diagram\n
+
+
+
+    start
+
+
+
+    if (Receive Order) then (accepted)
+    :Fill Order;
+    :Order Accepted;
+
+
+    fork
+    :Ship Order;
+
+    fork again
+    :Send Invoice;
+
+    :Receive Payment;
+
+    end fork
+
+    else (Order Rejected)
+    :Send Order Declined Notice;
+
+    endif
+
+
+    :Close Order;
+
+    end
+
+    @enduml
+
 
 Image Viewing and Analysis Software
 -----------------------------------
