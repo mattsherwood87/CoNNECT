@@ -1,0 +1,31 @@
+
+@startuml
+top to bottom direction
+
+actor operator
+
+frame modality {
+node mri as "Philips MRI" #DCD59A;line:046A38;line.bold;text:046A38 
+}
+
+together {
+    cloud npc as "\lWSU NPC" {
+        node master {
+            package package {
+            component Orthanc #DCD59A;line:046A38;line.bold;text:046A38
+        }
+    }
+    storage share #DCD59A;line:046A38;line.bold;text:046A38 [
+        resshare
+        WSU centralized storage
+        ]
+    }   
+Orthanc <-l-> share
+}
+
+operator ...r...> mri
+mri --> Orthanc  : DICOM
+mri -[hidden]up- Orthanc
+
+
+@enduml
