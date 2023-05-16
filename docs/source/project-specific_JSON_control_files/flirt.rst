@@ -274,11 +274,16 @@ Optional Parameters
      - **Required?**
      - **Data Type**
      - **Description**
-   * - input_bids_location
+   * - in_file
      - REQUIRED
-     - string
-     - Location of original, non-brain extracted T2 or T2 FLAIR image: 'rawdata' or 'derivatives'
-   * - input_bids_parameters
+     - exisitng file name
+     - name of input image
+   * - ref_file
      - REQUIRED
-     - dictionary
-     - A bids filename dictionary as explained in **NEEDS REFERENCE**
+     - existing file name
+     - name of reference image
+   * - affine_file
+     - OPTIONAL
+     - exisitng file name
+     - name of file containing affine transform 
+   * - 
