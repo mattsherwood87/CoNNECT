@@ -37,7 +37,7 @@ FLIRT-Specific parameters
 
 .. _fsl_flirt_inputs:
 
-.. list-table:: Available Keys in the bet control JSON file. Input and output files doe not need specified here.
+.. list-table:: Available Keys in the flirt control JSON file. Input and output files doe not need specified here.
    :widths: 30 15 15 40
    :header-rows: 1
 
@@ -52,7 +52,7 @@ FLIRT-Specific parameters
    * - angle_rep
      - OPTIONAL
      - string
-     - representation of rotation angles ('quaternion' or 'euler')
+     - representation of rotation angles: quaternion, euler
    * - apply_isoxfm
      - OPTIONAL
      - float
@@ -61,80 +61,202 @@ FLIRT-Specific parameters
      - OPTIONAL
      - boolean
      - apply transformation supplied by in_matrix_file (NOT SUPPORTED)
-   * - functional
+   * - bbrslope
+     - OPTIONAL
+     - float
+     - value of bbrslope
+   * - bbrtype
+     - OPTIONAL
+     - string
+     - type of bbr cost function: signed [default], global_abs, local_abs
+   * - bgvalue
+     - OPTIONAL
+     - float
+     - use specified background value for points outside FOV
+   * - bins
+     - OPTIONAL
+     - integer
+     - number of histogram bins
+   * - coarse_search
+     - OPTIONAL
+     - integer
+     - coarse search delta angle
+   * - cost
+     - OPTIONAL
+     - string
+     - cost function: mutualinfo, corratio, normcorr, normmi, leastsq, labeldiff, bbr
+   * - cost_func
+     - OPTIONAL
+     - string
+     - cost function: mutualinfo, corratio, normcorr, normmi, leastsq, labeldiff, bbr
+   * - datatype
+     - OPTIONAL
+     - string
+     - force output data type: char, short, int, float, double
+   * - display_init
      - OPTIONAL
      - boolean
-     - **NOT SUPPORTED**
+     - display initial matrix
+   * - dof
+     - OPTIONAL
+     - integer
+     - number of transform degrees of freedom
+   * - echospacing
+     - OPTIONAL
+     - float
+     - value of EPI echo spacing - units of seconds
+   * - environ
+     - OPTIONAL
+     - dictionary
+     - environment variables
+   * - fieldmap
+     - OPTIONAL
+     - file name 
+     - reference image
+   * - fieldmapmask
+     - OPTIONAL
+     - file name
+     - mask for fieldmap image
+   * - fine_search
+     - OPTIONAL
+     - integer
+     - fine search delta angle
+   * - force_scaling
+     - OPTIONAL
+     - boolean
+     - force rescaling even for low-res images
    * - ignore_exception
      - OPTIONAL
      - boolean
-     - **UPDATE**
-   * - mask
+     - print an error message instead of throwing an exception in case that interface fails to run
+   * - in_matrix_file
+     - OPTIONAL
+     - file name
+     - input 4x4 affine matrix
+   * - in_weight  
+     - OPTIONAL
+     - existing file name
+     - file for input weighting volume
+   * - interp
+     - OPTIONAL
+     - string
+     - final interpolation method used in reslicing: trilinear, nearestneighbor, sinc, spline
+   * - min_sampling
+     - OPTIONAL
+     - float
+     - set minimum voxel dimension for sampling
+   * - no_clamp
+     - OPTIONAL
+     - boolean 
+     - do not use intensity clamping
+   * - no_resample
      - OPTIONAL
      - boolean
-     - **UPDATE**
-   * - mesh
+     - do not change input sampling
+   * - no_resample_blur
      - OPTIONAL
      - boolean
-     - **UPDATE**
-   * - no_output
+     - do not use blurring on downsampling
+   * - no_search
      - OPTIONAL
      - boolean
-     - **UPDATE**
-   * - outline
+     - set all angular searches to ranges 0 to 0
+   * - out_file
      - OPTIONAL
-     - boolean
-     - **UPDATE**
+     - file name
+     - registered output file
+   * - out_log
+     - OPTIONAL
+     - file name
+     - output log
+   * -out_matrix_file
+     - OPTIONAL
+     - file name
+     - output affine matrix in 4x4 asciii format
    * - output_type
      - OPTIONAL
      - string
-     - **UPDATE**
-   * - padding
-     - OPTIONAL
-     - boolean
-     - **UPDATE**
-   * - radius
+     - FSL output type: NIFTI_PAIR, NIFTI_PAIR_GZ, NIFTI_GZ, NIFTI
+   * - padding_size
      - OPTIONAL
      - integer
-     - Head radius. Maps to command-line argument -r %d.
-   * - reduce_bias
+     - for applyxfm: interpolates outside image by size
+   * - pedir  
+     - OPTIONAL
+     - integer
+     - phase encode direction of EPI - 1/2/3=x/y/z & -1/-2/-3=x/-y/-z
+   * - ref_weight
+     - OPTIONAL
+     - existing file name
+     - file for reference weighting volume
+   * - rigid2D
      - OPTIONAL
      - boolean
-     - Bias field and neck cleanup
-   * - remove_eyes
+     - use 2D rigid body mode - ignores dof
+   * - save_log
      - OPTIONAL
-     - boolean
-     - eye & optic nerve cleanup (can be useful in SIENA)
-   * - robust
+     - boolean 
+     - save to log file
+   * - Schedule
      - OPTIONAL
-     - boolean
-     - Robust brain centre estimation (iterates BET several times)
-   * - skull
+     - existing file name
+     - replaces default schedule
+   * - searchr_x
      - OPTIONAL
-     - boolean
-     - Creates a skull image. Maps to command-line argument -s.
-   * - surfaces
+     - integer
+     - search angles along x-axis, in degrees
+   * - searchr_y
      - OPTIONAL
-     - boolean
-     - run bet2 and then betsurf to get additional skull and scalp surfaces (includes registrations). Maps to command-line arguments -A. Mutually_exclusive: functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
-   * - t2_guided
+     - integer
+     - search angles along y-axis, in degrees
+   * - searchr_z
      - OPTIONAL
-     - boolean
-     - Requires a dictionary titled T2 as described in :numref:`t2_input` as with creating surfaces, when also feeding in non-brain-extracted T2 (includes registrations). Maps to command-line arguments -A2 %s. Mutually exclusive functional, reduce_bias, robust, padding, remove_eyes, surfaces, t2_guided
+     - integer
+     - search angles along z-axis, in degrees
+   * - sinc_width
+     - OPTIONAL
+     - integer
+     - full-width in voxels
+   * - sinc_window
+     - OPTIONAL
+     - string
+     - sinc window: rectangular, hanning, blackman
    * - terminal_output
      - OPTIONAL
      - string
-     - Control terminal output: **stream** - displays to terminal immediately (default), **allatonce** - waits till command is finished to display output, **file** - writes output to file, **none** - output is ignored
-   * - threshold
+     - control terminal output: stream, allatonce, file, none
+   * - uses_qform
      - OPTIONAL
      - boolean
-     - apply thresholding to segmented brain image and mask. Maps to a command-line arguemtn -t
-   * - vertical gradient
+     - initialize using sform or qform
+   * - verbose
      - OPTIONAL
-     - float
-     - Vertical gradient in fractional intensity threshold (-1, 1). Maps to a command-line argument -g %.2f
-
-
+     - integer
+     - verbose mode, 0 is least
+   * - wm_seg
+     - OPTIONAL
+     - file name
+     - white matter segmentation volume needed by BBR cost function
+   * - wmcoords
+     - OPTIONAL
+     - file name
+     - white matter boundary coordinates for BBR cost function
+   * - wmnorms
+     - OPTIONAL
+     - file name
+     - white matter boundary normals for BBR cost function
+   * - out_file
+     - OUTPUTS
+     - exisitng file name
+     - path/name of registered file
+   * - out_log
+     - OUTPUTS
+     - file name
+     - path/name of output log
+   * - out_matrix_file
+     - OUTPUT
+     - existing file name
+     - path/name of calculated affine transform
 
 
 Optional Parameters
