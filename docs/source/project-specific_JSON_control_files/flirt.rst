@@ -22,11 +22,23 @@ available input data types). This file contains the inputs described in the nipy
      - OPTIONAL
      - string
      - free text to provide a brief description
+   * - main_image_params
+     - OPTIONAL
+     - dictionary
+     - parameters as described in :numref:`std_reference_inputs`.
+   * - reference_image_params
+     - OPTIONAL
+     - dictionary
+     - parameters as described in :numref:`std_reference_inputs`.
    * - flirt_params
      - REQUIRED
      - dictionary
      - FLIRT parameters as described in :numref:`fsl_flirt_inputs`
-   * - std_reference_image
+   * - standard_reference_params
+     - OPTIONAL
+     - dictionary
+     - parameters as described in :numref:`std_reference_inputs`.
+   * - secondary_image_params
      - OPTIONAL
      - dictionary
      - parameters as described in :numref:`std_reference_inputs`.
@@ -37,7 +49,7 @@ FLIRT-Specific parameters
 
 .. _fsl_flirt_inputs:
 
-.. list-table:: Available Keys in the flirt control JSON file. Input and output files doe not need specified here.
+.. list-table:: Available Keys for the flirt_params in the flirt control JSON file. Input and output files do not need specified here.
    :widths: 30 15 15 40
    :header-rows: 1
 
@@ -262,9 +274,38 @@ FLIRT-Specific parameters
 Optional Parameters
 -------------------
 
-**standard_reference_image** 
+**secondary_image_params** 
 
-.. _std_reference_inputs:
+These keys should be defined if the user would like to apply the registered output to a secondary image.
+
+.. _std_ref_inputs:
+
+.. list-table:: Secondary image input dictionary keys. 
+   :widths: 30 15 15 40
+   :header-rows: 1
+
+   * - **Key Name**
+     - **Required?**
+     - **Data Type**
+     - **Description**
+   * - input_bids_labels
+     - REQUIRED
+     - dictionary
+     - A bids filename dictionary as explained in **NEEDS REFERENCE**
+   * - output_matrix_base
+     - REQUIRED
+     - string
+     - base element for the output registration matrix
+   * - output_bids_labels
+     - REQUIRED
+     - dictionary
+     - A bids filename dictionary as explained in **NEEDS REFERENCE**
+
+**standard_reference_params** 
+
+These keys should be defined if the user would like to register input to a standard reference image (either )
+
+.. _std_ref_inputs:
 
 .. list-table:: Standard reference image input dictionary keys.
    :widths: 30 15 15 40
@@ -274,11 +315,25 @@ Optional Parameters
      - **Required?**
      - **Data Type**
      - **Description**
-   * - input_bids_location
+   * - file
      - REQUIRED
      - string
-     - Location of original, non-brain extracted T2 or T2 FLAIR image: 'rawdata' or 'derivatives'
-   * - input_bids_parameters
+     - Standard reference filename located within the FSL standard data directory
+   * - type
+     - REQUIRED
+     - string
+     - type of input file: FSL
+   * - output_matrix_suffix
+     - REQUIRED
+     - string
+     - suffix for the output registration matrix
+   * - output_bids_labels
      - REQUIRED
      - dictionary
      - A bids filename dictionary as explained in **NEEDS REFERENCE**
+   * - output_json_values
+     - REQUIRED
+     - dictionary
+     - A dictionary containing keys and values to specify in the registered NIfTI output JSON sidecar
+
+     
