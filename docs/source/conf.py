@@ -33,8 +33,7 @@ extensions = [
     'sphinx.ext.autosectionlabel',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
-    'sphinx.ext.graphviz',
-    'sphinxcontrib.plantuml'
+    'sphinx.ext.graphviz'
 ]
 
 intersphinx_mapping = {
@@ -45,7 +44,6 @@ intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
 
-plantuml = 'java -jar ../utils/plantuml.jar'
 
 
 # -- Options for HTML output
