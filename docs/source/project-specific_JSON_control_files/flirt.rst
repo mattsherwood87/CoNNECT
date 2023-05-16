@@ -31,7 +31,7 @@ available input data types). This file contains the inputs described in the nipy
 FLIRT-Specific parameters
 -------------------------
 
-.. _fsl_bet_inputs:
+.. _fsl_flirt_inputs:
 
 .. list-table:: Available Keys in the bet control JSON file. Input and output files doe not need specified here.
    :widths: 30 15 15 40
@@ -140,7 +140,7 @@ Optional Parameters
 
 .. _std_reference_input:
 
-.. list-table:: T2 input dictionary keys.
+.. list-table:: Standard reference image input dictionary keys.
    :widths: 30 15 15 40
    :header-rows: 1
 

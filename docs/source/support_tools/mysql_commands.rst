@@ -7,7 +7,7 @@ data integrity and conformity, and to improve data consistency and data processi
 
 
 
-.. py:function:: mysql_commands.py(inDir, basename)
+.. py:function:: mysql_commands(inDir, basename)
     
     test
 

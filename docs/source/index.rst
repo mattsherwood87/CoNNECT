@@ -26,7 +26,7 @@ data loss, expedited data processing and rapid project development.
    * :ref:`Administration <administration/index>`
 
 .. toctree::
-   :caption: Table of Contents
+   :caption: **Table of Contents**
    :maxdepth: 2
 
    administration/index

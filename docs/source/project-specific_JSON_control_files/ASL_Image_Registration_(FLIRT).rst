@@ -1,2 +1,0 @@
-5.2.4.	ASL Image Registration (FLIRT) 
-Image registration parameters for ASL/T1 registration via FSL’s FLIRT can be defined in a file titled “<project_identifier>_flirt_input.json”. In addition to custom parameters, this file contains the inputs to FLIRT as described in the nipype python extension manual available at https://nipype.readthedocs.io/en/0.12.0/interfaces/generated/nipype.interfaces.fsl.preprocess.html#flirt. The available parameters are provided in Table 20.

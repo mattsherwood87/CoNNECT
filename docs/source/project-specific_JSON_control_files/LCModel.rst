@@ -1,2 +1,0 @@
-5.2.5.	LCModel
-LCModel is utilized for the analysis of MRS data. Batch processing can accelerate the processing process and reduce user errors. Parameters for LCModel analysis can be defined in a file titled “<project_identifier>_lcmodel_input.json”. In addition to custom parameters, this file contains the inputs to LCModel as describe within the lengthy manual available at http://s-provencher.com/pub/LCModel/manual/manual.pdf. The available parameters are provided in Table 21.

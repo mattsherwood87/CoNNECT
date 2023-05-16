@@ -36,12 +36,11 @@ the right, highlighted in :numref:`booking step2`.
 
 .. figure:: ./_images/mri.calender.month.png
     :align:  center
-    :width:  100%
+    :width:  40%
 
     Dropdown menu to access week view.
 
-**Step 4.** The MRI Calender will show available times for specific days.  If a specific time is available, and with the proper 
-credentials awarded from WSU, continue to www.outlook.office.com/bookings/calender. If you are not affiliated with WSU, 
+**Step 4.** The MRI Calender will show available times for specific days.  If a specific time is available, continue to the CoNNECT Bookings webpage to finalize booking. If you are not affiliated with WSU, 
 please reach out to the CoNNECT Staff and a Booking will be made on your behalf.
 
 .. figure:: ./_images/mri.calender.week.view.PNG
@@ -54,7 +53,7 @@ please reach out to the CoNNECT Staff and a Booking will be made on your behalf.
 Schedule Appointment
 --------------------
 
-**Step 5.** Once into bookings, select the desired date and time specified by the subject. A menu will be displayed, 
+**Step 5.** Once in the CoNNECT Bookings webpage, select the desired date and time specified by the subject. A menu will be displayed, 
 such as Figure 6. Choose the dropdown menu to specify the duration of the scan. Correct the time in Service Details if necessary. 
 
 .. figure:: ./_images/create.booking.drop.down.PNG

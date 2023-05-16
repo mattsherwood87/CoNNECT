@@ -1,6 +1,0 @@
-5.2.	Project-Specific Batch Control JSON Parameter Files
-The JSON files here should be placed in the “processing_scripts” folder within the project’s scratch directory. Each file contains a parameter titled ‘__general_comment__’ to allow for a short description to be included in the file.
-5.2.1.	Group Identifiers
-The group identifiers JSON file is a simple method to associate subject datasets to a single group. In this file, “<project_identifier>_group_ids.json”, there is a parameter titled ‘__general_comment__’ as well as parameters for each subject with a string identifying the associated group.
-5.2.2.	File Identifiers
-The file identifiers JSON file is a simple tool that can be used to automate the assessment of existing data. In this file, “<project_identifier>_file_ids.json”, parameters are separated into categories. Each parameter contains an array of strings identifying the unique ending of the filename prior to the extension. These are described in Table 19.

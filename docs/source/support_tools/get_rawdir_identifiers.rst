@@ -7,7 +7,7 @@ data integrity and conformity, and to improve data consistency and data processi
 
 
 
-.. py:function:: get_rawdir_identifiers.py(inDir, basename)
+.. py:function:: get_rawdir_identifiers(inDir, basename)
     
     test
 

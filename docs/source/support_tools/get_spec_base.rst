@@ -7,7 +7,7 @@ data integrity and conformity, and to improve data consistency and data processi
 
 
 
-.. py:function:: get_spec_base.py(inDir, basename)
+.. py:function:: get_spec_base(inDir, basename)
     
     test
 

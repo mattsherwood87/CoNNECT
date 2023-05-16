@@ -30,6 +30,9 @@ Brain extraction parameters (:numref:`bet_json_table`) for FSL BET or ANTs Brain
 BET-Specific parameters
 -----------------------
 
+FSL BET
+^^^^^^^
+
 .. _fsl_bet_inputs:
 
 .. list-table:: Available Keys in the bet control JSON file. Input and output files doe not need specified here.
@@ -129,6 +132,9 @@ BET-Specific parameters
       - float
       - Vertical gradient in fractional intensity threshold (-1, 1)
 
+
+ANTs Brain Extraction
+^^^^^^^^^^^^^^^^^^^^^
 
 .. _ants_bet_inputs:
 
