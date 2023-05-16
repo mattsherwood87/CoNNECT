@@ -34,7 +34,7 @@ the right, highlighted in :numref:`booking step2`.
 
 **Step 3.** Once into the MRI Calender, select view by week on the drop down menu to the upper right quadrant of the calender.
 
-    .. figure:: ./_images/mri.calender.month.png
+.. figure:: ./_images/mri.calender.month.png
     :align:  center
     :width:  100%
 

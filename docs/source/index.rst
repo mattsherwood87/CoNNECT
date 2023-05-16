@@ -13,8 +13,7 @@ This documentation describes the Data Management and Analysis pipelines that hav
 data loss, expedited data processing and rapid project development.
 
 .. figure:: ./_images/WSU_3T_Ingenia_Cx.jpg
-   :height: 401
-   :width: 601
+   :width: 50%
    :align: center
 
    The Philips Ingenia Cx installed in the Neuroscience Engineering Building on Wright State's Dayton campus.
