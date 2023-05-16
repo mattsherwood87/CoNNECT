@@ -15,7 +15,7 @@ directory, converts them to NIfTI files and stores them in the project/subject/s
 
 .. figure:: ../_images/orthanc.png
    :align: center
-   :width: 50%
+   :width: 33%
       
    PACS data transfer from MRI to centralized storage via CoNNECT NPC.
 
