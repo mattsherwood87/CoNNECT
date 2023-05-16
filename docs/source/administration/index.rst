@@ -1,25 +1,19 @@
 :topic: Administration
 
+**************
 Administration
-########
+**************
 
 The WSU CoNNECT is a facility dedicated to collaborative research involving magnetic resonance imaging (MRI). The CoNNECT facility
 is managed by a Governing Board (see :numref:`org chart`), led by CoNNECT Founding Director Dr. Matthew Sherwood. 
 
-Governing Board
-***************
+.. toctree::
+   :caption: Table of Contents
+   :maxdepth: 2
 
-The Governing Board is chaired by the executive director. The Governing Board includes staff and faculty members from Wright State but 
-also external constituents from the US Air Force, US Navy and local clinical facilities. This Governing Board meets regularly to review 
-policies and procedures, and to review any safety incidents.
+   governing_board
+   booking
 
-.. _org chart:
-
-.. figure:: ./_images/connect_org_chart.png
-   :align: center
-   :width: 100%
-      
-   CoNNECT Governing Board active organization chart.
-
+.. include:: governing_board.rst
 
 .. include:: booking.rst
