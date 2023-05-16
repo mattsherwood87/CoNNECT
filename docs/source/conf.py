@@ -45,6 +45,8 @@ intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
 
+plantuml = 'java -jar ../utils/plantuml.jar'
+
 
 # -- Options for HTML output
 # html_static_path = ['_static']
