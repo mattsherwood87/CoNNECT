@@ -1,0 +1,24 @@
+@startuml
+!pragma useVerticalIf on
+
+(*) --> if "fslroi?" then
+
+partition "**Volume Extraction**" {
+--->[True] if "volume in\nmain_image_params?" then
+-left->[yes] "extract specified\nvolume via fslroi"
+-down-> "change input image\nto extract volume" as chgIn
+else
+-right->[no] "extract center\nvolume via fslroi"
+-down-> chgIn 
+}
+
+endif
+else
+-r->[False] if "fslbet?" then 
+partition "**Brain Extraction**" {
+->[True] "perform brain extraction\nvia FSL's bet"
+else
+->[False] "done"
+}
+
+@enduml

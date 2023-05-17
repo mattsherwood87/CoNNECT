@@ -1,6 +1,7 @@
 
 @startuml
 skinparam ConditionEndStyle hline
+!pragma useVerticalIf on
 start
 
 
@@ -12,31 +13,26 @@ if (fslroi?) then (yes)
             :extract center\nvolume via fslroi;
         endif
         :change input image\nto extracted volume;
-        goto fslbet
     }
 else (no)
+endif
+if (fslbet?) then (yes)
     partition "**Brain Extraction**" {
-        label fslbet
-        if (fslbet?) then (yes)
-            :perform brain extraction\nvia FSL's bet;
-            :create binary\nbrain mask;
-            :change input image\nto brain-extracted image;
-            if (secondary_image_params?) then (yes)
-                :apply brain mask\nto secondary image;
-                :change secondary image\nto brain-extracted image;
-            else (no)
-                goto flirt
-            endif
+        :perform brain extraction\nvia FSL's bet;
+        :create binary\nbrain mask;
+        :change input image\nto brain-extracted image;
+        if (secondary_image_params?) then (yes)
+            :apply brain mask\nto secondary image;
+            :change secondary image\nto brain-extracted image;
         else (no)
-            goto flirt
         endif
     }
+else (no)
 endif
 
 
 
 partition "**Registration**" {
-    label flirt
     :prepare FSL's FLIRT;
     if (reference_image_params 'type') then (std)
         :extract output bids labels\nfrom standard_reference_params;
@@ -55,8 +51,6 @@ partition "**Registration**" {
 
     if (standard_reference_params) then (yes)
         if (reference_image_params 'type') then (std)
-            'label sp_lab0
-            'goto lb0
         else
             :concatenate reference-to-standard\ntransform with input-to-reference;
             :apply transform to\ninput image;
@@ -66,22 +60,12 @@ partition "**Registration**" {
                 :apply transform\nto secondary image;
                 :create registration\noverlays;
             else (no)
-                'label sp_lab1
-                'goto lb0
             endif
-            'label sp_lab2
-            'goto lb0
         endif
-        label sp_lab3
-        goto lb0
-    else 
-        'label sp_lab4
-        'goto lb0
     endif
 }
         
 
-label lb0
 end
 
 @enduml
