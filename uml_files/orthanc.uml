@@ -23,7 +23,7 @@ together {
 Orthanc <-l-> share
 }
 
-operator ...r...> mri
+operator .right.> mri
 mri --> Orthanc  : DICOM
 mri -[hidden]up- Orthanc
 

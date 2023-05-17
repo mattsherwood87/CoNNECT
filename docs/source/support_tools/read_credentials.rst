@@ -7,7 +7,7 @@ data integrity and conformity, and to improve data consistency and data processi
 
 
 
-.. py:function:: read_credentials.py(inDir, basename)
+.. py:function:: read_credentials(inDir, basename)
     
     test
 

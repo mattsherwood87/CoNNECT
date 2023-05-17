@@ -1,0 +1,87 @@
+
+@startuml
+skinparam ConditionEndStyle hline
+start
+
+
+if (fslroi?) then (yes)
+    partition "**Volume Extraction**" {
+        if (volume in\nmain_image_params?) then (yes)
+            :extract specified\nvolume via fslroi;
+        else (no)
+            :extract center\nvolume via fslroi;
+        endif
+        :change input image\nto extracted volume;
+        goto fslbet
+    }
+else (no)
+    partition "**Brain Extraction**" {
+        label fslbet
+        if (fslbet?) then (yes)
+            :perform brain extraction\nvia FSL's bet;
+            :create binary\nbrain mask;
+            :change input image\nto brain-extracted image;
+            if (secondary_image_params?) then (yes)
+                :apply brain mask\nto secondary image;
+                :change secondary image\nto brain-extracted image;
+            else (no)
+                goto flirt
+            endif
+        else (no)
+            goto flirt
+        endif
+    }
+endif
+
+
+
+partition "**Registration**" {
+    label flirt
+    :prepare FSL's FLIRT;
+    if (reference_image_params 'type') then (std)
+        :extract output bids labels\nfrom standard_reference_params;
+    else
+        :extract output bids labels\nfrom reference_image_params;
+    endif
+    :perform FLIRT;
+    :invert output\ntransform;
+    :create registration\noverlays;
+
+    if (secondary_image_params?) then (yes)
+        :apply transform to\nsecondary image;
+        :create registration\noverlays for secondary image;
+    else (no)
+    endif
+
+    if (standard_reference_params) then (yes)
+        if (reference_image_params 'type') then (std)
+            'label sp_lab0
+            'goto lb0
+        else
+            :concatenate reference-to-standard\ntransform with input-to-reference;
+            :apply transform to\ninput image;
+            :create registration\noverlays;
+            :invert output\ntransform;
+            if (secondary_image_params?) then (yes)
+                :apply transform\nto secondary image;
+                :create registration\noverlays;
+            else (no)
+                'label sp_lab1
+                'goto lb0
+            endif
+            'label sp_lab2
+            'goto lb0
+        endif
+        label sp_lab3
+        goto lb0
+    else 
+        'label sp_lab4
+        'goto lb0
+    endif
+}
+        
+
+label lb0
+end
+
+@enduml

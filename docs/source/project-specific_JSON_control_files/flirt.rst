@@ -22,6 +22,14 @@ available input data types). This file contains the inputs described in the nipy
      - OPTIONAL
      - string
      - free text to provide a brief description
+   * - fslroi
+     - OPTIONAL
+     - boolean
+     - perform fslroi to extract a single volume from input 4D image. Extracts the center volume unless the 'volume' key of the main_image_params
+   * - ``__general_comment__``
+     - OPTIONAL
+     - string
+     - free text to provide a brief description
    * - main_image_params
      - OPTIONAL
      - dictionary
@@ -46,6 +54,37 @@ available input data types). This file contains the inputs described in the nipy
 
 FLIRT-Specific parameters
 -------------------------
+
+**main_image_params** 
+
+These keys are used to identify the main input image for registration.
+
+.. _std_ref_inputs:
+
+.. list-table:: Main image input dictionary keys. 
+   :widths: 30 15 15 40
+   :header-rows: 1
+
+   * - **Key Name**
+     - **Required?**
+     - **Data Type**
+     - **Description**
+   * - input_bids_labels
+     - REQUIRED
+     - dictionary
+     - A bids filename dictionary as explained in **NEEDS REFERENCE**
+   * - output_matrix_base
+     - REQUIRED
+     - string
+     - base element for the output registration matrix
+   * - output_bids_labels
+     - REQUIRED
+     - dictionary
+     - A bids filename dictionary as explained in **NEEDS REFERENCE**
+   * - volume
+     - OPTIONAL
+     - integer
+     - volume to extract using fslroi. Must specify 'fslroi'.
 
 .. _fsl_flirt_inputs:
 
