@@ -1,0 +1,65 @@
+{
+	"__general_comment__": "This file contains the input for FLIRT. ",
+
+    "input_regexstr": "acq-axial_T1w.nii.gz",
+    "fslroi": false,
+    "bet": true,
+
+
+    "inclusion_list": ["nii.gz"],
+
+    "flirt_params": {
+        "interp": "trilinear",
+        "dof": 12,
+        "searchr_x": [-20, 20],
+        "searchr_y": [-20, 20],
+        "searchr_z": [-20, 20],
+        "bins": 640,
+        "cost": "corratio",
+        "cost_func": "mutualinfo"
+    },
+
+    "main_image_params": {
+        "output_bids_location": "anat",
+        "input_bids_labels": {
+            "acquisition": "axial",
+            "suffix": "T1w",
+            "extension": "nii.gz"
+        },
+        "output_bids_labels": {
+            "resolution": "hi",
+            "suffix": "T1w"
+        },
+        "output_json_values": {
+            "Resolution": {
+                "hi": "matched to original high-resolution T1w"
+            },
+            "SpatialReference": "orig"
+        },
+        "out_matrix_base": "highres"
+    },
+
+    "standard_reference_params": {
+        "file":"MNI152_T1_2mm_brain.nii.gz",
+        "type": "FSL",
+        "out_matrix_suffix": "standard",
+        "output_bids_labels": {
+            "process": "flirt",
+            "resolution": "2mm",
+            "space": "MNI152NLin6ASym",
+            "description": "brain",
+            "suffix": "T1w",
+            "extension": "nii.gz"
+        },
+        "output_json_values": {
+            "Resolution": {
+                "1mm": "FSL MNI152T1_1mm_brain.nii.gz",
+                "2mm": "FSL MNI152T1_2mm_brain.nii.gz"
+            }
+        }
+    },
+
+    "reference_image_params": {
+        "type": "std"
+    }
+}

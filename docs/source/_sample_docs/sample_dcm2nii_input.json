@@ -1,0 +1,5 @@
+{
+    "__general_comment__": "This file contains the input for dcm2niix conversion.",
+    "dicom_id": "IM_",
+    "exclusion_list": ["none"]
+}

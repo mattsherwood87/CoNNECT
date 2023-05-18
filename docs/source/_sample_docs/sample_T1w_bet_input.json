@@ -1,0 +1,10 @@
+{
+	"__general_comment__": "This file contains the input for FSL BET extraction. ",
+    "type": "FSL",
+    "bet_params": {
+        "frac": 0.3,
+        "vertical_gradient": 0.05,
+        "outline": true,
+        "reduce_bias": true
+    }
+}

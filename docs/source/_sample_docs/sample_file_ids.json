@@ -1,0 +1,11 @@
+{
+	"__general_comment__": "This file contains the header for data checking",
+    "session_numbers":["ses-1","ses-2","ses3"],
+	"header_intro":["subject_id","group","session"],
+	"raw_nifti":["acq-source","asl-resting-moco_m0scan","asl-resting_asl","asl-resting-moco_asl","dwi-55-dir_dwi","dwi-55-dir_dwi_FA","axial-highres_T1w","T2-sag_FLAIR"],
+	"raw_bval":["dwi-55-dir_dwi.bval","dwi-55-dir_dwi.bvec"],
+    "raw_svs":["SPECTRA-AC30_svs","WATER-AC30_svs","SPECTRA-L135_svs","WATER-L135_svs","SPECTRA-L30_svs","WATER-L30_svs","SPECTRA-R135_svs","WATER-R135_svs","SPECTRA-R30_svs","WATER-R30_svs"],
+	"processed_T1_files":["axial-highres_T1w_brain","axial-highres_T1w_space-MNI152NLin6Sym","highres2standard","T1_first_all_fast_firstseg"],
+	"processed_asl_files":["example_asl2highres","example_asl2standard","example_asl_space-T1w","example_asl_space-MNI152NLin6Sym","perfusion_calib"],
+	"processed_mrs_files":["SPECTRA-AC30_svs","SPECTRA-L135_svs","SPECTRA-L30_svs","SPECTRA-R135_svs","SPECTRA-R30_svs"]
+}

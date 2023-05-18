@@ -1,0 +1,99 @@
+{
+	"__general_comment__": "This file contains the input for FLIRT extraction. ",
+
+    "asl_regexstr": "acq-control",
+    "fslroi": false,
+    "bet": true,
+
+    "inclusion_list": ["apt","nii.gz"],
+
+    "flirt_params": {
+        "interp": "spline",
+        "dof": 9,
+        "searchr_x": [-20, 20],
+        "searchr_y": [-20, 20],
+        "searchr_z": [-20, 20],
+        "bins": 640,
+        "cost": "corratio",
+        "cost_func": "mutualinfo"
+    },
+
+    "main_image_params": {
+        "type": "apt",
+        "output_bids_location": "apt",
+        "input_bids_labels": {
+            "acquisition": "control"
+        },
+        "output_bids_labels": {
+            "resolution": "lo",
+            "suffix": "apt"
+        },
+        "output_json_values": {
+            "Resolution": {
+                "lo": "matched to original APT resolution"
+            },
+            "SpatialReference": "orig"
+        },
+        "out_matrix_base": "apt",
+        "volume": 1
+    },
+
+    "secondary_image_params":{
+        "input_bids_labels": {
+            "acquisition": "mtrasym",
+            "suffix": "apt"
+        },
+        "out_matrix_base": "mtrasym",
+        "output_bids_labels": {
+            "acquisition": "mtrasym",
+            "suffix": "apt"
+        }
+    },
+
+    "standard_reference_params": {
+        "file":"MNI152_T1_2mm_brain.nii.gz",
+        "type": "FSL",
+        "out_matrix_suffix": "standard",
+        "output_bids_labels": {
+            "process": "flirt",
+            "resolution": "2mm",
+            "space": "MNI152NLin6ASym",
+            "description": "brain",
+            "suffix": "apt",
+            "extension": "nii.gz"
+        },
+        "output_json_values": {
+            "Resolution": {
+                "1mm": "FSL MNI152T1_1mm_brain.nii.gz",
+                "2mm": "FSL MNI152T1_2mm_brain.nii.gz"
+            }
+        }
+    },
+
+    "reference_image_params": {
+        "type": "bids",
+        "input_bids_location": "derivatives",
+        "input_bids_labels": {
+            "acquisition": "axial",
+            "process": "fslbet",
+            "description": "brain",
+            "resolution": "hi",
+            "suffix": "T1w",
+            "extension": "nii.gz"
+        },
+        "output_bids_labels": {
+            "process": "flirt",
+            "resolution": "hi",
+            "space": "individual",
+            "description": "brain",
+            "suffix": "apt",
+            "extension": "nii.gz"
+        },
+        "output_json_values": {
+            "Resolution": {
+                "hi": "matched to original high-resolution T1w"
+            }
+        },
+        "out_matrix_base": "highres"
+    }
+}

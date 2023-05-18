@@ -1,0 +1,252 @@
+{
+	"asl-base": {
+        "json_header": {
+            "ProtocolName": ["ASL","base"],
+            "NotProtocolName": ["SOURCE"]
+        },
+        "ScanName": "acq-cbf_task-rest_run-01_asl",
+        "BidsDir": "perf"
+    },
+	"asl-base-source": {
+        "json_header": {
+            "ProtocolName": ["ASL","base","SOURCE"]
+        },
+        "ScanName": "acq-source_task-rest_run-01_asl",
+        "BidsDir": "perf"
+    },
+	"asl-during1": {
+        "json_header": {
+            "ProtocolName": ["ASL","during1"],
+            "NotProtocolName": ["SOURCE"]
+        },
+        "ScanName": "acq-cbf_task-rest_run-02_asl",
+        "BidsDir": "perf"
+    },
+	"asl-during1-source": {
+        "json_header": {
+            "ProtocolName": ["ASL","during1","SOURCE"]
+        },
+        "ScanName": "acq-source_task-rest_run-02_asl",
+        "BidsDir": "perf"
+    },
+	"asl-during2": {
+        "json_header": {
+            "ProtocolName": ["ASL","during2"],
+            "NotProtocolName": ["SOURCE"]
+        },
+        "ScanName": "acq-cbf_task-rest_run-03_asl",
+        "BidsDir": "perf"
+    },
+	"asl-during2-source": {
+        "json_header": {
+            "ProtocolName": ["ASL","during2","SOURCE"]
+        },
+        "ScanName": "acq-source_task-rest_run-03_asl",
+        "BidsDir": "perf"
+    },
+	"asl-during3": {
+        "json_header": {
+            "ProtocolName": ["ASL","during3"],
+            "NotProtocolName": ["SOURCE"]
+        },
+        "ScanName": "acq-cbf_task-rest_run-04_asl",
+        "BidsDir": "perf"
+    },
+	"asl-during3-source": {
+        "json_header": {
+            "ProtocolName": ["ASL","during3","SOURCE"]
+        },
+        "ScanName": "acq-source_task-rest_run-04_asl",
+        "BidsDir": "perf"
+    },
+	"asl-during4": {
+        "json_header": {
+            "ProtocolName": ["ASL","during4"],
+            "NotProtocolName": ["SOURCE"]
+        },
+        "ScanName": "acq-cbf_task-rest_run-05_asl",
+        "BidsDir": "perf"
+    },
+	"asl-during4-source": {
+        "json_header": {
+            "ProtocolName": ["ASL","during4","SOURCE"]
+        },
+        "ScanName": "acq-source_task-rest_run-05_asl",
+        "BidsDir": "perf"
+    },
+	"asl-during5": {
+        "json_header": {
+            "ProtocolName": ["ASL","during5"],
+            "NotProtocolName": ["SOURCE"]
+        },
+        "ScanName": "acq-cbf_task-rest_run-06_asl",
+        "BidsDir": "perf"
+    },
+	"asl-during5-source": {
+        "json_header": {
+            "ProtocolName": ["ASL","during5","SOURCE"]
+        },
+        "ScanName": "acq-source_task-rest_run-06_asl",
+        "BidsDir": "perf"
+    },
+	"asl-during6": {
+        "json_header": {
+            "ProtocolName": ["ASL","during6"],
+            "NotProtocolName": ["SOURCE"]
+        },
+        "ScanName": "acq-cbf_task-rest_run-07_asl",
+        "BidsDir": "perf"
+    },
+	"asl-during6-source": {
+        "json_header": {
+            "ProtocolName": ["ASL","during6","SOURCE"]
+        },
+        "ScanName": "acq-source_task-rest_run-07_asl",
+        "BidsDir": "perf"
+    },
+	"asl-post1": {
+        "json_header": {
+            "ProtocolName": ["ASL","post1"],
+            "NotProtocolName": ["SOURCE"]
+        },
+        "ScanName": "acq-cbf_task-rest_run-08_asl",
+        "BidsDir": "perf"
+    },
+	"asl-post1-source": {
+        "json_header": {
+            "ProtocolName": ["ASL","post1","SOURCE"]
+        },
+        "ScanName": "acq-source_task-rest_run-08_asl",
+        "BidsDir": "perf"
+    },
+	"asl-post2": {
+        "json_header": {
+            "ProtocolName": ["ASL","post2"],
+            "NotProtocolName": ["SOURCE"]
+        },
+        "ScanName": "acq-cbf_task-rest_run-09_asl",
+        "BidsDir": "perf"
+    },
+	"asl-post2-source": {
+        "json_header": {
+            "ProtocolName": ["ASL","post2","SOURCE"]
+        },
+        "ScanName": "acq-source_task-rest_run-09_asl",
+        "BidsDir": "perf"
+    },
+	"asl-post3": {
+        "json_header": {
+            "ProtocolName": ["ASL","post3"],
+            "NotProtocolName": ["SOURCE"]
+        },
+        "ScanName": "acq-cbf_task-rest_run-10_asl",
+        "BidsDir": "perf"
+    },
+	"asl-post3-source": {
+        "json_header": {
+            "ProtocolName": ["ASL","post3","SOURCE"]
+        },
+        "ScanName": "acq-source_task-rest_run-10_asl",
+        "BidsDir": "perf"
+    },
+
+
+	"fMRI-pre": {
+        "json_header": {
+            "ProtocolName": ["fMRI","base"]
+        },
+        "ScanName": "task-auditorystroop_run-01_bold",
+        "BidsDir": "func"
+    },
+    "fMRI-during1": {
+        "json_header": {
+            "ProtocolName": ["fMRI","during1"]
+        },
+        "ScanName": "task-auditorystroop_run-02_bold",
+        "BidsDir": "func"
+    },
+    "fMRI-during2": {
+        "json_header": {
+            "ProtocolName": ["fMRI","during2"]
+        },
+        "ScanName": "task-auditorystroop_run-03_bold",
+        "BidsDir": "func"
+    },
+    "fMRI-post": {
+        "json_header": {
+            "ProtocolName": ["fMRI","post"]
+        },
+        "ScanName": "task-auditorystroop_run-04_bold",
+        "BidsDir": "func"
+    },
+
+
+	"T1w-sag": {
+        "json_header": {
+            "ProtocolName": ["MPRAGE","SAG"]
+        },
+        "ScanName": "acq-sagittal_T1w",
+        "BidsDir": "anat"
+    },
+    "T1w-cor": {
+        "json_header": {
+            "ProtocolName": ["MPRAGE","COR","iso"],
+            "NotProtocolName": ["3Dnonselect"]
+        },
+        "ScanName": "acq-coronal_T1w",
+        "BidsDir": "anat"
+    },
+    "T1w-ax": {
+        "json_header": {
+            "ProtocolName": ["MPRAGE","AX","iso"],
+            "NotProtocolName": ["3Dnonselect"]
+        },
+        "ScanName": "acq-axial_T1w",
+        "BidsDir": "anat"
+    },
+
+
+	"T2-flair": {
+        "json_header": {
+            "ProtocolName": ["FLAIR"]
+        },
+        "ScanName": "FLAIR",
+        "BidsDir": "anat"
+    },
+
+
+	"APTw-base-real": {
+        "json_header": {
+            "ProtocolName": ["APT","base"],
+            "PhilipsRescaleIntercept": -10
+        },
+        "ScanName": "acq-mtrasym_run-01_apt",
+        "BidsDir": "apt"
+    },
+	"APTw-base": {
+        "json_header": {
+            "ProtocolName": ["APT","base"],
+            "PhilipsRescaleIntercept": 0
+        },
+        "ScanName": "acq-control_run-01_apt",
+        "BidsDir": "apt"
+    },
+
+
+	"APTw-post": {
+        "json_header": {
+            "ProtocolName": ["APT","post"],
+            "PhilipsRescaleIntercept": 0
+        },
+        "ScanName": "acq-control_run-02_apt",
+        "BidsDir": "apt"
+    },
+	"APTw-post-real": {
+        "json_header": {
+            "ProtocolName": ["APT","post"],
+            "PhilipsRescaleIntercept": -10
+        },
+        "ScanName": "acq-mtrasym_run-02_apt",
+        "BidsDir": "apt"
+    }
+}

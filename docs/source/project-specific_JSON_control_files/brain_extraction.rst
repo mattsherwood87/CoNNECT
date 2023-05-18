@@ -5,6 +5,11 @@ Brain extraction parameters (:numref:`bet_json_table`) for FSL BET or ANTs Brain
 <https://nipype.readthedocs.io/en/0.12.0/interfaces/generated/nipype.interfaces.fsl.preprocess.html#bet>`__ or `ANTs Brain Extraction 
 <https://nipype.readthedocs.io/en/latest/api/generated/nipype.interfaces.ants.segmentation.html#brainextraction>`__. 
 
+**Sample Brain Extraction JSON control files**
+
+* :doc:`T1w <../_sample_docs/sample_T1w_bet_input.json>`
+* :doc:`ASL <../_sample_docs/sample_asl_bet_input.json>`
+* :doc:`3D APTw <../_sample_docs/sample_apt_bet_input.json>`
 
 
 .. _bet_json_table:
@@ -35,7 +40,7 @@ FSL BET
 
 .. _fsl_bet_inputs:
 
-.. list-table:: Available Keys in the bet control JSON file. Input and output files doe not need specified here.
+.. list-table:: Available Keys in the bet control JSON file. Input and output files do not need specified here.
     :widths: 30 15 15 40
     :header-rows: 1
 

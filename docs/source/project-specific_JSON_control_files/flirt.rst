@@ -7,6 +7,12 @@ available input data types). This file contains the inputs described in the nipy
 provided in :numref:`flirt_json_table`.
 
 
+**Sample FLIRT JSON control files**
+
+* :doc:`T1w <../_sample_docs/sample_T1w_flirt_input.json>`
+* :doc:`ASL <../_sample_docs/sample_asl_flirt_input.json>`
+* :doc:`3D APTw <../_sample_docs/sample_apt_flirt_input.json>`
+
 .. _flirt_json_table:
 
 .. list-table:: Available Keys in the FLIRT JSON control file.
@@ -29,27 +35,34 @@ provided in :numref:`flirt_json_table`.
      - OPTIONAL
      - string
      - filename for :doc:`BET JSON control file <brain_extraction>`
+   * - inclusion_list
+     - OPTIONAL
+     - list[string]
+     - list of strings for option search inclusion criteria
+   * - exclusion_list
+     - OPTIONAL
+     - list[string]
+     - list of strings for option search exclusion criteria
    * - main_image_params
      - OPTIONAL
      - dictionary
-     - parameters as described in :numref:`std_reference_inputs`.
+     - parameters as described in :numref:`main_image_inputs`
    * - reference_image_params
      - OPTIONAL
      - dictionary
-     - parameters as described in :numref:`std_reference_inputs`.
+     - parameters as described in :numref:`ref_image_inputs`
    * - flirt_params
      - REQUIRED
      - dictionary
      - FLIRT parameters as described in :numref:`fsl_flirt_inputs`
-   * - standard_reference_params
-     - OPTIONAL
-     - dictionary
-     - parameters as described in :numref:`std_reference_inputs`.
    * - secondary_image_params
      - OPTIONAL
      - dictionary
-     - parameters as described in :numref:`std_reference_inputs`.
-
+     - parameters as described in :numref:`sec_image_inputs`
+   * - standard_reference_params
+     - OPTIONAL
+     - dictionary
+     - parameters as described in :numref:`std_ref_inputs`
 
 FLIRT-Specific parameters
 -------------------------
@@ -58,7 +71,7 @@ FLIRT-Specific parameters
 
 These keys are used to identify the main input image for registration.
 
-.. _std_ref_inputs:
+.. _main_image_inputs:
 
 .. list-table:: Main image input dictionary keys. 
    :widths: 30 15 15 40
@@ -72,18 +85,70 @@ These keys are used to identify the main input image for registration.
      - REQUIRED
      - dictionary
      - A bids filename dictionary as explained in **NEEDS REFERENCE**
+   * - output_bids_location
+     - REQUIRED
+     - string
+     - bids derivatives sub-folder (derivatives -> sub-XXX -> ses-YYY - > output_bids_location)
    * - output_matrix_base
      - REQUIRED
      - string
-     - base element for the output registration matrix
+     - base element for the output registration matrix (highres in highres2standard.mat)
    * - output_bids_labels
      - REQUIRED
      - dictionary
      - A bids filename dictionary as explained in **NEEDS REFERENCE**
+   * - output_json_values
+     - REQUIRED
+     - dictionary
+     - Key-value pairs to additionally insert into the JSON sidecar accompanying input-to-reference transformed image
    * - volume
      - OPTIONAL
      - integer
-     - volume to extract using fslroi. Must specify 'fslroi'.
+     - volume to extract using fslroi. Must specify 'fslroi' as true.
+     
+     
+\n
+**reference_image_params** 
+
+These keys must be defined.
+
+.. _ref_image_inputs:
+
+.. list-table:: Standard reference image input dictionary keys.
+   :widths: 30 15 15 40
+   :header-rows: 1
+
+   * - **Key Name**
+     - **Required?**
+     - **Data Type**
+     - **Description**
+   * - type
+     - REQUIRED
+     - string
+     - Type of reference: std or bids
+   * - input_bids_location
+     - OPTIONAL
+     - string
+     - Input bids location: rawdata or derivatives (required if type bids)
+   * - input_bids_labels
+     - OPTIONAL
+     - dictionary
+     - A bids filename dictionary as explained in **NEEDS REFERENCE** (required if type bids)
+   * - output_bids_labels
+     - OPTIONAL
+     - dictionary
+     - Supplemental bids filename dictionary as explained in **NEEDS REFERENCE** (required if type bids)
+   * - output_matrix_base
+     - OPTIONAL
+     - string
+     - base element for the output registration matrix (highres in highres2standard.mat) (required if type bids)
+   * - output_json_values
+     - OPTIONAL
+     - dictionary
+     - Supplemental key-value pairs to additionally insert into the JSON sidecar accompanying input-to-reference transformed image (required if type bids)
+   
+
+     
 
 .. _fsl_flirt_inputs:
 
@@ -316,7 +381,7 @@ Optional Parameters
 
 These keys should be defined if the user would like to apply the registered output to a secondary image.
 
-.. _std_ref_inputs:
+.. _sec_image_inputs:
 
 .. list-table:: Secondary image input dictionary keys. 
    :widths: 30 15 15 40
@@ -337,7 +402,7 @@ These keys should be defined if the user would like to apply the registered outp
    * - output_bids_labels
      - REQUIRED
      - dictionary
-     - A bids filename dictionary as explained in **NEEDS REFERENCE**
+     - Supplemental bids filename dictionary as explained in **NEEDS REFERENCE**
 
 \n
 **standard_reference_params** 
@@ -361,18 +426,18 @@ These keys should be defined if the user would like to register input to a stand
    * - type
      - REQUIRED
      - string
-     - type of input file: FSL
+     - type of input file: FSL **CURRENTLY UNUSED**
    * - output_matrix_suffix
      - REQUIRED
      - string
-     - suffix for the output registration matrix
+     - suffix for the output registration matrix (standard in highres2standard.mat)
    * - output_bids_labels
      - REQUIRED
      - dictionary
-     - A bids filename dictionary as explained in **NEEDS REFERENCE**
+     - Supplemental bids filename dictionary as explained in **NEEDS REFERENCE**
    * - output_json_values
      - REQUIRED
      - dictionary
-     - A dictionary containing keys and values to specify in the registered NIfTI output JSON sidecar
+     - Supplemental key-value pairs to additionally insert into the JSON sidecar accompanying input-to-standard transformed image
 
      
