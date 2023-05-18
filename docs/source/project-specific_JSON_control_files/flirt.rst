@@ -2,7 +2,7 @@ FMRIB's Linear Image Registration Tool (FLIRT)
 ==============================================
 
 FLIRT parameters can be found in “<project_identifier>_<input-datatype>_bet_input.json” (see :numref:`BET_input_data_types` for a list of 
-available input data types). This file contains the inputs described in the nipype python extension manual for `FSL BET 
+available input data types). This file contains the inputs described in the nipype python extension manual for `FSL FLIRT 
 <https://nipype.readthedocs.io/en/0.12.1/interfaces/generated/nipype.interfaces.fsl.preprocess.html#flirt>`__. The available parameters are 
 provided in :numref:`flirt_json_table`.
 
@@ -46,23 +46,23 @@ provided in :numref:`flirt_json_table`.
    * - main_image_params
      - OPTIONAL
      - dictionary
-     - parameters as described in :numref:`main_image_inputs`
+     - parameters as described in :numref:`FLIRT_main_image`
    * - reference_image_params
      - OPTIONAL
      - dictionary
-     - parameters as described in :numref:`reference_image_inputs`
+     - parameters as described in :numref:`FLIRT_ref_image`
    * - flirt_params
      - REQUIRED
      - dictionary
-     - FLIRT parameters as described in :numref:`fsl_flirt_inputs`
+     - FLIRT parameters as described in :numref:`FLIRT_params`
    * - secondary_image_params
      - OPTIONAL
      - dictionary
-     - parameters as described in :numref:`sec_image_inputs`
+     - parameters as described in :numref:`FLIRT_sec_image`
    * - standard_reference_params
      - OPTIONAL
      - dictionary
-     - parameters as described in :numref:`std_ref_inputs`
+     - parameters as described in :numref:`FLIRT_std_image`
 
 Input Image Parameters
 -------------------------
@@ -71,7 +71,7 @@ Input Image Parameters
 
 These keys are used to identify the main input image for registration.
 
-.. _main_image_inputs:
+.. _FLIRT_main_image:
 
 .. list-table:: Main image input dictionary keys. 
    :widths: 30 15 15 40
@@ -107,10 +107,10 @@ These keys are used to identify the main input image for registration.
      - volume to extract using fslroi. Must specify 'fslroi' as true.
      
      
-
+|
 **reference_image_params** 
 
-.. _reference_image_inputs:
+.. _FLIRT_ref_image:
 
 .. list-table:: Standard reference image input dictionary keys.
    :widths: 30 15 15 40
@@ -149,7 +149,7 @@ These keys are used to identify the main input image for registration.
   FLIRT Parameters
   ----------------
 
-.. _fsl_flirt_inputs:
+.. _FLIRT_params:
 
 .. list-table:: Available Keys for the flirt_params in the flirt control JSON file. Input and output files do not need specified here.
    :widths: 30 15 15 40
@@ -380,7 +380,7 @@ Optional Parameters
 
 These keys should be defined if the user would like to apply the registered output to a secondary image.
 
-.. _sec_image_inputs:
+.. _FLIRT_sec_image:
 
 .. list-table:: Secondary image input dictionary keys. 
    :widths: 30 15 15 40
@@ -408,7 +408,7 @@ These keys should be defined if the user would like to apply the registered outp
 
 These keys should be defined if the user would like to register input to a standard reference image (either )
 
-.. _std_ref_inputs:
+.. _FLIRT_std_image:
 
 .. list-table:: Standard reference image input dictionary keys.
    :widths: 30 15 15 40
