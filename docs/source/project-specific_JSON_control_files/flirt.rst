@@ -110,9 +110,11 @@ These keys are used to identify the main input image for registration.
 |
 **reference_image_params** 
 
+These keys are used to identify the reference image for registration.
+
 .. _FLIRT_ref_image:
 
-.. list-table:: Standard reference image input dictionary keys.
+.. list-table:: Reference image input dictionary keys.
    :widths: 30 15 15 40
    :header-rows: 1
 
