@@ -64,7 +64,7 @@ provided in :numref:`flirt_json_table`.
      - dictionary
      - parameters as described in :numref:`std_ref_inputs`
 
-FLIRT-Specific parameters
+Input Image Parameters
 -------------------------
 
 **main_image_params** 
@@ -107,7 +107,7 @@ These keys are used to identify the main input image for registration.
      - volume to extract using fslroi. Must specify 'fslroi' as true.
      
      
-\n
+|
 **reference_image_params** 
 
 These keys must be defined.
@@ -148,7 +148,8 @@ These keys must be defined.
      - Supplemental key-value pairs to additionally insert into the JSON sidecar accompanying input-to-reference transformed image (required if type bids)
    
 
-     
+  FLIRT Parameters
+  ----------------
 
 .. _fsl_flirt_inputs:
 
@@ -404,7 +405,7 @@ These keys should be defined if the user would like to apply the registered outp
      - dictionary
      - Supplemental bids filename dictionary as explained in **NEEDS REFERENCE**
 
-\n
+|
 **standard_reference_params** 
 
 These keys should be defined if the user would like to register input to a standard reference image (either )
