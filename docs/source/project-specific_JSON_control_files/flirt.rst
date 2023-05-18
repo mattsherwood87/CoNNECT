@@ -107,7 +107,7 @@ These keys are used to identify the main input image for registration.
      - volume to extract using fslroi. Must specify 'fslroi' as true
 
 |
-**reference_image_params** 
+**reference_image_params** testing
 
 These keys are used to identify the reference image for registration.
 
@@ -146,7 +146,7 @@ These keys are used to identify the reference image for registration.
      - dictionary
      - Supplemental key-value pairs to additionally insert into the JSON sidecar accompanying input-to-reference transformed image (required if type bids)
    
-
+|
 FLIRT Parameters
 ----------------
 
