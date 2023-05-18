@@ -2,6 +2,25 @@
 flirt.py
 ========
 
+A support tool (flirt.py) was developed to support broad analyses implementing volume extraction (for 4D datasets), brain extraction, and/or
+registration via FSL's FLIRT. Specifically, this tools supports paralleled computation implemented from **connect_flirt**. A flowchart showing 
+the order of operations is depicted in :numref:`flirt_diagram`. 
+
+.. note:: 
+    NEED TO PROVIDE A REFERENCE TO CONNECT_FLIRT.py
+
+.. note:: 
+    This support tool requires JSON control files to specify input parameters for :doc:`CoNNECT NPC <../project-specific_JSON_control_files/flirt>` 
+    and accompanying processing tools such as volume extraction and brain extraction. 
+
+.. _flirt_diagram:
+
+.. figure:: ../_images/flirt.png
+   :align: center
+   :width: 10%
+      
+   Flowchart for the CoNNECT custom flirt.py batch processing support tool.
+
 
 .. py:function:: flirt.py(IN_FILE,DATA_DIR,FLIRT_PARAMS,*args,**kwargs)
     
@@ -27,7 +46,7 @@ flirt.py
     :rtype: None
 
 
-convert_dicoms.py also supports execution via command-line:
+flirt.py also supports execution via command-line:
 
 .. code-block:: shell-session
 

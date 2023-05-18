@@ -3,14 +3,13 @@ FMRIB's Linear Image Registration Tool (FLIRT)
 
 FLIRT parameters can be found in “<project_identifier>_<input-datatype>_bet_input.json” (see :numref:`BET_input_data_types` for a list of 
 available input data types). This file contains the inputs described in the nipype python extension manual for `FSL BET 
-<https://nipype.readthedocs.io/en/0.12.1/interfaces/generated/nipype.interfaces.fsl.preprocess.html#flirt>`__. The available parameters are provided in :numref:`flirt_json_table`.
-
-
+<https://nipype.readthedocs.io/en/0.12.1/interfaces/generated/nipype.interfaces.fsl.preprocess.html#flirt>`__. The available parameters are 
+provided in :numref:`flirt_json_table`.
 
 
 .. _flirt_json_table:
 
-.. list-table:: Available Keys in the bet control JSON file.
+.. list-table:: Available Keys in the FLIRT JSON control file.
    :widths: 30 15 15 40
    :header-rows: 1
 
@@ -26,10 +25,10 @@ available input data types). This file contains the inputs described in the nipy
      - OPTIONAL
      - boolean
      - perform fslroi to extract a single volume from input 4D image. Extracts the center volume unless the 'volume' key of the main_image_params
-   * - ``__general_comment__``
+   * - bet
      - OPTIONAL
      - string
-     - free text to provide a brief description
+     - filename for :doc:`BET JSON control file <brain_extraction>`
    * - main_image_params
      - OPTIONAL
      - dictionary
