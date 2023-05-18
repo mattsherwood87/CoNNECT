@@ -10,8 +10,8 @@ the order of operations is depicted in :numref:`flirt_diagram`.
     NEED TO PROVIDE A REFERENCE TO CONNECT_FLIRT.py
 
 .. note:: 
-    This support tool requires JSON control files to specify input parameters for :doc:`CoNNECT NPC <../project-specific_JSON_control_files/flirt>` 
-    and accompanying processing tools such as volume extraction and brain extraction. 
+    This support tool requires JSON control files to specify input parameters for :doc:`FLIRT <../project-specific_JSON_control_files/flirt>` 
+    and any additional processing such as volume extraction and brain extraction. 
 
 .. _flirt_diagram:
 
