@@ -339,6 +339,7 @@ These keys should be defined if the user would like to apply the registered outp
      - dictionary
      - A bids filename dictionary as explained in **NEEDS REFERENCE**
 
+\n
 **standard_reference_params** 
 
 These keys should be defined if the user would like to register input to a standard reference image (either )
