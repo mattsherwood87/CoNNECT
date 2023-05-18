@@ -2,8 +2,8 @@
 flirt.py
 ========
 
-A support tool (flirt.py) was developed to support broad analyses implementing volume extraction (for 4D datasets), brain extraction, and/or
-registration via FSL's FLIRT. Specifically, this tools supports paralleled computation implemented from **connect_flirt**. A flowchart showing 
+This support tool implements volume extraction (for 4D datasets), brain extraction, and/or registration via FSL's FLIRT. 
+Specifically, this tools supports paralleled computation implemented from **connect_flirt**. A flowchart showing 
 the order of operations is depicted in :numref:`flirt_diagram`. 
 
 .. note:: 
