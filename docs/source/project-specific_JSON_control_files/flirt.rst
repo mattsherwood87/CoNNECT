@@ -33,8 +33,8 @@ provided in :numref:`flirt_json_table`.
      - perform fslroi to extract a single volume from input 4D image. Extracts the center volume unless the 'volume' key of the main_image_params
    * - bet
      - OPTIONAL
-     - string
-     - filename for :doc:`BET JSON control file <brain_extraction>`
+     - boolean
+     - run brain extraction 
    * - inclusion_list
      - OPTIONAL
      - list[string]
@@ -50,7 +50,7 @@ provided in :numref:`flirt_json_table`.
    * - reference_image_params
      - OPTIONAL
      - dictionary
-     - parameters as described in :numref:`ref_image_inputs`
+     - parameters as described in :numref:`reference_image_inputs`
    * - flirt_params
      - REQUIRED
      - dictionary
@@ -107,12 +107,10 @@ These keys are used to identify the main input image for registration.
      - volume to extract using fslroi. Must specify 'fslroi' as true.
      
      
-|
+
 **reference_image_params** 
 
-These keys must be defined.
-
-.. _ref_image_inputs:
+.. _reference_image_inputs:
 
 .. list-table:: Standard reference image input dictionary keys.
    :widths: 30 15 15 40
