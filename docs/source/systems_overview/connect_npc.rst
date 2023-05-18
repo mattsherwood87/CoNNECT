@@ -3,7 +3,7 @@
 CoNNECT Neuro-Processing Cluster (NPC)
 ======================================
 
-The :doc:`CoNNECT NPC <../cluster_computing/index>`` is a collection of systems that are centrally and locally managed. The resources are all centrally located and under
+The :doc:`CoNNECT NPC <../cluster_computing/index>` is a collection of systems that are centrally and locally managed. The resources are all centrally located and under
 the control of Wright State Computing and Telecommunications (CaTS). The CoNNECT NPC operates on a network isolated from the main WSU
 campus network.
 

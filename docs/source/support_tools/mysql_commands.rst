@@ -6,13 +6,22 @@ Data collected and produced for each project will follow `BIDS specifications <h
 data integrity and conformity, and to improve data consistency and data processing optimization.
 
 
+sql_multiple_query
+------------------
 
-.. py:function:: mysql_commands(inDir, basename)
+.. py:function:: sql_multiple_query(*args,**kwargs)
     
     test
 
-    :param kind: Optional "kind" of ingredients.
-    :type kind: list[str] or None
+    :param database: Optional "kind" of ingredients.
+    :param searchtable: REQUIRED
+    :type database: string
+    :type searchtable: string
     :raise lumache.InvalidKindError: If the kind is invalid.
     :return: The ingredients list.
     :rtype: list[str]
+
+sql_query
+---------
+
+
