@@ -13,7 +13,7 @@ processes are flirt and bet.
 
 .. figure:: ../_images/JSON_control_file_location.png
    :align: center
-   :width: 30%
+   :width: 15%
       
    Directory tree showing the location of a Project's JSON control files.
 
