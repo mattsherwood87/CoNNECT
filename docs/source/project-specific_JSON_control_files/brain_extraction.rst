@@ -7,9 +7,9 @@ Brain extraction parameters (:numref:`bet_json_table`) for FSL BET or ANTs Brain
 
 **Sample Brain Extraction JSON control files**
 
-* :doc:`T1w <../_sample_docs/sample_T1w_bet_input.json>`
-* :doc:`ASL <../_sample_docs/sample_asl_bet_input.json>`
-* :doc:`3D APTw <../_sample_docs/sample_apt_bet_input.json>`
+* :download:`T1w <../_sample_docs/sample_T1w_bet_input.json>`
+* :download:`ASL <../_sample_docs/sample_asl_bet_input.json>`
+* :download:`3D APTw <../_sample_docs/sample_apt_bet_input.json>`
 
 
 .. _bet_json_table:
@@ -26,6 +26,10 @@ Brain extraction parameters (:numref:`bet_json_table`) for FSL BET or ANTs Brain
       - OPTIONAL
       - string
       - free text to provide a brief description
+    * - type
+      - REQUIRED
+      - string
+      - brain extraction program: FSL or ANTs
     * - bet_params
       - REQUIRED
       - dictionary

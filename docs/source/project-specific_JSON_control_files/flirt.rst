@@ -9,9 +9,9 @@ provided in :numref:`flirt_json_table`.
 
 **Sample FLIRT JSON control files**
 
-* :doc:`T1w <../_sample_docs/sample_T1w_flirt_input.json>`
-* :doc:`ASL <../_sample_docs/sample_asl_flirt_input.json>`
-* :doc:`3D APTw <../_sample_docs/sample_apt_flirt_input.json>`
+* :download:`T1w <../_sample_docs/sample_T1w_flirt_input.json>`
+* :download:`ASL <../_sample_docs/sample_asl_flirt_input.json>`
+* :download:`3D APTw <../_sample_docs/sample_apt_flirt_input.json>`
 
 .. _flirt_json_table:
 
