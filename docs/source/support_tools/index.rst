@@ -1,7 +1,7 @@
 :topic: Custom Support Tools
 
 ********************
-Custom Support Tools
+CoNNECT Support Tools
 ********************
 
 
@@ -13,8 +13,20 @@ described in the previous section.
 
 .. include:: convert_dicoms.rst
 
-.. include:: create_mysql_connections.rst
+.. include:: create_fsl_condor_job.rst
 
-.. include:: create_python_condor_job.rst3
+.. include:: create_python_condor_job.rst
 
 .. include:: flirt.rst
+
+.. include:: flirt_pngappend.rst
+
+.. include:: get_dir_identifiers.rst
+
+.. include:: get_scan_id.rst
+
+.. include:: get_spec_base.rst
+
+.. include:: mysql_commands.rst
+
+.. include:: read_credentials.rst

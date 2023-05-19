@@ -32,6 +32,7 @@ data loss, expedited data processing and rapid project development.
    administration/index
    systems_overview/index
    cluster_computing/index
+   broad_analysis_tools/index
    support_tools/index
    project-specific_JSON_control_files/index
    
