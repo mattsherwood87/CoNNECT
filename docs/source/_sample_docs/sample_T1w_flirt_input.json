@@ -20,12 +20,12 @@
     },
 
     "main_image_params": {
-        "output_bids_location": "anat",
         "input_bids_labels": {
             "acquisition": "axial",
             "suffix": "T1w",
             "extension": "nii.gz"
         },
+        "output_bids_location": "anat",
         "output_bids_labels": {
             "resolution": "hi",
             "suffix": "T1w"

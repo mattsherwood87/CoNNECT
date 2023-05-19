@@ -1,5 +1,5 @@
 MySQL Database
-**************
+==============
 
 A CoNNECT MySQL database has been implemented on the master to index files in each project's directory. These databases and tools 
 therein are local to only the master and, thus, core nodes do not have the ability to query or update. Different tables must be established
