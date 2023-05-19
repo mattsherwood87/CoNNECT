@@ -6,14 +6,12 @@ connect_neuro_db_query.py
     This function only supports command-line interface described as:
 
     Required Arguments:
-
     -p <project_identifier>, --project <project_identifier>
         search the selected Project Table
     -r REGEXSTR, --regex REGEXSTR
         Search string (no wildcards, matches if the search string appears anywhere in the field specified by -w|--where)
 
     Optional Arguments:
-
     -h, --help 
         show the help message and exit
     -c RETURNCOL, --col RETURNCOL

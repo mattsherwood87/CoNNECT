@@ -22,7 +22,7 @@ the order of operations is depicted in :numref:`flirt_diagram`.
    Flowchart for the CoNNECT custom flirt.py batch processing support tool.
 
 
-.. py:function:: flirt.py(IN_FILE,DATA_DIR,FLIRT_PARAMS,*args,**kwargs)
+.. py:function:: flirt(IN_FILE,DATA_DIR,FLIRT_PARAMS,*args,**kwargs)
     
     This function performed FLIRT registration between secondary and/or standard (reference) images. Brain extraction will be 
     performed prior to registration on the input file if bet_params is specified.
