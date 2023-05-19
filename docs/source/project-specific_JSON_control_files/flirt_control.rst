@@ -150,6 +150,8 @@ These keys are used to identify the reference image for registration.
 FLIRT Parameters
 ----------------
 
+**flirt_params**
+
 .. _FLIRT_params_table:
 
 .. list-table:: Available Keys for the flirt_params in the flirt control JSON file. Input and output files do not need specified here.
