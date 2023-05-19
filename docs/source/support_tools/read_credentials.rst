@@ -25,7 +25,7 @@ should be defined as their own key titled by their respective protocol number pr
      - dictionary
      - Dictionary identifying key elements of each project described in :numref:`credentials_secondary_table`
 |
-.. _credentials_seconary_table:
+.. _credentials_secondary_table:
 
 .. list-table:: Dictionary keys for the <project_identifier> elements.
    :widths: 25 50 25
@@ -56,7 +56,7 @@ should be defined as their own key titled by their respective protocol number pr
      - string
      - MySQL table identifying files within the project's directory (excluding sourcedata)
 
-
+|
 .. py:function:: read_credentials(inDir, basename)
     
     Read the credential file (credentials.json) from the general_processing_codes directory.
