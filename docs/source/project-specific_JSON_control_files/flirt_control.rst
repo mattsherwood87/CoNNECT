@@ -7,9 +7,9 @@ available input data types). The available parameters are provided in :numref:`f
 
 **Sample FLIRT JSON control files**
 
-* :download:`T1w <../_sample_docs/sample_T1w_flirt_input.json>`
-* :download:`ASL <../_sample_docs/sample_asl_flirt_input.json>`
-* :download:`3D APTw <../_sample_docs/sample_apt_flirt_input.json>`
+* :download:`T1w <../_sample_docs/sample_T1w_flirt_input.json>` or available `here <https://connect-tutorial.readthedocs.io/en/latest/_downloads/6fdb0f4aee89e2227f4a3d99772ae134/sample_T1w_flirt_input.json>`__
+* :download:`ASL <../_sample_docs/sample_asl_flirt_input.json>` or available `here <https://connect-tutorial.readthedocs.io/en/latest/_downloads/821452cbbc736702b5b4f252387be3a9/sample_asl_flirt_input.json>`__
+* :download:`3D APTw <../_sample_docs/sample_apt_flirt_input.json>` or available `here <https://connect-tutorial.readthedocs.io/en/latest/_downloads/7fdc5c6fc48c2cff03a9b55bdf29ada9/sample_apt_flirt_input.json>`__
 
 .. _flirt_json_table:
 
@@ -52,7 +52,7 @@ available input data types). The available parameters are provided in :numref:`f
    * - flirt_params
      - REQUIRED
      - dictionary
-     - FLIRT parameters as described in :doc:`Our Specific Inputs <flirt_table>`
+     - FLIRT parameters as described in `Our FLIRT input Table <https://connect-tutorial.readthedocs.io/en/latest/project-specific_JSON_control_files/flirt_table.html>`__
    * - secondary_image_params
      - OPTIONAL
      - dictionary
@@ -151,7 +151,8 @@ FLIRT Parameters
 **flirt_params**
 
 These parameters contains most of the inputs described in the nipype python extension manual for `FSL FLIRT 
-<https://nipype.readthedocs.io/en/0.12.1/interfaces/generated/nipype.interfaces.fsl.preprocess.html#flirt>`__. See :doc:`Our Specific Inputs <flirt_table>`
+<https://nipype.readthedocs.io/en/0.12.1/interfaces/generated/nipype.interfaces.fsl.preprocess.html#flirt>`__. See a table of our specific inputs `HERE 
+<https://connect-tutorial.readthedocs.io/en/latest/project-specific_JSON_control_files/flirt_table.html>`__.
 
 
 
