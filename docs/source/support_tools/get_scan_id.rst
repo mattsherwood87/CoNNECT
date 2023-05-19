@@ -2,17 +2,16 @@
 get_scan_id.py
 ===============
 
-Data collected and produced for each project will follow `BIDS specifications <https://bids-specification.readthedocs.io/en/stable/>`__ to ensure community standards are upheld, to improve 
-data integrity and conformity, and to improve data consistency and data processing optimization.
-
-
-
 .. py:function:: get_scan_id(inDir, basename)
     
-    test
+    Get metadata from a sourcedata NIfTI file using the Project's scan_id JSON file within the Project's 'code' directory.
 
-    :param kind: Optional "kind" of ingredients.
-    :type kind: list[str] or None
-    :raise lumache.InvalidKindError: If the kind is invalid.
-    :return: The ingredients list.
-    :rtype: list[str]
+    get_scan_id(inDir, basename)
+
+    :param inDir: Required fullpath to sourcedata sub-directory containing NIfTI file
+    :param basename: Required basename of the sourcedata NIfTI file
+    :type inDir: str
+    :type basename: str
+    :raise Error: Any error occurs.
+    :return: scan name, bids directory as identified in the Project's scan_id JSON file within the Project's 'code' directory
+    :rtype: str, str

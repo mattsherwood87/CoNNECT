@@ -2,17 +2,15 @@
 get_dir_indentifiers.py
 ===============
 
-Data collected and produced for each project will follow `BIDS specifications <https://bids-specification.readthedocs.io/en/stable/>`__ to ensure community standards are upheld, to improve 
-data integrity and conformity, and to improve data consistency and data processing optimization.
 
-
-
-.. py:function:: get_dir_indentifiers(inDir, basename)
+.. py:function:: get_dir_indentifiers(singleDir)
     
-    test
+    Get subject and session identifiers from a BIDS filepath
 
-    :param kind: Optional "kind" of ingredients.
-    :type kind: list[str] or None
-    :raise lumache.InvalidKindError: If the kind is invalid.
-    :return: The ingredients list.
-    :rtype: list[str]
+    get_dir_identifiers(singleDir)
+
+    :param singleDir: Required BIDS-compliant filepath
+    :type kind: str
+    :raise Error: Any error occurs
+    :return: subject identifier (XXX in sub-XXX), session identifier (YYY in ses-YYY)
+    :rtype: str, str

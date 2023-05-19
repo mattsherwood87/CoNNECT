@@ -2,17 +2,16 @@
 get_spec_base.py
 ===============
 
-Data collected and produced for each project will follow `BIDS specifications <https://bids-specification.readthedocs.io/en/stable/>`__ to ensure community standards are upheld, to improve 
-data integrity and conformity, and to improve data consistency and data processing optimization.
-
-
-
 .. py:function:: get_spec_base(inDir, basename)
     
-    test
+    Get metadata from a MRS file.
+    
+    This program returns the Project credentials into the custom specBase class (**NEEDS REFERENCE**), which should be imported prior to calling get_spec_base().
 
-    :param kind: Optional "kind" of ingredients.
-    :type kind: list[str] or None
-    :raise lumache.InvalidKindError: If the kind is invalid.
-    :return: The ingredients list.
-    :rtype: list[str]
+    get_spec_base(specFile)
+
+    :param specFile: Required path to a MRS file
+    :type specFile: str
+    :raise Error: Any error occurs
+    :return: None
+    :rtype: None

@@ -1,13 +1,12 @@
 
-create_python_condor_job.py
+create_fsl_condor_job.py
 ===============
 
-
-.. py:function:: create_python_condor_job(inDir, basename)
+.. py:function:: create_fsl_condor_job(inDir, basename)
     
-    Creates an HTCondor job for helper_function commands.
+    Creates an HTCondor job for FSL commands.
 
-    create_python_condor_job(jobName, exeName, machineNames, submit, error, output, log, dagman)
+    create_fsl_condor_job(jobName, exeName, machineNames, submit, error, output, log, dagman)
 
     :param jobName: Required name for the parallel htcondor job
     :param exeName: FSL executable name

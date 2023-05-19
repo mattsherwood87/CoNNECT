@@ -1,4 +1,5 @@
-:topic: FLIRT parameter table
+flirt_params
+------------
 
 .. _FLIRT_params_table:
 

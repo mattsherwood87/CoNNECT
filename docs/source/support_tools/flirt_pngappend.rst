@@ -3,26 +3,22 @@ flirt_pngappend.py
 ========
 
 
-.. py:function:: flirt_pngappend(IN_FILE,DATA_DIR,FLIRT_PARAMS,*args,**kwargs)
+.. py:function:: flirt_pngappend(IN_FILE,REF_FILE,OUT_FILE)
     
-    This function performed FLIRT registration between secondary and/or standard (reference) images. Brain extraction will be 
-    performed prior to registration on the input file if bet_params is specified.
+    Creates a registration overlay image (PNG). This tool is utilized by :doc:`flirt.py <flirt.rst>`.
 
-    flirt_pngappend(IN_FILE,DATA_DIR,FLIRT_PARAMS,overwrite=False,bet_params=None,progress=False)
+    Top row contains a background image of IN_FILE in REF_FILE space overlaid with the edges of REF_FILE (in red).
+    Bottom row contains a background image of REF_FILE overlaid with the edges of IN_FILE in REF_FILE space (in red).
 
-    :param IN_FILE: REQUIRED String or pathlike object to an input NIfTI file.
-    :param DATA_DIR: REQUIRED String or pathlike object to the project's data directory (project's 'dataDir' credential)
-    :param FLIRT_PARAMS: REQUIRED String or pathlike object to the input file's FLIRT parameter file
-    :param overwrite: OPTIONAL overwrite any existing files (default False) 
-    :param bet_params: OPTIONAL String or pathlike object to the input file's BET parameter file (default None) 
-    :param progress: OPTIONAL operate in verbose mode (default False) 
+    flirt_pngappend(IN_FILE, IN_FILE, OUT_FILE)
+
+    :param IN_FILE: REQUIRED String or pathlike object to an input NIfTI file transformed to the space of REF_FILE.
+    :param REF_FILE: REQUIRED String or pathlike object to a reference NIfTI file.
+    :param OUT_FILE: REQUIRED String or pathlike object to the output PNG file that will be created
     :type IN_FILE: str or None or Pathlike object
-    :type DATA_DIR: str or None or Pathlike object
-    :type FLIRT_PARAMS: str or None or Pathlike object
-    :type overwrite: bool
-    :type bet_params: str or None or Pathlike object
-    :type progress: bool
-    :raise Error: If path does not exist.
+    :type REF_FILE: str or None or Pathlike object
+    :type OUT_FILE: str or None or Pathlike object
+    :raise Error: If any error occurs.
     :return: None
     :rtype: None
 
