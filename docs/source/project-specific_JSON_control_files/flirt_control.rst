@@ -54,7 +54,7 @@ provided in :numref:`flirt_json_table`.
    * - flirt_params
      - REQUIRED
      - dictionary
-     - FLIRT parameters as described in :numref:`FLIRT_params`
+     - FLIRT parameters as described in :numref:`FLIRT_params_table`
    * - secondary_image_params
      - OPTIONAL
      - dictionary
@@ -150,7 +150,7 @@ These keys are used to identify the reference image for registration.
 FLIRT Parameters
 ----------------
 
-.. _FLIRT_params:
+.. _FLIRT_params_table:
 
 .. list-table:: Available Keys for the flirt_params in the flirt control JSON file. Input and output files do not need specified here.
    :widths: 30 15 15 40
