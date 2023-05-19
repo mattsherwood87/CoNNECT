@@ -52,7 +52,7 @@ available input data types). The available parameters are provided in :numref:`f
    * - flirt_params
      - REQUIRED
      - dictionary
-     - FLIRT parameters as described in :doc:`flirt_table`
+     - FLIRT parameters as described in :doc:`Our Specific Inputs <flirt_table>`
    * - secondary_image_params
      - OPTIONAL
      - dictionary
@@ -151,7 +151,7 @@ FLIRT Parameters
 **flirt_params**
 
 These parameters contains most of the inputs described in the nipype python extension manual for `FSL FLIRT 
-<https://nipype.readthedocs.io/en/0.12.1/interfaces/generated/nipype.interfaces.fsl.preprocess.html#flirt>`__. See :doc:`flirt_table`
+<https://nipype.readthedocs.io/en/0.12.1/interfaces/generated/nipype.interfaces.fsl.preprocess.html#flirt>`__. See :doc:`Our Specific Inputs <flirt_table>`
 
 
 
