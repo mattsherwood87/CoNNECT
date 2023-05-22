@@ -5,7 +5,7 @@ get_scan_id.py
 .. py:function:: get_scan_id(inDir, basename)
     
     Search the metadata accompanying a sourcedata NIfTI file (found in the accompanying JSON sidecar) using the Project's scan_id JSON file
-    within the Project's 'code' directory (found `HERE <Scan Identification>`).
+    within the Project's 'code' directory (found `Scan Identification`_).
 
     get_scan_id(inDir, basename)
 
