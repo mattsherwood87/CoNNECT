@@ -1,8 +1,11 @@
 FMRIB's Linear Image Registration Tool (FLIRT)
 ==============================================
 
-FLIRT parameters can be found in “<project_identifier>_<input-datatype>_bet_input.json” (see :numref:`BET_input_data_types` for a list of 
+FLIRT parameters can be found in “<project_identifier>_<input-datatype>_flirt_input.json” (see :numref:`input_data_types` for a list of 
 available input data types). The available parameters are provided in :numref:`flirt_json_table`.
+
+.. see_also:: 
+  flirt.py also supports the execution of brain extraction, controlled through its own `JSON file <https://connect-tutorial.readthedocs.io/en/latest/project-specific_JSON_control_files/index.html#brain-extraction-bet>`__
 
 
 **Sample FLIRT JSON control files**

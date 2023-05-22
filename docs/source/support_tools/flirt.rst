@@ -9,8 +9,8 @@ the order of operations is depicted in :numref:`flirt_diagram`.
 .. note:: 
     NEED TO PROVIDE A REFERENCE TO CONNECT_FLIRT.py
 
-.. note:: 
-    This support tool requires JSON control files to specify input parameters for :doc:`FLIRT <../project-specific_JSON_control_files/flirt>` 
+.. see_also:: 
+    This support tool requires JSON control files to specify input parameters for `FLIRT <https://connect-tutorial.readthedocs.io/en/latest/project-specific_JSON_control_files/index.html#fmrib-s-linear-image-registration-tool-flirt>`__
     and any additional processing such as volume extraction and brain extraction. 
 
 .. _flirt_diagram:
