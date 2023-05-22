@@ -4,7 +4,8 @@ get_scan_id.py
 
 .. py:function:: get_scan_id(inDir, basename)
     
-    Get metadata from a sourcedata NIfTI file using the Project's scan_id JSON file within the Project's 'code' directory.
+    Search the metadata accompanying a sourcedata NIfTI file (found in the accompanying JSON sidecar) using the Project's scan_id JSON file
+    within the Project's 'code' directory (found :ref:`**HERE** <scan_identification_json>`).
 
     get_scan_id(inDir, basename)
 
@@ -13,5 +14,5 @@ get_scan_id.py
     :type inDir: str
     :type basename: str
     :raise Error: Any error occurs.
-    :return: scan name, bids directory as identified in the Project's scan_id JSON file within the Project's 'code' directory
+    :return: scan name created from get_bids_filename found in bids_commands.py, bids directory as identified in the Project's scan_id JSON file within the Project's 'code' directory
     :rtype: str, str

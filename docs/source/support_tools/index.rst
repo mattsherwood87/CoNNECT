@@ -11,6 +11,8 @@ described in the previous section.
 
 .. note:: FIGURE TO BE INSERTED
 
+.. include:: bids_commands.rst
+
 .. include:: convert_dicoms.rst
 
 .. include:: create_fsl_condor_job.rst
