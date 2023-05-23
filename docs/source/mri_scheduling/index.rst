@@ -1,14 +1,15 @@
+:topic: MRI Scheduling
 
 
+**************
 MRI Scheduling
-==============
-
+**************
 
 
 MRI Scheduling through wright.edu is as follows:
 
 View MRI Availability
----------------------
+=====================
 
 **Step 1.** Start by going to the `CoNNECT laboratory website <https://science-math.wright.edu/lab/center-of-neuroimaging-and-neuro-evaluation-of-cognitive-technologies>`__. 
 The introductory CoNNECT page should look like :numref:`booking step1`.
@@ -55,7 +56,7 @@ webpage to finalize booking. If you are not affiliated with WSU, please reach ou
 
 
 Schedule Appointment
---------------------
+====================
 
 **Step 5.** Once in the CoNNECT Bookings webpage, select the desired date and time specified by the subject. A menu will be displayed, 
 such as :numref:`booking_step5`. Choose the dropdown menu to specify the duration of the scan. Correct the time in Service Details if necessary. 

@@ -1,0 +1,80 @@
+
+@startuml
+skinparam ConditionEndStyle hline
+!pragma useVerticalIf on
+
+<style>
+.default {
+    LineColor 046A38
+    FontColor 046A38
+    BackgroundColor #CBA052
+}
+.secondary {
+    BackgroundColor #E7E3C6
+}
+.standard {
+    BackgroundColor #F2F1F0
+}
+</style>
+start
+
+'loop while images in /resshare/PACS
+
+if (files in /resshare/PACS?) then (yes)
+    :read DICOM header;
+    :locate associated project\nand sourcedata directory;
+    :copy DICOM images to subject/session folder;
+    :convert DICOM images to NIfTI\nvia convert_dicoms.py;
+    :move NIfTI images into BIDS-compliant\nrawdata via connect_create_raw_nii.py;
+    partition "**Volume Extraction**" <<default>> {
+        if (volume in\nmain_image_params?) then (yes)
+            :extract specified\nvolume via fslroi;
+        else (no)
+            :extract center\nvolume via fslroi;
+        endif
+        :change input image\nto extracted volume;
+    }
+else (no)
+endif
+
+:remove copied DICOM images from /resshare/PACS;
+
+
+
+partition #CBA052 "**Registration**" <<default>> {
+    if (reference_image_params 'type') then (std)
+        :extract output bids labels\nfrom standard_reference_params;
+    else
+        :extract output bids labels\nfrom reference_image_params;
+    endif
+    :perform FLIRT;
+
+    if (secondary_image_params?) then (yes)
+        partition "Secondary Image (OPTIONAL)" <<secondary>> {
+            :apply transform to\nsecondary image;
+        }
+    else (no)
+    endif
+
+    if (standard_reference_params) then (yes)
+        partition "Input-to-Standard (OPTIONAL)" <<standard>> {
+            if (reference_image_params 'type') then (std)
+            else
+                :concatenate reference-to-standard\ntransform to input-to-reference;
+                :apply transform to\ninput image;
+                if (secondary_image_params?) then (yes)
+                    partition "Secondary Image (OPTIONAL)" <<secondary>> {
+                        :apply transform\nto secondary image;
+                    }
+                else (no)
+                endif
+            endif
+        }
+    else (no)
+    endif
+}
+        
+
+end
+
+@enduml
