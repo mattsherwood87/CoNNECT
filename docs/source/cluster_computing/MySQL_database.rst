@@ -43,6 +43,7 @@ Any ‘-‘ are illegal characters in the table name and are generally replaced 
      - Extension, excluding filename and path. NULL if no extension
      - 48
 
+|
 .. _mysql_sourcedata_table:
 
 .. list-table:: The main database for each project <searchSourceTable>, as defined via the `credentials.json file <https://connect-tutorial.readthedocs.io/en/latest/support_tools/index.html#read-credentials-py>`_.
