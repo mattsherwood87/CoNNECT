@@ -10,7 +10,7 @@ by these analysis tools to allow maximum flexibility of their implementation. Sp
 
 .. note:: At this time, these functions only support command-line usage. 
 
-'.. include:: connect_create_project_db.rst
+.. include:: connect_create_project_db.rst
 
 '.. include:: connect_create_raw_nii.rst
 
