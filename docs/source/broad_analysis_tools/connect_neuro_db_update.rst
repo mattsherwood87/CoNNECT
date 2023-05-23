@@ -4,11 +4,7 @@ connect_neuro_db_update.py
     
 This function only supports command-line interface with the options:
 
-**Required Arguments:**
--p PROJECT, --project PROJECT   search the selected table for the indicated <project_identifier> can provide term 'all' to update all tables in credentials.json
-
-**Optional Arguments:**
-
+-p PROJECT, --project PROJECT   **REQUIRED** search the selected table for the indicated <project_identifier> can provide term 'all' to update all tables in credentials.json
 -h, --help  show the help message and exit
 --progress  verbose mode
 -s, --source    update the searchSourceTable
