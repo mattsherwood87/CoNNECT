@@ -27,7 +27,7 @@ should be defined as their own key titled by their respective protocol number pr
      - dictionary
      - Dictionary identifying key elements of each project described in :numref:`credentials_secondary_table`
 
-|
+
 
 .. _credentials_secondary_table:
 
