@@ -1,3 +1,4 @@
+.. _read credentials:
 
 read_credentials.py
 ===============
