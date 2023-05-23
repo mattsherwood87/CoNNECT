@@ -44,7 +44,7 @@ should be defined as their own key titled by their respective protocol number pr
      - Full project title
    * - database
      - string
-     - MySQL database for the associated main and source tables described in :doc:`the MySQL section of this document </cluster_computing/index>`
+     - MySQL database for the associated main and source tables described in :doc:`the MySQL section of this document </cluster_computing/mysql-database>`
    * - dataDir
      - string
      - Local directory within the mounted centralized storage's 'projects' folder where data shall be located.
