@@ -14,7 +14,7 @@ MySQL can be accessed through the command line:
 where <database> is replaced with the MySQL database. Currently, all projects are contained in a single database, "CoNNECT".
 
 Each project will have two tables in the CoNNECT database: one main table containing all files except source files and one source table containing files within 
-the BIDS sourcedata directory. The main table (referred to in the project's :ref:`credentials as searchTable <read credentials>`) contains the elements described 
+the BIDS sourcedata directory. The main table (referred to in the project's :ref:`read credentials`) contains the elements described 
 in :numref:`mysql_data_table`. The sourcedata table contains the elements described in :numref:`mysql_sourcedata_table`. 
 
 MySQL allows efficent queries of files contained within a project's directories. This will optimize file searching and data processing.
