@@ -71,55 +71,63 @@ Logging in to MySQL
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: shell-session
-    $ mysql --login-path=client <database>
+
+   $ mysql --login-path=client <database>
     
 
 Exiting MySQL
 ^^^^^^^^^^^^^
 
 .. code-block:: shell-session
-  $ exit
+
+   $ exit
   
 
 Creating a New Database
 ^^^^^^^^^^^^^
 
 .. code-block:: shell-session
-  $ CREATE DATABASE <database_name>;
+
+   $ CREATE DATABASE <database_name>;
   
 
 Creating a New Table
 ^^^^^^^^^^^^^
 
 .. code-block:: shell-session
-  $ CREATE TABLE <table_name> (<column1_name> <column1_size> <column2_name> <column2_size>);
+
+   $ CREATE TABLE <table_name> (<column1_name> <column1_size> <column2_name> <column2_size>);
   
 
 List All Tables in Database
 ^^^^^^^^^^^^^
 
 .. code-block:: shell-session
-  $ SHOW tables;
+
+   $ SHOW tables;
   
 
 Retrieve ALL Columns from a Table
 ^^^^^^^^^^^^^
 
-.. code-block:: shell-session
-  $ SELECT * FROM <table_name>;
+.. code-block:: shell-session 
+
+   $ SELECT * FROM <table_name>;
   
 
 Retrieve ALL Columns from a Table Matching String
 ^^^^^^^^^^^^^
 
 .. code-block:: shell-session
-  $ CREATE DATABASE <database_name> WHERE <column> REGEXP “<search_string>”;
+
+   $ CREATE DATABASE <database_name> WHERE <column> REGEXP “<search_string>”;
   
 
 Determine Last Update Time for a Table
 ^^^^^^^^^^^^^
 
 .. code-block:: shell-session
-  $ SELECT UPDATE_TIME FROM information_schema.tables WHERE TABLE_SCHEMA = <database> AND TABLE_NAME = <table>;
+
+   $ SELECT UPDATE_TIME FROM information_schema.tables WHERE TABLE_SCHEMA = <database> AND TABLE_NAME = <table>;
 
 

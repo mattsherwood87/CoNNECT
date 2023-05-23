@@ -6,7 +6,9 @@ MRI Scheduling
 **************
 
 
-MRI Scheduling through wright.edu is as follows:
+MRI Scheduling should be completed by communicating with laboratory staff directly or via the approved CoNNECT Booking Webpage. Access to the CoNNECT Booking Webpage
+is restricted and can be approved with a request directly to Dr. Sherwood at matt.sherwood@wright.edu. The procedures below detail appointment scheduling through the
+CoNNECT Booking Webpage.
 
 View MRI Availability
 =====================
