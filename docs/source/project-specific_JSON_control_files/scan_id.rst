@@ -1,3 +1,5 @@
+.. _scan_identification_json:
+
 Scan Identification
 ======================
 

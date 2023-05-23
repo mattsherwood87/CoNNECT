@@ -1,7 +1,7 @@
 connect_neuro_db_query.py
 ==========================
     
-This function only supports command-line interface described as:
+This function will query the Project's MySQL database using the provided search criteria defined below:
 
 -p PROJECT, --project PROJECT   **REQUIRED** search the selected table for the indicated <project_identifier>
 -r REGEXSTR, --regex REGEXSTR   **REQUIRED** Search string (no wildcards, matches if the search string appears anywhere in the field specified by -w|--where)

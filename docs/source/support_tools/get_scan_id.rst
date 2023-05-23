@@ -2,6 +2,8 @@
 get_scan_id.py
 ===============
 
+This function is currently used by connect_create_raw_nii.py.
+
 .. py:function:: get_scan_id(inDir, basename)
     
     Search the metadata accompanying a sourcedata NIfTI file (found in the accompanying JSON sidecar) using the Project's scan_id JSON file
