@@ -14,7 +14,7 @@ should be defined as their own key titled by their respective protocol number pr
 .. _credentials_main_table:
 
 .. list-table:: Key descriptions for the credentials.json file.
-   :widths: 25 50 25
+   :widths: 25 25 50
    :header-rows: 1
 
    * - **Key**
@@ -26,11 +26,13 @@ should be defined as their own key titled by their respective protocol number pr
    * - <project_identifier>
      - dictionary
      - Dictionary identifying key elements of each project described in :numref:`credentials_secondary_table`
+
 |
+
 .. _credentials_secondary_table:
 
 .. list-table:: Dictionary keys for the <project_identifier> elements.
-   :widths: 25 50 25
+   :widths: 25 25 50
    :header-rows: 1
 
    * - **Key**
