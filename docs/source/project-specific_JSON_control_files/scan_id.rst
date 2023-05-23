@@ -1,4 +1,3 @@
-.. _scan_identification_json:
 
 Scan Identification
 ======================
@@ -65,7 +64,7 @@ Scan Identification parameters can be found in “<project_identifier>_scan_id.j
       - string
       - BIDS rawdata sub-directory to move the NIfTI image and associated files
 
-      |
+|
 
 **json_header search keys**
 
