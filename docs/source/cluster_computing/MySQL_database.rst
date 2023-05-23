@@ -3,7 +3,7 @@ MySQL Database
 
 A CoNNECT MySQL database has been implemented on the master node to index files in each project's directory. This database and associated tools 
 therein are local to only the master node and, thus, core nodes do not have the ability to query or update. Different tables must be established
-for each independent project, which can be developed using `this custom toolkit <https://connect-tutorial.readthedocs.io/en/latest/broad_analysis_tools/index.html#connect-create-project-db-py>`_.
+for each independent project, which can be developed using :doc:`this custom toolkit <../broad_analysis_tools/connect_create_project_db>`.
 
 MySQL can be accessed through the command line:
 
@@ -14,8 +14,7 @@ MySQL can be accessed through the command line:
 where <database> is replaced with the MySQL database. Currently, all projects are contained in a single database, "CoNNECT".
 
 Each project will have two tables in the CoNNECT database: one main table containing all files except source files and one source table containing files within 
-the BIDS sourcedata directory. The main table (referred to in the project's 
-`credentials as searchTable <https://connect-tutorial.readthedocs.io/en/latest/support_tools/index.html#read-credentials-py>`_) contains the elements described 
+the BIDS sourcedata directory. The main table (referred to in the project's :doc:`credentials as searchTable <../support-tools/read-credentials-py>`) contains the elements described 
 in :numref:`mysql_data_table`. The sourcedata table contains the elements described in :numref:`mysql_sourcedata_table`. 
 
 MySQL allows efficent queries of files contained within a project's directories. This will optimize file searching and data processing.

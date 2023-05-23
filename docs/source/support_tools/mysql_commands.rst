@@ -8,7 +8,7 @@ sql_multiple_query
 
 .. py:function:: sql_multiple_query(*args,**kwargs)
     
-    test
+    Performs a query of the identified table and returns multiple columns that matched the search criteria.
 
     :param database: Optional "kind" of ingredients.
     :param searchtable: REQUIRED
