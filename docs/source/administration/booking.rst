@@ -32,7 +32,9 @@ the right, highlighted in :numref:`booking step2`.
 
     MRI Calender highlighted on the WSU CoNNECT lab website.
 
-**Step 3.** Once into the MRI Calender, select view by week on the drop down menu to the upper right quadrant of the calender.
+**Step 3.** Once into the MRI Calender, select view by week on the drop down menu to the upper right quadrant of the calender (:numref:`booking_step3`).
+
+.. _booking_step3:
 
 .. figure:: ./_images/mri.calender.month.png
     :align:  center
@@ -40,8 +42,10 @@ the right, highlighted in :numref:`booking step2`.
 
     Dropdown menu to access week view.
 
-**Step 4.** The MRI Calender will show available times for specific days.  If a specific time is available, continue to the CoNNECT Bookings webpage to finalize booking. If you are not affiliated with WSU, 
-please reach out to the CoNNECT Staff and a Booking will be made on your behalf.
+**Step 4.** The MRI Calender will show available times for specific days (:numref:`booking_step4`).  If a specific time is available, continue to the CoNNECT Bookings 
+webpage to finalize booking. If you are not affiliated with WSU, please reach out to the CoNNECT Staff and a Booking will be made on your behalf.
+
+.. _booking_step4:
 
 .. figure:: ./_images/mri.calender.week.view.PNG
    :align:  center
@@ -54,10 +58,12 @@ Schedule Appointment
 --------------------
 
 **Step 5.** Once in the CoNNECT Bookings webpage, select the desired date and time specified by the subject. A menu will be displayed, 
-such as Figure 6. Choose the dropdown menu to specify the duration of the scan. Correct the time in Service Details if necessary. Subject 
-names should follow the following structure:
+such as :numref:`booking_step5`. Choose the dropdown menu to specify the duration of the scan. Correct the time in Service Details if necessary. 
+Subject names should follow the following structure:
 
     <project_identifier> <subject identifier> <OPTIONAL session identifier>
+
+.. _booking_step5:
 
 .. figure:: ./_images/create.booking.drop.down.PNG
    :align:  center
@@ -65,8 +71,14 @@ names should follow the following structure:
 
    Illustrates the drop down menu on the Bookings website. 
 
-**Step 6.** Complete the Customer Information by stating the IRB number of the current project you are booking, followed by the project 
-3 letter acronym, subject number, and session.  An example shown in Figure 8. 
+**Step 6.** Complete the Customer Information by stating the IRB number of the current project you are booking, followed by subject number 
+and (optional) session identifier:
+
+    <project_identifier> <subject identifier> <OPTIONAL session identifier>  
+    
+as depicted in :numref:`booking_step6`. 
+
+.. _booking_step6:
 
 .. figure:: ./_images/create.booking.nomenclature.PNG
    :align:  center
