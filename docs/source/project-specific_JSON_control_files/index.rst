@@ -42,4 +42,5 @@ processes are flirt and bet.
 
 .. include:: brain_extraction.rst
 .. include:: flirt_control.rst
+.. include:: scan_id.rst
 

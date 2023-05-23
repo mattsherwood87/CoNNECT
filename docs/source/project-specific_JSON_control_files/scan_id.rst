@@ -43,7 +43,7 @@ Scan Identification parameters can be found in “<project_identifier>_scan_id.j
 
 .. _sequence_dict_items:
 
-.. list-table:: Keys description for the sequence dictionary.
+.. list-table:: Description of the keys in the sequence dictionaries.
     :widths: 30 15 15 40
     :header-rows: 1
 
