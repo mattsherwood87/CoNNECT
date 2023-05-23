@@ -1,8 +1,9 @@
-connect_neuro_db_update.py
+connect_create_project_db.py
 ==========================
 
     
-This function only supports command-line interface with the options:
+This function creates the Project's searchTable and searchSourceTable, as defined via the `credentials.json file <https://connect-tutorial.readthedocs.io/en/latest/support_tools/index.html#read-credentials-py>`_.
+This function can be executed via command-line only using the following options:
 
 -p PROJECT, --project PROJECT   **REQUIRED** search the selected table for the indicated <project_identifier> can provide term 'all' to update all tables in credentials.json
 -h, --help  show the help message and exit
@@ -14,4 +15,4 @@ This function only supports command-line interface with the options:
 
 .. code-block:: shell-session
 
-    $ connect_neuro_db_update.py -p <project_identifier> --main --source --progress 
+    $ connect_create_project_db.py -p <project_identifier> 

@@ -28,3 +28,5 @@ option to the programs described within this manual
 
 
 .. include:: open-source_software.rst
+
+.. include:: MySQL_database.rst

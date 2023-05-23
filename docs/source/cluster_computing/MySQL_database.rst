@@ -23,7 +23,7 @@ Any ‘-‘ are illegal characters in the table name and are generally replaced 
 
 .. _mysql_data_table:
 
-.. list-table:: The main database for each project <searchTable>.
+.. list-table:: The main database for each project <searchTable>, as defined via the `credentials.json file <https://connect-tutorial.readthedocs.io/en/latest/support_tools/index.html#read-credentials-py>`_.
    :widths: 25 50 25
    :header-rows: 1
 
@@ -45,7 +45,7 @@ Any ‘-‘ are illegal characters in the table name and are generally replaced 
 
 .. _mysql_sourcedata_table:
 
-.. list-table:: The main database for each project <searchSourceTable>.
+.. list-table:: The main database for each project <searchSourceTable>, as defined via the `credentials.json file <https://connect-tutorial.readthedocs.io/en/latest/support_tools/index.html#read-credentials-py>`_.
    :widths: 25 50 25
    :header-rows: 1
 
