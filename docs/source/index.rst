@@ -43,7 +43,7 @@ policies and procedures, and to review any safety incidents.
    :caption: **Table of Contents**
    :maxdepth: 2
 
-   administration/index
+   mri_scheduling/index
    systems_overview/index
    cluster_computing/index
    broad_analysis_tools/index

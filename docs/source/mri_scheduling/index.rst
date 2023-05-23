@@ -60,9 +60,6 @@ Schedule Appointment
 
 **Step 5.** Once in the CoNNECT Bookings webpage, select the desired date and time specified by the subject. A menu will be displayed, 
 such as :numref:`booking_step5`. Choose the dropdown menu to specify the duration of the scan. Correct the time in Service Details if necessary. 
-Subject names should follow the following structure:
-
-    <project_identifier> <subject identifier> <OPTIONAL session identifier>
 
 .. _booking_step5:
 
@@ -71,6 +68,7 @@ Subject names should follow the following structure:
    :width:  40%
 
    Illustrates the drop down menu on the Bookings website. 
+
 
 **Step 6.** Complete the Customer Information by stating the IRB number of the current project you are booking, followed by subject number 
 and (optional) session identifier:
