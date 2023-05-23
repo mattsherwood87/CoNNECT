@@ -1,9 +1,9 @@
 :topic: WSU CoNNECT
 
 
-##################################
+**********************************
 Welcome to the WSU's Center of Neuroimaging and Neuro-Evaluation of Cognitive Technologies
-##################################
+**********************************
 
 
 **CoNNECT** houses a 3.0-Tesla Philips Ingenia Cx MRI system with focused neuroimaging research applications.
@@ -36,8 +36,6 @@ policies and procedures, and to review any safety incidents.
       
    CoNNECT Governing Board active organization chart.
    
-.. sidebar::
-   * :ref:`Administration <administration/index>`
 
 .. toctree::
    :caption: **Table of Contents**
