@@ -3,7 +3,7 @@ MySQL Database
 
 A CoNNECT MySQL database has been implemented on the master node to index files in each project's directory. This database and associated tools 
 therein are local to only the master node and, thus, core nodes do not have the ability to query or update. Different tables must be established
-for each independent project, which can be developed using `this custom toolkit <connect_create_project_db.py>`_.
+for each independent project, which can be developed using `this custom toolkit <https://connect-tutorial.readthedocs.io/en/latest/broad_analysis_tools/index.html#connect-create-project-db-py>`_.
 
 MySQL can be accessed through the command line:
 

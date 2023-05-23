@@ -20,27 +20,13 @@ data loss, expedited data processing and rapid project development.
 .. note::
    This manual is under active initial development.
 
-
-Governing Board
-===============
-
-The Governing Board is chaired by the executive director. The Governing Board (see :numref:`org chart`) includes staff and faculty members from Wright State but 
-also external constituents from the US Air Force, US Navy and local clinical facilities, and is led by CoNNECT Founding Director Dr. Matthew Sherwood. . This Governing Board meets regularly to review 
-policies and procedures, and to review any safety incidents. 
-
-.. _org chart:
-
-.. figure:: ./_images/connect_org_chart.png
-   :align: center
-   :width: 50%
-      
-   CoNNECT Governing Board active organization chart.
    
 
 .. toctree::
    :caption: **Table of Contents**
    :maxdepth: 2
 
+   administration/index
    mri_scheduling/index
    systems_overview/index
    cluster_computing/index
