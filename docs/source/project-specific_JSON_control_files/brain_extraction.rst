@@ -9,9 +9,9 @@ Brain extraction parameters (:numref:`bet_json_table`) for FSL BET or ANTs Brain
 
 **Sample Brain Extraction JSON control files**
 
-* :download:`T1w <../_sample_docs/sample_T1w_bet_input.json>` (or available `HERE <https://connect-tutorial.readthedocs.io/en/latest/_downloads/be7dfdc20af8e227afbdca86d697c380/sample_T1w_bet_input.json>`__`)
-* :download:`ASL <../_sample_docs/sample_asl_bet_input.json>` (or available `HERE <https://connect-tutorial.readthedocs.io/en/latest/_downloads/84e3a18a8ba1dafbf4259a386c529265/sample_asl_bet_input.json>`__`)
-* :download:`3D APTw <../_sample_docs/sample_apt_bet_input.json>` (or available `HERE <https://connect-tutorial.readthedocs.io/en/latest/_downloads/21e00d656530cceabc6b9f2d6f030552/sample_apt_bet_input.json>`__`)
+* :download:`T1w <../_sample_docs/sample_T1w_bet_input.json>` (or available `here <https://connect-tutorial.readthedocs.io/en/latest/_downloads/be7dfdc20af8e227afbdca86d697c380/sample_T1w_bet_input.json>`__)
+* :download:`ASL <../_sample_docs/sample_asl_bet_input.json>` (or available `here <https://connect-tutorial.readthedocs.io/en/latest/_downloads/84e3a18a8ba1dafbf4259a386c529265/sample_asl_bet_input.json>`__)
+* :download:`3D APTw <../_sample_docs/sample_apt_bet_input.json>` (or available `here <https://connect-tutorial.readthedocs.io/en/latest/_downloads/21e00d656530cceabc6b9f2d6f030552/sample_apt_bet_input.json>`__)
 
 
 .. _bet_json_table:
