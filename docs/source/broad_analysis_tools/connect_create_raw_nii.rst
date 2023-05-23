@@ -1,18 +1,31 @@
-connect_create_project_db.py
+connect_create_raw_nii.py
 ==========================
 
-    
-This function creates the Project's searchTable and searchSourceTable, as defined via the `credentials.json file <https://connect-tutorial.readthedocs.io/en/latest/support_tools/index.html#read-credentials-py>`_.
+This function moves sourcedata NIfTI files (and JSON/txt sidecars) created from connect_dcm2nii.py or convert_dicoms to the corresponding rawdata directory. 
 This function can be executed via command-line only using the following options:
 
--p PROJECT, --project PROJECT   **REQUIRED** search the selected table for the indicated <project_identifier> can provide term 'all' to update all tables in credentials.json
+.. _project_code_directory:
+
+.. figure:: ../_images/connect_create_raw_nii.png
+   :align: center
+   :width: 20%
+      
+   Required pre-requisite files for execution of connect_create_raw_nii.py.
+
+
+-p PROJECT, --project PROJECT   **REQUIRED** project identifier to execute
+-i IN_DIR, --in-dir INDIR   Only execute for a single subject/session by providing a path to individual subject/session
 -h, --help  show the help message and exit
 --progress  verbose mode
--s, --source    update the searchSourceTable, as defined via the `credentials.json file <https://connect-tutorial.readthedocs.io/en/latest/support_tools/index.html#read-credentials-py>`_
--m, --main  update the searchTable, as defined via the `credentials.json file <https://connect-tutorial.readthedocs.io/en/latest/support_tools/index.html#read-credentials-py>`_
+--overwrite    force create of rawdata files by skipping file checking
 -v, --version   display the current version
 
 
 .. code-block:: shell-session
 
-    $ connect_create_project_db.py -p <project_identifier> 
+    $ connect_create_raw_nii.py -p <project_identifier> 
+
+
+.. code-block:: shell-session
+
+    $ connect_create_raw_nii.py -p <project_identifier> --in-dir <path to sourcedata for a single subject/session>

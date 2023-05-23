@@ -1,0 +1,18 @@
+
+@startuml
+top to bottom direction
+
+
+node connect_func as "connect_create_raw_nii.py" 
+node helper1 as "get_scan_id" 
+connect_func <--> helper1
+node helper2 as "read_credentials" 
+connect_func <--> helper2
+node creds as "credentials.json" #DCD59A;line:046A38;line.bold;text:046A38 
+helper2 <-- creds
+node scan_id as "<project_identifier>_scan_id.json" #DCD59A;line:046A38;line.bold;text:046A38 
+helper1 <-- scan_id
+
+
+
+@enduml
