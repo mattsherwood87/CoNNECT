@@ -1,4 +1,4 @@
-.. _read credentials:
+.. _read credentials section:
 
 read_credentials.py
 ===============
