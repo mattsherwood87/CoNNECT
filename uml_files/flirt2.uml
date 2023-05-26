@@ -15,21 +15,21 @@ GroupFontColor #046A38
 }
 
 'autonumber
-participant "INPUT" as in #CBA052
+participant "INPUT" as in #719949
 [->in
 group Volume Extraction [fslroi == true]
-    participant "FSL fslroi" as roi #CBA052
+    participant "FSL fslroi" as roi #719949
     in->roi ++ #F8E08E : input image
     roi->roi : extract single volume
     return change input image\nto extracted volume
 end
 group Brain Extraction [bet = true] 
-    participant "FSL BET\nor\nANTS Brain Extraction" as bet #CBA052
+    participant "FSL BET\nor\nANTS Brain Extraction" as bet #719949
     in->bet ++ #F8E08E : input image
     bet->bet : extract brain
     return change input image to brain image
     group Apply Brainmask to Secondary Image [secondary_image_params in JSON control file] 
-        participant "FSL fslmaths" as sec1 #CBA052
+        participant "FSL fslmaths" as sec1 #719949
         in->sec1 ++ #F8E08E : secondary image
         bet->sec1 : brainmask
         sec1->sec1 : apply brainmask
@@ -37,7 +37,7 @@ group Brain Extraction [bet = true]
     end
 end
 
-participant "FSL FLIRT" as flirt #CBA052
+participant "FSL FLIRT" as flirt #719949
 group Reference Image Type [reference_image_params "type" == std]
     in->flirt ++ #F8E08E : standard reference image
 else 
