@@ -4,7 +4,7 @@
 skinparam sequence {
 LifeLineBorderThickness 3
 ArrowThickness 2
-BoxBackgroundColor #CBA052
+BoxBackgroundColor #DCD59A
 BoxBorderColor #046A38
 BoxFontColor #046A38
 GroupBackgroundColor #F2F1F0
