@@ -18,7 +18,7 @@ actor operator #719949
 
 participant "Philips MRI" as mri #719949
 operator->mri : Pushes DICOM images
-box WSU NPC Master Node #CBA052
+box CoNNECT NPC Master Node #CBA052
 participant Orthanc #719949
 mri->Orthanc : Transfer Request
 box WSU Centralized Storage  
@@ -31,7 +31,7 @@ endbox
 
 endbox
 
-
+mri-->operator : Finished
 
 
 

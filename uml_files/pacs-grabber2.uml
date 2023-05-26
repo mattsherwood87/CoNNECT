@@ -1,0 +1,64 @@
+
+@startuml
+!pragma teoz true
+skinparam sequence {
+LifeLineBorderThickness 3
+ArrowThickness 2
+BoxBackgroundColor #DCD59A
+BoxBorderColor #046A38
+BoxFontColor #046A38
+'GroupBackgroundColor #F2F1F0
+GroupBodyBackgroundColor #F2F1F0
+'GroupBorderThickness 2
+'GroupBorderColor #046A38
+'GroupFontColor #046A38
+}
+
+'actor operator #719949
+
+
+box CoNNECT NPC Master Node #CBA052
+participant "connect_pacs_dicom_grabber.py" as grabber #719949
+
+box Support Tools
+participant "convert_dicoms.py" as convert #719949
+endbox
+
+box Broad Analysis Tools
+participant "connect_create_raw_nii.py" as create #719949
+endbox
+
+box WSU Centralized Storage  
+participant "/resshare/PACS" as pacs #719949
+participant "sourcedata" as src #719949
+participant "rawdata" as raw #719949
+endbox
+
+endbox
+
+{start} [->grabber
+pacs->grabber : DICOM Header
+grabber->convert : Convert DICOM to NIfTI
+activate convert #F8E08E
+pacs o-> convert : DICOM
+convert->convert : dcm2niix
+convert o-> src : save NIfTI image
+'pacs->(20)src : DICOM-to-NIfTI conversion
+convert-->grabber
+deactivate convert
+
+grabber->create : Create BIDS-compliant NIfTI
+activate create #F8E08E
+src o-> create : read NIfTI
+create->create : format BIDS filename
+create o-> raw : save BIDS NIfTI image
+create-->grabber
+deactivate create
+
+{end} [/-grabber
+{end} <-> {start} : look for\nmore DICOMs
+
+
+
+
+@enduml
