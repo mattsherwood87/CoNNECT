@@ -1,0 +1,27 @@
+
+@startuml
+!pragma teoz true
+skinparam sequence {
+BoxColor #DCD59A
+BoxBackgroundColor #CBA052
+BoxBorderColor #046A38
+BoxFontColor #046A38
+}
+
+actor operator
+
+participant "Philips MRI" as mri
+operator->mri : Pushes DICOM images
+box WSU NPC Master Node 
+participant Orthanc
+box WSU Centralized Storage  #E7E3C6
+participant "/resshare/PACS" as share
+endbox
+
+endbox
+mri->Orthanc : Transfer Request
+mri->share : DICOM
+Orthanc->mri : Transfer Response
+
+
+@enduml

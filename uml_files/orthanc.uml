@@ -16,8 +16,8 @@ together {
         }
     }
     storage share #DCD59A;line:046A38;line.bold;text:046A38 [
-        resshare
-        WSU centralized storage
+        Temporary DICOM Storage
+        /resshare/PACS
         ]
     }   
 Orthanc <-l-> share

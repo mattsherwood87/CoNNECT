@@ -1,0 +1,48 @@
+
+@startuml
+top to bottom direction
+
+
+together {
+    cloud npc as "\lWSU NPC" {
+        node master {
+            package pacs-grabber.service {
+                component pacsgrabber as "connect_pacs_dicom_grabber.py" #DCD59A;line:046A38;line.bold;text:046A38
+            
+                package support as "support tools" {
+                    component convert as "convert_dicoms.py" #DCD59A;line:046A38;line.bold;text:046A38
+                }
+                package broad as "broad analysis tools" {
+                    component create as "connect_create_raw_nii.py" #DCD59A;line:046A38;line.bold;text:046A38
+                }
+            }
+        }
+        storage share #DCD59A;line:046A38;line.bold;text:046A38 [
+            Temporary DICOM Storage
+            /resshare/PACS
+            ]
+        storage share2 #DCD59A;line:046A38;line.bold;text:046A38 [
+            Project sourcedata
+            /resshare/projects/<contract>/<project>/sourcedata/sub-<subject_identifier>/ses-YYYYMMDD-<session_identifier>/<series_name>
+            ]
+        storage share3 #DCD59A;line:046A38;line.bold;text:046A38 [
+            Project sourcedata
+            /resshare/projects/<contract>/<project>/sourcedata/sub-<subject_identifier>/ses-YYYYMMDD-<session_identifier>
+            ]
+        storage share4 #DCD59A;line:046A38;line.bold;text:046A38 [
+            Project rawdata
+            /resshare/projects/<contract>/<project>/rawdata/sub-<subject_identifier>/ses-YYYYMMDD-<session_identifier>
+            ]
+    }   
+    pacsgrabber <-left- share : DICOM
+    pacsgrabber -right-> share2 : DICOM
+    pacsgrabber -[hidden]-> convert
+    share2 --> convert : DICOM
+    convert -down-> share3 : NIfTI
+    pacsgrabber -[hidden]-> create
+    share3 --> create : NIfTI
+    create -right-> share4 : BIDS NIfTI
+}
+
+
+@enduml

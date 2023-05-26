@@ -1,0 +1,73 @@
+
+@startuml
+!pragma teoz true
+skinparam sequence {
+LifeLineBorderThickness 3
+ArrowThickness 2
+BoxBackgroundColor #CBA052
+BoxBorderColor #046A38
+BoxFontColor #046A38
+GroupBackgroundColor #F2F1F0
+GroupBodyBackgroundColor #E7E3C6
+GroupBorderThickness 2
+GroupBorderColor #046A38
+GroupFontColor #046A38
+}
+
+'autonumber
+participant "INPUT" as in #CBA052
+[->in
+group Volume Extraction [fslroi == true]
+    participant "FSL fslroi" as roi #CBA052
+    in->roi ++ #F8E08E : input image
+    roi->roi : extract single volume
+    return change input image\nto extracted volume
+end
+group Brain Extraction [bet = true] 
+    participant "FSL BET\nor\nANTS Brain Extraction" as bet #CBA052
+    in->bet ++ #F8E08E : input image
+    bet->bet : extract brain
+    return change input image to brain image
+    group Apply Brainmask to Secondary Image [secondary_image_params in JSON control file] 
+        participant "FSL fslmaths" as sec1 #CBA052
+        in->sec1 ++ #F8E08E : secondary image
+        bet->sec1 : brainmask
+        sec1->sec1 : apply brainmask
+        return change secondary image to brain image
+    end
+end
+
+participant "FSL FLIRT" as flirt #CBA052
+group Reference Image Type [reference_image_params "type" == std]
+    in->flirt ++ #F8E08E : standard reference image
+else 
+    in->flirt : reference image
+end
+
+flirt->flirt : transform to reference space
+return input image in reference space
+
+group Apply to Secondary Image [secondary_image_params in JSON control file]
+    in->flirt ++ #F8E08E : secondary image
+    flirt<-? : input-to-reference transform
+    flirt->flirt : transform to reference space
+    '{start}<->{end} : transform
+    return : secondary image in reference space
+end
+
+group Transform to Standard Space [standard_reference_params in JSON control file && reference_image_params "type" != std]
+    in->flirt ++ #F8E08E : input image in reference space
+    flirt<-? : reference-to-standard transform
+    flirt->flirt : transform to standard space
+    return input image in standard space
+    group Apply to Secondary Image [secondary_image_params in JSON control file]
+        in->flirt ++ #F8E08E : secondary image
+        flirt<-? : input-to-standard transform
+        flirt->flirt : transform to standard space
+        return secondary image in standard space
+    end
+end
+
+[<-in
+
+@enduml

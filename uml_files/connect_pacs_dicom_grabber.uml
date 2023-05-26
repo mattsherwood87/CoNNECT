@@ -1,0 +1,47 @@
+
+@startuml
+skinparam ConditionEndStyle hline
+!pragma useVerticalIf on
+
+<style>
+.default {
+    LineColor 046A38
+    FontColor 046A38
+    BackgroundColor #CBA052
+}
+.secondary {
+    BackgroundColor #E7E3C6
+}
+.standard {
+    BackgroundColor #F2F1F0
+}
+</style>
+start
+
+'loop while images in /resshare/PACS
+
+if (files in /resshare/PACS?) then (yes)
+    :read DICOM header;
+    :locate associated project\nand sourcedata directory;
+    :copy DICOM images to subject/session folder;
+    :convert DICOM images to NIfTI\nvia convert_dicoms.py;
+    :move NIfTI images into BIDS-compliant\nrawdata via connect_create_raw_nii.py;
+    partition "**Volume Extraction**" <<default>> {
+        if (volume in\nmain_image_params?) then (yes)
+            :extract specified\nvolume via fslroi;
+        else (no)
+            :extract center\nvolume via fslroi;
+        endif
+        :change input image\nto extracted volume;
+    }
+else (no)
+endif
+
+:remove copied DICOM images from /resshare/PACS;
+
+
+        
+
+end
+
+@enduml

@@ -15,9 +15,9 @@ the order of operations is depicted in :numref:`flirt_diagram`.
 
 .. _flirt_diagram:
 
-.. figure:: ../_images/flirt.png
+.. figure:: ../_images/flirt2.png
    :align: center
-   :width: 10%
+   :width: 30%
       
    Flowchart for the CoNNECT custom flirt.py batch processing support tool.
 
