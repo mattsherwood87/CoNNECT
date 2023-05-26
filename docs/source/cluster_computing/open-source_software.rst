@@ -13,7 +13,7 @@ directory, converts them to NIfTI files and stores them in the project/subject/s
 
 .. _orthanc_server:
 
-.. figure:: ../_images/orthanc.png
+.. figure:: ../_images/orthanc2.png
    :align: center
    :width: 33%
       

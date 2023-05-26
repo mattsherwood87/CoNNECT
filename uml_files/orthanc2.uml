@@ -2,20 +2,26 @@
 @startuml
 !pragma teoz true
 skinparam sequence {
-BoxColor #DCD59A
+LifeLineBorderThickness 3
+ArrowThickness 2
 BoxBackgroundColor #CBA052
 BoxBorderColor #046A38
 BoxFontColor #046A38
+GroupBackgroundColor #F2F1F0
+GroupBodyBackgroundColor #E7E3C6
+GroupBorderThickness 2
+GroupBorderColor #046A38
+GroupFontColor #046A38
 }
 
 actor operator
 
-participant "Philips MRI" as mri
+participant "Philips MRI" as mri #CBA052
 operator->mri : Pushes DICOM images
 box WSU NPC Master Node 
-participant Orthanc
+participant Orthanc #CBA052
 box WSU Centralized Storage  #E7E3C6
-participant "/resshare/PACS" as share
+participant "/resshare/PACS" as share #CBA052
 endbox
 
 endbox
