@@ -9,10 +9,12 @@
  ++projects
  +++<contract>
  ++++<project>
- +++++**code**
+ +++++code
  +++++derivatives
  +++++rawdata
- +++++sourcedata
+ +++++**sourcedata**
+ ++++++**sub-<subject_identifier>**
+ +++++++**ses-YYYYMMDD-<session_identifier>**
 
 }
 }

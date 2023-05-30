@@ -29,9 +29,9 @@ participant "connect_create_raw_nii.py" as create #719949
 endbox
 
 box WSU Centralized Storage  
-participant "/resshare/PACS" as pacs #719949
-participant "sourcedata" as src #719949
-participant "rawdata" as raw #719949
+participant "Temporary\nDICOM Storage" as pacs #719949
+participant "Subject/Session\nsourcedata" as src #719949
+participant "Subject/Session\nrawdata" as raw #719949
 endbox
 
 endbox
