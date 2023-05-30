@@ -12,9 +12,9 @@ by these analysis tools to allow maximum flexibility of their implementation. Sp
 
 .. include:: connect_create_project_db.rst
 
-'.. include:: connect_create_raw_nii.rst
+.. include:: connect_create_raw_nii.rst
 
-'.. include:: connect_dcm2nii.rst
+.. include:: connect_dcm2nii.rst
 
 '.. include:: connect_flirt.rst
 
@@ -24,7 +24,7 @@ by these analysis tools to allow maximum flexibility of their implementation. Sp
 
 .. include:: connect_neuro_db_update.rst
 
-'.. include:: connect_pacs_dicom_grabber.rst
+.. include:: connect_pacs_dicom_grabber.rst
 
 '.. include:: connect_rawdata_check.rst
 
