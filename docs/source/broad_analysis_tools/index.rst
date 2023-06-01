@@ -16,9 +16,10 @@ by these analysis tools to allow maximum flexibility of their implementation. Sp
 
 .. include:: connect_dcm2nii.rst
 
-'.. include:: connect_flirt.rst
+.. include:: connect_flirt.rst
 
-'.. include:: connect_mri_system_log_grabber.rst
+..
+    .. include:: connect_mri_system_log_grabber.rst
 
 .. include:: connect_neuro_db_query.rst
 
@@ -26,11 +27,10 @@ by these analysis tools to allow maximum flexibility of their implementation. Sp
 
 .. include:: connect_pacs_dicom_grabber.rst
 
-'.. include:: connect_rawdata_check.rst
+.. include:: connect_rawdata_check.rst
 
-'.. include:: connect_scan_time_evaluator.rst
-
-'.. include:: connect_sourcedata_check.rst
+..
+    .. include:: connect_sourcedata_check.rst
 
 
 

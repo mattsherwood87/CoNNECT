@@ -1,18 +1,24 @@
-connect_create_project_db.py
+connect_flirt.py
 ==========================
 
     
-This function creates the Project's searchTable and searchSourceTable, as defined via the `credentials.json file <https://connect-tutorial.readthedocs.io/en/latest/support_tools/index.html#read-credentials-py>`_.
+This function executes registration via FSL's FLIRT using `connect_flirt.py support tool <https://connect-tutorial.readthedocs.io/en/latest/support_tools/index.html#flirt-py>`_.
 This function can be executed via command-line only using the following options:
 
--p PROJECT, --project PROJECT   **REQUIRED** search the selected table for the indicated <project_identifier> can provide term 'all' to update all tables in credentials.json
+-p PROJECT, --project PROJECT   **REQUIRED** project to identify the associated searchTable to query images matching `main_params.input_bids_labels <https://connect-tutorial.readthedocs.io/en/latest/project-specific_JSON_control_files/index.html#flirt-control>`_` in the <project_identifier> searchTable 
+--apt  utilize a 3D ATPw image as input for registration. This loads a FLIRT JSON control file <project_identifier>_apt_flirt_input.json
+--asl   utilize an ASL image as input for registration. This loads a FLIRT JSON control file <project_identifier>_asl_flirt_input.json
+--struc  utilize a structural image as input for registration. This loads a FLIRT JSON control file <project_identifier>_struc_flirt_input.json
 -h, --help  show the help message and exit
+--overwrite  force registration by skipping directory and database checking
 --progress  verbose mode
--s, --source    update the searchSourceTable, as defined via the `credentials.json file <https://connect-tutorial.readthedocs.io/en/latest/support_tools/index.html#read-credentials-py>`_
--m, --main  update the searchTable, as defined via the `credentials.json file <https://connect-tutorial.readthedocs.io/en/latest/support_tools/index.html#read-credentials-py>`_
+-s, --submit    submit conversion to the HTCondor queue for multi-threaded CPU processing
 -v, --version   display the current version
+
+
+.. note:: If multiple modality flags are provided (--apt, --struc, --asl), structural registration is performed first.
 
 
 .. code-block:: shell-session
 
-    $ connect_create_project_db.py -p <project_identifier> 
+    $ connect_flirt.py -p <project_identifier> --apt --asl --struc --overwrite --progress -s 

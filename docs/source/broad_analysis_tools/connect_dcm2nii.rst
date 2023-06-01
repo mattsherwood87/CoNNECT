@@ -10,7 +10,7 @@ for DICOM images contained in the sourcedata directory. These DICOM images are t
 
 This function can be executed via command-line only using the following options:
 
--p PROJECT, --project PROJECT   **REQUIRED** search the selected table for the indicated <project_identifier> can provide term 'all' to update all tables in credentials.json
+-p PROJECT, --project PROJECT   **REQUIRED** project to identify the associated `searchSourceTable <https://connect-tutorial.readthedocs.io/en/latest/support_tools/index.html#read-credentials-py>`_ to query DICOM images for NIfTI conversion
 -h, --help  show the help message and exit
 --overwrite  force conversion by skipping directory and database checking
 --progress  verbose mode
