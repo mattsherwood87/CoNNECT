@@ -2,7 +2,7 @@ connect_dcm2nii.py
 ==========================
 
     
-This function converts DICOM images searches a Project's searchSourceData MySQL table (`credentials.json file <https://connect-tutorial.readthedocs.io/en/latest/support_tools/index.html#read-credentials-py>`_) 
+This function converts DICOM images in a Project's `searchSourceTable <https://connect-tutorial.readthedocs.io/en/latest/support_tools/index.html#read-credentials-py>`_ MySQL table 
 for DICOM images contained in the sourcedata directory. These DICOM images are then converted to NIfTI images via dcm2niix and stored within the same sourcedata directory.
 
 .. seealso::
