@@ -1,4 +1,6 @@
-FMRIB's Linear Image Registration Tool (FLIRT)
+.. _flirt_json:
+
+FLIRT JSON Control File
 ==============================================
 
 FLIRT parameters can be found in “<project_identifier>_<input-datatype>_flirt_input.json” (see :numref:`input_data_types` for a list of 

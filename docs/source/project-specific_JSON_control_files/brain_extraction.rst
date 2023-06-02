@@ -1,4 +1,6 @@
-Brain Extraction (BET)
+.. _bet_json:
+
+Brain Extraction JSON Control File
 ======================
 
 Brain extraction parameters (:numref:`bet_json_table`) for FSL BET or ANTs Brain Extraction can be found in “<project_identifier>_<input-datatype>_bet_input.json". 

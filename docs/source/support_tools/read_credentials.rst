@@ -1,3 +1,4 @@
+.. _read_credentials_py:
 
 read_credentials.py
 ===============
@@ -6,7 +7,6 @@ Data collected and produced for each project will follow `BIDS specifications <h
 data integrity and conformity, and to improve data consistency and data processing optimization. 
 
 |
-.. _credentials_json_file:
 
 A single JSON file describes various parameters for each project/program. This file is ‘credentials.json’ and is located in the main code directory on the mounted centralized storage 
 (/resshare/general_processing_codes). The table below outlines the keys and their associated descriptions for a project in the credentials file. Each project in the credentials file 

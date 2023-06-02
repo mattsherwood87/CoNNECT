@@ -8,8 +8,8 @@ This function can be executed via command-line only using the following options:
 -p PROJECT, --project PROJECT   **REQUIRED** search the selected table for the indicated <project_identifier> can provide term 'all' to update all tables in credentials.json
 -h, --help  show the help message and exit
 --progress  verbose mode
--s, --source    update the searchSourceTable, as defined via the :ref:`_credentials_json_file` 
--m, --main  update the searchTable, as defined via the `credentials.json file <https://connect-tutorial.readthedocs.io/en/latest/support_tools/index.html#read-credentials-py>`_
+-s, --source    update the searchSourceTable, as defined via the credentials JSON file read by :ref:`_read_credentials_py` 
+-m, --main  update the searchTable, as defined via the credentials JSON file read by :ref:`_read_credentials_py` 
 -v, --version   display the current version
 
 

@@ -1,5 +1,6 @@
+.. _scan_id_json:
 
-Scan Identification
+Scan Identification JSON Control File
 ======================
 
 Scan Identification parameters can be found in “<project_identifier>_scan_id.json". This file contains the inputs described in :numref:`scan_id_json_table` and :numref:`sequence_dict_items`
