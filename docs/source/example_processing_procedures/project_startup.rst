@@ -4,22 +4,30 @@
 Project Startup
 ======================
 
+Modify credentials JSON control file
+------------------------------------
 
-#. Edit the credentials.json file located at /resshare/general_processing_code
-  #. Add the 2022-001 to the "projects" key
-  #. Create a new key titled 2022-001
-  #. Add the elements in :numref:`credentials_secondary_table` to the 2022-001 dictionary
+Edit the credentials.json file located at /resshare/general_processing_code
+
+#. Add 2022-001 to the "projects" key
+#. Create a new key titled 2022-001
+#. Add the elements in :numref:`credentials_secondary_table` to the 2022-001 dictionary
 
 
-#. Create the Project's :ref:`scan ID JSON file <scan_id_json>` in the Project's **code** directory
+Create MySQL tables
+-------------
 
-#. Create the Project's MySQL tables
+Create the Project's MySQL tables
 
-   .. code-block:: shell-session
-    
-    $ connect_create_project_db.py -p 2022-001
+.. code-block:: shell-session
+  
+  $ connect_create_project_db.py -p 2022-001
 
-#. Create the Project's Scan ID JSON control file
+
+Create a scan ID JSON control file
+-----------------------------------
+
+Create the Project's :ref:`scan ID JSON file <scan_id_json>` in the Project's **code** directory
 
    .. note::
       You may want to first collect a set of Pilot mri data and transmit to the CoNNECT NPC via PACS after you have
