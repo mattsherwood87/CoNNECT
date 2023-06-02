@@ -4,7 +4,7 @@
 get_scan_id.py
 ===============
 
-This function is currently used by connect_create_raw_nii.py.
+This function is currently used by :ref:`connect_create_raw_nii.py <connect_create_raw_nii_python>`.
 
 .. py:function:: get_scan_id(inDir, basename)
     

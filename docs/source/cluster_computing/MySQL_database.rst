@@ -1,3 +1,6 @@
+
+.. _mysql_db:
+
 MySQL Database
 ==============
 
