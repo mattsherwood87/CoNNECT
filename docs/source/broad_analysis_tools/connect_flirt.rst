@@ -3,7 +3,11 @@ connect_flirt.py
 
     
 This function executes registration via FSL's FLIRT using `connect_flirt.py support tool <https://connect-tutorial.readthedocs.io/en/latest/support_tools/index.html#flirt-py>`_.
-This function can be executed via command-line only using the following options:
+This function can be executed via command-line only:
+
+.. code-block:: shell-session
+
+    $ connect_flirt.py -p <project_identifier> --apt --asl --struc --overwrite --progress -s 
 
 -p PROJECT, --project PROJECT   **REQUIRED** project to identify the associated searchTable to query images matching `main_params.input_bids_labels <https://connect-tutorial.readthedocs.io/en/latest/project-specific_JSON_control_files/index.html#flirt-control>`_` in the <project_identifier> searchTable 
 --apt  utilize a 3D ATPw image as input for registration. This loads a FLIRT JSON control file <project_identifier>_apt_flirt_input.json
@@ -17,8 +21,3 @@ This function can be executed via command-line only using the following options:
 
 
 .. note:: If multiple modality flags are provided (--apt, --struc, --asl), structural registration is performed first.
-
-
-.. code-block:: shell-session
-
-    $ connect_flirt.py -p <project_identifier> --apt --asl --struc --overwrite --progress -s 

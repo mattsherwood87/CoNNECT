@@ -1,5 +1,5 @@
 
-.. _convert_dicoms_py:
+.. _convert_dicoms_python:
 
 convert_dicoms.py
 ===============

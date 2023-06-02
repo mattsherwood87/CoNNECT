@@ -1,4 +1,4 @@
-.. _read_credentials_py:
+.. _read_credentials_python:
 
 read_credentials.py
 ===============
