@@ -2,14 +2,15 @@ connect_flirt.py
 ==========================
 
     
-This function executes registration via FSL's FLIRT using `connect_flirt.py support tool <https://connect-tutorial.readthedocs.io/en/latest/support_tools/index.html#flirt-py>`_.
+This function executes registration via FSL's FLIRT using :ref:`flirt.py <flirt_python>`.
+
 This function can be executed via command-line only:
 
 .. code-block:: shell-session
 
     $ connect_flirt.py -p <project_identifier> --apt --asl --struc --overwrite --progress -s 
 
--p PROJECT, --project PROJECT   **REQUIRED** project to identify the associated searchTable to query images matching `main_params.input_bids_labels <https://connect-tutorial.readthedocs.io/en/latest/project-specific_JSON_control_files/index.html#flirt-control>`_` in the <project_identifier> searchTable 
+-p PROJECT, --project PROJECT   **REQUIRED** project to identify the associated searchTable to query images matching :ref:`main_params.input_bids_labels <flirt_json>` in the <project_identifier> searchTable 
 --apt  utilize a 3D ATPw image as input for registration. This loads a FLIRT JSON control file <project_identifier>_apt_flirt_input.json
 --asl   utilize an ASL image as input for registration. This loads a FLIRT JSON control file <project_identifier>_asl_flirt_input.json
 --struc  utilize a structural image as input for registration. This loads a FLIRT JSON control file <project_identifier>_struc_flirt_input.json

@@ -4,8 +4,8 @@ connect_dcm2nii.py
 ==========================
 
     
-This function converts DICOM images to NIfTI utilizing dcm2niix and :ref:`convert_dicoms_python`. Files within the identified Project's searchSourceTable, :ref:`credentials JSON file <read_credentials_python>`,
-are queried via MySQL for DICOM images. These DICOm images are contained within the Project's sourcedata directory. Directories within sourcedata that contain DICOM images are then passed to dcm2niix for 
+This function converts DICOM images to NIfTI utilizing dcm2niix and :ref:`convert_dicoms_python`. Files within the identified Project's :ref:`searchSourceTable <read_credentials_python>`
+are queried via MySQL for DICOM images. These DICOM images are contained within the Project's sourcedata directory. Directories within sourcedata that contain DICOM images are then passed to dcm2niix for 
 conversion. The NIfTI images created are then stored in the same sourcedata directory as their source DICOM directory.
 
 .. seealso::
