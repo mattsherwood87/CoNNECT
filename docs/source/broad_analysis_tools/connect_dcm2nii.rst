@@ -4,15 +4,16 @@ connect_dcm2nii.py
 ==========================
 
     
-This function converts DICOM images in a Project's `searchSourceTable <https://connect-tutorial.readthedocs.io/en/latest/support_tools/index.html#read-credentials-py>`_ MySQL table 
-for DICOM images contained in the sourcedata directory. These DICOM images are then converted to NIfTI images via dcm2niix and stored within the same sourcedata directory.
+This function converts DICOM images to NIfTI utilizing dcm2niix and :ref:`convert_dicoms_py`. Files within the identified Project's searchSourceTable, :ref:`credentials JSON file <read_credentials_py>` credentials JSON file read by :ref:`read_credentials_py`,
+are queried via MySQL for DICOM images. These DICOm images are contained within the Project's sourcedata directory. Directories within sourcedata that contain DICOM images are then passed to dcm2niix for 
+conversion. The NIfTI images created are then stored in the same sourcedata directory as their source DICOM directory.
 
 .. seealso::
-    NEED TO WRITE This
+    The `dcm2niix <https://www.nitrc.org/plugins/mwiki/index.php/dcm2nii:MainPage>`_ is the most common tool for DICOM-to-NIfTI conversion, and is implemented on our Ubuntu 20.04 CoNNECT NPC nodes.
 
 This function can be executed via command-line only using the following options:
 
--p PROJECT, --project PROJECT   **REQUIRED** project to identify the associated `searchSourceTable <https://connect-tutorial.readthedocs.io/en/latest/support_tools/index.html#read-credentials-py>`_ to query DICOM images for NIfTI conversion
+-p PROJECT, --project PROJECT   **REQUIRED** project to identify the associated searchSourceTable to query DICOM images for NIfTI conversion
 -h, --help  show the help message and exit
 --overwrite  force conversion by skipping directory and database checking
 --progress  verbose mode

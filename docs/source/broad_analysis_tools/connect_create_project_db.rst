@@ -2,7 +2,8 @@ connect_create_project_db.py
 ==========================
 
     
-This function creates the Project's searchTable and searchSourceTable, as defined via the `credentials.json file <https://connect-tutorial.readthedocs.io/en/latest/support_tools/index.html#read-credentials-py>`_.
+This function creates the Project's searchTable and searchSourceTable, as defined via the credentials JSON file read by :ref:`_read_credentials_py`.
+
 This function can be executed via command-line only using the following options:
 
 -p PROJECT, --project PROJECT   **REQUIRED** search the selected table for the indicated <project_identifier> can provide term 'all' to update all tables in credentials.json
