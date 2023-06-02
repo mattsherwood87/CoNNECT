@@ -2,7 +2,7 @@ connect_create_project_db.py
 ==========================
 
     
-This function creates the Project's searchTable and searchSourceTable, as defined via the :ref:`credentials JSON file <read_creds_python>`.
+This function creates the Project's searchTable and searchSourceTable, as defined via the :ref:`read_creds_python`.
 
 This function can be executed via command-line only using the following options:
 
