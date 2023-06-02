@@ -1,3 +1,5 @@
+.. _flirt_params_file:
+
 flirt_params
 ------------
 
