@@ -25,7 +25,7 @@ This function can be executed via command-line only using the following options:
 
 .. code-block:: shell-session
 
-    $ connect_create_raw_nii.py -p <project_identifier> --in-dir <path to sourcedata for a single subject/session> --progress --overwrite
+    $ connect_create_raw_nii.py -p <project_identifier> --in-dir <path to single session's sourcedata> --progress --overwrite
 
 
 -p PROJECT, --project PROJECT   **REQUIRED** project identifier to execute
