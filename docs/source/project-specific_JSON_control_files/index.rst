@@ -1,5 +1,7 @@
 :topic: Project-Specific JSON Control Files
 
+.. _json_control_files:
+
 ***********************************
 Project-Specific JSON Control Files
 ***********************************

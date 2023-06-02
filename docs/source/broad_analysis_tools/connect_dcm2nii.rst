@@ -1,3 +1,5 @@
+.. _connect_dcm2nii_py:
+
 connect_dcm2nii.py
 ==========================
 
