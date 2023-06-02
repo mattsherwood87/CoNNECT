@@ -6,19 +6,19 @@ Project Startup
 
 
 #. Edit the credentials.json file located at /resshare/general_processing_code
-  #. Add the 2022-001 to the "projects" key
-  #. Create a new key titled 2022-001
-  #. Add the elements in :numref:`credentials_secondary_table` to the 2022-001 dictionary
+   #. Add the 2022-001 to the "projects" key
+   #. Create a new key titled 2022-001
+   #. Add the elements in :numref:`credentials_secondary_table` to the 2022-001 dictionary
 
-  .. note:: This is a manual process.
+   .. note:: This is a manual process.
 
 #. Create the Project's :ref:`scan ID JSON file <scan_id_json>` in the Project's **code** directory
 
-  .. note:: This is a manual process.
+   .. note:: This is a manual process.
 
 #. Create the Project's MySQL tables
 
-  .. code-block:: shell-session
+   .. code-block:: shell-session
     
     $ connect_create_project_db.py -p 2022-001
 
