@@ -1,4 +1,6 @@
 
+.. _get_dir_idenfiers_python:
+
 get_dir_indentifiers.py
 ===============
 

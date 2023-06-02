@@ -1,3 +1,4 @@
+
 .. _bet_json:
 
 Brain Extraction JSON Control File

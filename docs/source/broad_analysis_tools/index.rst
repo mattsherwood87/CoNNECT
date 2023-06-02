@@ -6,7 +6,7 @@ CoNNECT Broad Analysis Tools
 
 There are many custom analysis tools that have been developed to provide broad processing capabilities across projects, MRI scanners, imaging parameters, and processing 
 specifications. These tools are described in this Section. Many of these tools utilize a common JSON architecture to describe project-specific inputs that are utilized 
-by these analysis tools to allow maximum flexibility of their implementation. Specifics to these JSON control files can be found at :ref:`json_control_files`. 
+by these analysis tools to allow maximum flexibility of their implementation. Specifics to these JSON control files can be found at :ref:`HERE <json_control_files>`. 
 
 .. note:: At this time, these functions only support command-line usage. 
 
