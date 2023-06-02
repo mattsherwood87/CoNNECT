@@ -1,7 +1,7 @@
 connect_create_raw_nii.py
 ==========================
 
-This function moves sourcedata NIfTI files (and JSON/txt sidecars) created from connect_dcm2nii.py or convert_dicoms to the corresponding rawdata directory. 
+This function moves sourcedata NIfTI files (and JSON/txt sidecars) created from connect_dcm2nii.py or :ref:`convert_dicoms_py` to the corresponding rawdata directory. 
 
 This function can be executed via command-line only using the following options:
 
