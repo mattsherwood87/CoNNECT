@@ -7,7 +7,7 @@ convert_dicoms.py
 
 .. py:function:: convert_dicoms(source_singleDir, progress)
     
-    This functionconverts sourcedata DICOM images to NIfTI images, and stores the output in the parent folder.
+    This function converts sourcedata DICOM images (or any DICOM images in source_singleDir) to NIfTI images, and stores the output NIfTI (and JSON/TXT sidecars) in the parent folder.
 
     convert_dicoms(source_singleDIr, progress)
 
