@@ -9,6 +9,7 @@ Modify credentials JSON control file
 
 Edit the credentials.json file located at /resshare/general_processing_code
 
+#. Determine your project identifier from your approved IRB number. Get this information from Dr. Sherwood. For example purposes, we will use "2022-001".
 #. Add 2022-001 to the "projects" key
 #. Create a new key titled 2022-001
 #. Add the elements from `Dictionary keys for the <project_identifier> elements <https://connect-tutorial.readthedocs.io/en/latest/support_tools/index.html#read-credentials-py>`_ to the 2022-001 dictionary
