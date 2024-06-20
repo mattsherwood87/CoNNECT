@@ -229,3 +229,28 @@ flirt_params
 
 
 
+**standard_reference_image** 
+
+.. _std_reference_inputs:
+
+.. list-table:: Standard reference image input dictionary keys.
+   :widths: 30 15 15 40
+   :header-rows: 1
+
+   * - **Key Name**
+     - **Required?**
+     - **Data Type**
+     - **Description**
+   * - in_file
+     - REQUIRED
+     - exisitng file name
+     - name of input image
+   * - ref_file
+     - REQUIRED
+     - existing file name
+     - name of reference image
+   * - affine_file
+     - OPTIONAL
+     - exisitng file name
+     - name of file containing affine transform 
+   * - 
