@@ -11,7 +11,7 @@ Edit the credentials.json file located at /resshare/general_processing_code
 
 #. Add 2022-001 to the "projects" key
 #. Create a new key titled 2022-001
-#. Add the elements in :numref:`credentials_secondary_table` to the 2022-001 dictionary
+#. Add the elements in :numref:`mysql_data_table` to the 2022-001 dictionary
 
 
 Create MySQL tables
