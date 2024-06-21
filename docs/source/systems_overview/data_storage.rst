@@ -18,7 +18,7 @@ available on the master and any core nodes.
 Data Organization
 -----------------
 
-test Data collected and produced for each project will follow `BIDS specifications <https://bids-specification.readthedocs.io/en/stable/>`__ to ensure community standards are upheld, to improve 
+Data collected and produced for each project will follow `BIDS specifications <https://bids-specification.readthedocs.io/en/stable/>`__ to ensure community standards are upheld, to improve 
 data integrity and conformity, and to improve data consistency and data processing optimization.
 
 .. note:: Insert BIDS overview, etc including filename structure table here
