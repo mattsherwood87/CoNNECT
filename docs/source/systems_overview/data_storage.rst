@@ -22,3 +22,48 @@ Data collected and produced for each project will follow `BIDS specifications <h
 data integrity and conformity, and to improve data consistency and data processing optimization.
 
 .. note:: Insert BIDS overview, etc including filename structure table here
+
+
+.. _get_bids_filename_table:
+
+.. list-table:: Available Keys for compliant get_bids_filename from input labels. 
+   :widths: 30 15 15 40
+   :header-rows: 1
+
+   * - **Entity**
+     - **Label Prefix**
+     - **Description**
+   * - task
+     - task
+     - A set of structured activities performed by the participant. No two tasks should have the same name.
+   * - acquisition
+     - acq
+     - Data acquisition is a continuous uninterupted block of time during which the MRI was acquiring data.
+   * - run
+     - run
+     - An uniterupted repition that has the same acquisition parameters and task.
+   * - process
+     - proc
+     - Name of process that generated the outputs.
+   * - resolution
+     - res
+     - The acq-<label> entity cooresponds to a custom label the user may use to distinguish a different set of parameters used for acquiring the same modality. 
+       For example <acq-highres> or <acq-lowres>.
+   * - space
+     - space
+     - Useful for describing the source of tranforms from an input image to a target space.
+   * - description
+     - desc
+     - Describing acronyms within labeling code.
+   * - suffix
+     - suf
+     - A filename consists of a chain of entity instances and a suffix all separated by underscores, and an extension.
+   * - extension
+     - ext
+     - The extension depends on the inaging modality and the data format, and can convey further details of the file's content.
+     
+
+     For example, bids format should follow this structure:
+
+     _sub-_ses-_acq-_run-_task-_desc-_suf-.ext
+
