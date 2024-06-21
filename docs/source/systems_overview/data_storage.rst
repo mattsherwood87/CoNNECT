@@ -24,6 +24,10 @@ data integrity and conformity, and to improve data consistency and data processi
 .. note:: Insert BIDS overview, etc including filename structure table here
 
 
+For example, bids format should follow this structure:
+_sub-_ses-_acq-_run-_task-_desc-_.ext
+
+
 .. _get_bids_filename_table:
 
 .. list-table:: Available Keys for compliant get_bids_filename from input labels. 
@@ -56,14 +60,12 @@ data integrity and conformity, and to improve data consistency and data processi
      - desc
      - Describing acronyms within labeling code.
    * - suffix
-     - suf
+     - NA
      - A filename consists of a chain of entity instances and a suffix all separated by underscores, and an extension.
    * - extension
      - ext
      - The extension depends on the inaging modality and the data format, and can convey further details of the file's content.
      
 
-For example, bids format should follow this structure:
 
-_sub-_ses-_acq-_run-_task-_desc-_suf-.ext
 
