@@ -63,7 +63,7 @@ data integrity and conformity, and to improve data consistency and data processi
      - The extension depends on the inaging modality and the data format, and can convey further details of the file's content.
      
 
-     For example, bids format should follow this structure:
+For example, bids format should follow this structure:
 
-     _sub-_ses-_acq-_run-_task-_desc-_suf-.ext
+_sub-_ses-_acq-_run-_task-_desc-_suf-.ext
 
