@@ -27,7 +27,7 @@ data integrity and conformity, and to improve data consistency and data processi
 .. _get_bids_filename_table:
 
 .. list-table:: Available Keys for compliant get_bids_filename from input labels. 
-   :widths: 30 15 15 40
+   :widths: 30 15 55
    :header-rows: 1
 
    * - **Entity**
