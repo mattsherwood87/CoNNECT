@@ -11,19 +11,15 @@ import os
 from nipype.interfaces.dcm2nii import Dcm2niix
 import argparse
 
-parser = argparse.ArgumentParser()
 
 # ******************* PARSE COMMAND LINE ARGUMENTS ********************
 def parse_arguments():
 
+    parser = argparse.ArgumentParser()
     #input options for main()
     parser.add_argument('source_singleDir')
     parser.add_argument('progress',type=bool)
     return parser
-
-
-def to_raw(string):
-    return fr"{string}"
 
 
 
