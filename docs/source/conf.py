@@ -6,6 +6,7 @@ import sphinx_adc_theme
 
 sys.path.append(os.path.abspath('ext'))
 sys.path.append('.')
+sys.path.insert(0,os.abspath('support_tools'))
 
 
 from links.link import *
