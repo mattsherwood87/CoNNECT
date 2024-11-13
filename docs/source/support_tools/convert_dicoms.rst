@@ -22,16 +22,17 @@ convert_dicoms.py
 
 
 
-module
+
 .. automodule:: helper_functions.convert_dicoms
 
-function
+
 .. autofunction:: helper_functions.convert_dicoms
 
-class
-.. autoclass:: convert_dicoms
+
+.. autoclass:: helper_functions.convert_dicoms
     :members:
     :special-members:
+
 
 convert_dicoms.py also supports execution via command-line:
 
