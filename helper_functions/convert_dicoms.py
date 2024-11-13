@@ -33,8 +33,6 @@ def convert_dicoms(source_singleDir,progress):
     Arguments:
 
         source_singleDir (str): fullpath to a sourcedata directory containing DICOM images
-
-        args (str): a sequence of program arguments
             
         progress (BOOL): OPTIONAL flag to display command line output providing additional details on the processing status
 
@@ -75,7 +73,6 @@ def main():
     """
     parser = parse_arguments()
     options = parser.parse_args()
-    print('Converting dicoms in ' + options.source_singleDir + ' to ')
     convert_dicoms(options.source_singleDir,options.progress)
 
 

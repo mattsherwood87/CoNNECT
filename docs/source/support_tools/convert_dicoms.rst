@@ -30,7 +30,7 @@ convert_dicoms.py
 .. argparse::
     :module: helper_functions.convert_dicoms
     :func: parse_arguments
-    :prog: convert_dicoms
+    :prog: convert_dicoms.py
 
 
 
