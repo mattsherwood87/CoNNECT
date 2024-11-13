@@ -15,7 +15,7 @@ import argparse
 # ******************* PARSE COMMAND LINE ARGUMENTS ********************
 def parse_arguments():
 
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser('convert_dicoms.py: Command-line execution of DICOM to NIfTI conversion via dcm2niix. Converted NIfTI images are placed in the directory containing the imput sourcedata directory.')
     #input options for main()
     parser.add_argument('source_singleDir')
     parser.add_argument('progress',type=bool)
@@ -26,7 +26,7 @@ def parse_arguments():
 # ******************* CONVERT DICOMS ********************
 def convert_dicoms(source_singleDir,progress):
     """
-    This function converts sourcedata DICOM images to NIfTI images in the input sourcedata directory.
+    This function converts sourcedata DICOM images to NIfTI images in the input sourcedata directory. This function requires the installation of dcm2niix. Converted NIfTI images are placed in the directory containing the imput sourcedata directory.
 
     convert_dicoms(source_singleDir,progress=False)
 
