@@ -23,10 +23,10 @@ convert_dicoms.py
 
 
 
-.. automodule:: convert_dicoms
+.. automodule:: helper_functions.convert_dicoms
 
 
-.. autofunction:: convert_dicoms
+.. autofunction:: helper_functions.convert_dicoms
 
 
 .. autoclass:: convert_dicoms
