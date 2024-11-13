@@ -28,3 +28,8 @@ convert_dicoms.py also supports execution via command-line:
 
 
 .. automodule:: convert_dicoms
+
+.. autofunction:: convert_dicoms
+
+.. autoclass:: convert_dicoms
+    :members:
