@@ -12,10 +12,10 @@ sys.path.append('.')
 from links.link import *
 from links import *
 
-sys.path.insert(0, os.path.abspath('../../'))
 sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('..'))
-sys.path.insert(0, os.path.abspath('../../helper_functions'))
+sys.path.insert(0, os.path.abspath('../../'))
+
 
 # -- Project information
 
