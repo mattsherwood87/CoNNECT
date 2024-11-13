@@ -27,5 +27,4 @@ convert_dicoms.py also supports execution via command-line:
     $ ./convert_dicoms.py <source_singleDir> --progress
 
 
-
 .. automodule:: convert_dicoms
