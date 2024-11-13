@@ -19,8 +19,7 @@ def parse_arguments():
     #input options for main()
     parser.add_argument('source_singleDir')
     parser.add_argument('progress',type=bool)
-    options = parser.parse_args()
-    return options
+    return parser
 
 
 def to_raw(string):
@@ -78,7 +77,8 @@ def main():
     """
     The entry point of this program.
     """
-    options = parse_arguments()
+    parser = parse_arguments()
+    options = parser.parse_args()
     print('Converting dicoms in ' + options.source_singleDir + ' to ')
     convert_dicoms(options.source_singleDir,options.progress)
 
