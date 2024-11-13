@@ -23,13 +23,13 @@ convert_dicoms.py
 
 
 
-.. automodule:: helper_functions.convert_dicoms
+.. automodule:: convert_dicoms
 
 
-.. autofunction:: helper_functions.convert_dicoms
+.. autofunction:: convert_dicoms
 
 
-.. autoclass:: helper_functions.convert_dicoms
+.. autoclass:: convert_dicoms
     :members:
     :special-members:
 
