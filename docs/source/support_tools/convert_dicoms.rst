@@ -21,22 +21,18 @@ convert_dicoms.py
 
 
 
-
-
-.. automodule:: helper_functions.convert_dicoms
-    :members:
-    :special-members:
-
 .. argparse::
     :module: helper_functions.convert_dicoms
     :func: parse_arguments
     :prog: convert_dicoms.py
 
 
+.. automodule:: helper_functions.convert_dicoms
+    :members:
+    :special-members:
 
 
-convert_dicoms.py also supports execution via command-line:
 
-.. code-block:: shell-session
 
-     $ ./convert_dicoms.py <source_singleDir> --progress
+
+
