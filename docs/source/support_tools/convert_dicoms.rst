@@ -28,7 +28,9 @@ convert_dicoms.py
     :special-members:
 
 
-.. autofunction:: helper_functions.convert_dicoms
+.. autofunction:: helper_functions.convert_dicoms.convert_dicoms
+    :members:
+    :special-members:
 
 
 
