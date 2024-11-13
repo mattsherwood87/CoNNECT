@@ -15,7 +15,7 @@ from links import *
 sys.path.insert(0, os.path.abspath('../../'))
 sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('..'))
-sys.path.insert(0, os.path.abspath('../../../helper_functions'))
+sys.path.insert(0, os.path.abspath('../../helper_functions'))
 
 # -- Project information
 
@@ -33,6 +33,7 @@ extensions = [
     'sphinx.ext.duration',
     'sphinx.ext.doctest',
     'sphinx.ext.autodoc',
+    'sphinx.ext.napoleon',
     'sphinx.ext.autosectionlabel',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
