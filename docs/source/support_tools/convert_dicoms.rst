@@ -25,3 +25,8 @@ convert_dicoms.py also supports execution via command-line:
 .. code-block:: shell-session
 
     $ ./convert_dicoms.py <source_singleDir> --progress
+
+
+
+.. autoclass:: convert_dicoms
+    :members:
