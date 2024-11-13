@@ -20,16 +20,21 @@ convert_dicoms.py
     :rtype: None
 
 
-.. convert_dicoms.py also supports execution via command-line:
-
-.. .. code-block:: shell-session
-
-..     $ ./convert_dicoms.py <source_singleDir> --progress
 
 
+module
 .. automodule:: helper_functions.convert_dicoms
 
+function
 .. autofunction:: helper_functions.convert_dicoms
 
+class
 .. autoclass:: convert_dicoms
     :members:
+    :special-members:
+
+convert_dicoms.py also supports execution via command-line:
+
+.. code-block:: shell-session
+
+     $ ./convert_dicoms.py <source_singleDir> --progress
