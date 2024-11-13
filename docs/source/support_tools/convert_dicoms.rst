@@ -27,10 +27,10 @@ convert_dicoms.py
     :members:
     :special-members:
 
-
-.. autofunction:: helper_functions.convert_dicoms.convert_dicoms
-    :members:
-    :special-members:
+.. argparse::
+    :module: helper_functions.convert_dicoms
+    :func: parse_arguments
+    :prog: convert_dicoms
 
 
 
