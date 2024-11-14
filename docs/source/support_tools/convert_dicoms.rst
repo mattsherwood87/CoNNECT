@@ -5,27 +5,14 @@ convert_dicoms.py
 ===============
 
 
-.. .. py:function:: convert_dicoms(source_singleDir, progress)
-    
-..    This function converts sourcedata DICOM images (or any DICOM images in source_singleDir) to NIfTI images, and stores the output NIfTI (and JSON/TXT sidecars) in the parent folder.
 
-..    convert_dicoms(source_singleDIr, progress)
+.. .. argparse::
+..     :module: helper_functions.convert_dicoms
+..     :func: parse_arguments
+..     :prog: convert_dicoms.py
 
-..    :param source_singleDir: REQUIRED String or pathlike object of a directory containing DICOM images.
-    :param progress: OPTIONAL operate in verbose mode (default False) 
-    :type source_singleDir: str or None or Pathlike object
-    :type progress: bool
-    :raise Error: If path does not exist.
-    :return: None
-    :rtype: None
-
-
-
-.. argparse::
-    :module: helper_functions.convert_dicoms
-    :func: parse_arguments
+.. autoprogram:: helper_functions.convert_dicoms:parser 
     :prog: convert_dicoms.py
-
 
 .. automodule:: helper_functions.convert_dicoms
     :members:

@@ -38,7 +38,8 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
     'sphinx.ext.graphviz',
-    'sphinxarg.ext'
+    'sphinxarg.ext',
+    'sphinxcontrib.autoprogram'
 ]
 
 intersphinx_mapping = {
