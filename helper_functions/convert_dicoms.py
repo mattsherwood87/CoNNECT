@@ -17,8 +17,8 @@ def parse_arguments():
 
     parser = argparse.ArgumentParser('convert_dicoms.py: Command-line execution of DICOM to NIfTI conversion via dcm2niix. Converted NIfTI images are placed in the directory containing the imput sourcedata directory.')
     #input options for main()
-    parser.add_argument('source_singleDir',required=True,help='(str) fullpath to a sourcedata directory containing DICOM images')
-    parser.add_argument('progress',required=False,default=False,type=bool,help='(bool) run in verbose mode (default=False)')
+    parser.add_argument('source_singleDir',help='(str) fullpath to a sourcedata directory containing DICOM images')
+    parser.add_argument('progress',default=False,type=bool,help='(bool) run in verbose mode')
     return parser
 
 
