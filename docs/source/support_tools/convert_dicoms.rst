@@ -11,7 +11,7 @@ convert_dicoms.py
 ..     :func: parse_arguments
 ..     :prog: convert_dicoms.py
 
-.. autoprogram:: helper_functions.convert_dicoms:parser 
+.. autoprogram:: convert_dicoms:parser 
     :prog: convert_dicoms.py
 
 .. automodule:: helper_functions.convert_dicoms
