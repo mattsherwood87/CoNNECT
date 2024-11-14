@@ -17,8 +17,8 @@ parser = argparse.ArgumentParser('convert_dicoms.py: Command-line execution of D
 def parse_arguments():
 
     #input options for main()
-    parser.add_argument('source_singleDir',help='(str) fullpath to a sourcedata directory containing DICOM images')
-    parser.add_argument('progress',default=False,type=bool,help='(bool) run in verbose mode')
+    parser.add_argument('-s','--source',action='store',dest='source_singleDir',required=True,help='(str) fullpath to a sourcedata directory containing DICOM images')
+    parser.add_argument('--progress',required=False,dest='progress',default=False,type=bool,help='(bool) run in verbose mode')
     return parser
 
 
@@ -71,8 +71,8 @@ def main():
     """
     The entry point of this program.
     """
-    parser = parse_arguments()
-    options = parser.parse_args()
+    parser2 = parse_arguments()
+    options = parser2.parse_args()
     convert_dicoms(options.source_singleDir,options.progress)
 
 
