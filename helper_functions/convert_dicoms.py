@@ -30,15 +30,12 @@ def convert_dicoms(source_singleDir,progress):
 
     convert_dicoms(source_singleDir,progress=False)
 
-    Arguments:
+    :param source_singleDir: fullpath to a sourcedata directory containing DICOM images
+    :type source_singleDir: str
 
-        source_singleDir (str): fullpath to a sourcedata directory containing DICOM images
-            
-        progress (BOOL): OPTIONAL flag to display command line output providing additional details on the processing status
-
-    Returns:
-        None
-    """
+    :param progress: flag to display command line output providing additional details on the processing status
+    :type progress: bool, optional
+    """    
 
     if os.path.isdir(source_singleDir):
         #setup dicom conversion to nifti
