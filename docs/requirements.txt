@@ -21,7 +21,7 @@ sphinxcontrib-websupport==1.1.0
 absl-py==2.0.0
 ants==0.0.7
 antspynet==0.2.3
-antspyx=0.3.8
+antspyx==0.4.2
 anyio==4.4.0
 asgiref==3.7.2
 aspose-pdf==24.5.0
