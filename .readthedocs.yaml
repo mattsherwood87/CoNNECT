@@ -4,10 +4,16 @@ build:
   os: "ubuntu-20.04"
   tools:
     python: "3.10"
+  jobs:
+    post_build:
+      FSLDIR='/usr/local/fsl'
+      FREESURFER_DIR='/usr/local/freesurfer/7.4.1'
+
 
 python:
   install:
     - requirements: docs/requirements.txt
+  
 
 formats:
   - epub
