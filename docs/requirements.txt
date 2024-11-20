@@ -21,7 +21,7 @@ sphinxcontrib-websupport==1.1.0
 absl-py==2.0.0
 ants==0.0.7
 antspynet==0.2.3
-antspyx @ file:///home/nw028mss/Downloads/antspyx-0.3.8-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=5dedc4d8e44785907fb346dba7726d443e0f11c36e85be134ddc5e90e490d0fd
+antspyx=0.3.8
 anyio==4.4.0
 asgiref==3.7.2
 aspose-pdf==24.5.0
