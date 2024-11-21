@@ -15,7 +15,6 @@ credentialsFilePath = os.path.join(REALPATH, "credentials.json")
 with open(credentialsFilePath) as j:
     fullCredentials = json.load(j)
 
-# from .get_dir_identifiers_new import get_dir_identifiers_new
 
 from .bids_commands import *
 from .convert_dicoms import convert_dicoms
@@ -185,7 +184,7 @@ class specBase:
 
 
 def import_flirt():
-    from .old_versions.flirt import flirt
+    from .flirt import flirt
 
 
 st.creds = st.creds()
