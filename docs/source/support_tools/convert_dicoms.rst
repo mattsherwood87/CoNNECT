@@ -11,13 +11,13 @@ convert_dicoms.py
 ..     :func: parse_arguments
 ..     :prog: convert_dicoms.py
 
-.. autoprogram:: helper_functions.convert_dicoms:parser 
+.. autoprogram:: support_tools.convert_dicoms:parser 
     :prog: convert_dicoms.py
 
 Python Implementation
 ---------------------
 
-.. automodule:: helper_functions.convert_dicoms
+.. automodule:: support_tools.convert_dicoms
     :members:
     :special-members:
 

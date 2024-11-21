@@ -24,7 +24,7 @@ antspynet==0.2.3
 antspyx==0.4.2
 anyio
 asgiref
-aspose-pdf==24.5.0
+#aspose-pdf
 asttokens==2.4.1
 astunparse==1.6.3
 attrs==24.2.0
