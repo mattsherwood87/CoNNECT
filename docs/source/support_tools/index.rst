@@ -22,6 +22,11 @@ __init__.py
 Python Implementation
 ---------------------
 
+.. autoclass:: creds 
+    :members:
+
+    .. automethod:: support_tools.__init__
+
 .. automodule:: support_tools.__init__
     :members:
     :special-members:
