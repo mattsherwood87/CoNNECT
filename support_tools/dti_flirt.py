@@ -134,18 +134,18 @@ def dti_flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, overwrite: bool=Fa
         
         # create file inputs and outputs
         mainFileDir = os.path.dirname(mainFile)
-        subName, fullSesNum, sesNum = st.get_dir_identifiers_new(mainFileDir)
-        mainFlirtOutputDir = os.path.join(DATA_DIR,'derivatives','sub-' + subName,'ses-' + sesNum,'flirt',mainParams['output_bids_location'])#create base path and filename for move
+        st.subject.get_id(mainFileDir)
+        mainFlirtOutputDir = os.path.join(DATA_DIR,'derivatives','sub-' + st.subject.id,'ses-' + st.subject.sesNum,'flirt',mainParams['output_bids_location'])#create base path and filename for move
         if not os.path.isdir(mainFlirtOutputDir):
             os.makedirs(mainFlirtOutputDir)
 
         #look for accompanying structural data on disk in derivatives
         if refImage and not refImageParams['type'] == 'std':
-            ref_regexStr = st.bids_commands.get_bids_filename(**refImageParams['input_bids_labels'])
+            ref_regexStr = st.bids.get_bids_filename(**refImageParams['input_bids_labels'])
             if refImageParams['input_bids_location'] == 'raw':
-                refImageFile = glob(os.path.join(DATA_DIR,'rawdata','sub-' + subName,'ses-' + sesNum,'anat','*' + ref_regexStr + '*'))
+                refImageFile = glob(os.path.join(DATA_DIR,'rawdata','sub-' + st.subject.id,'ses-' + st.subject.sesNum,'anat','*' + ref_regexStr + '*'))
             elif refImageParams['input_bids_location'] == 'derivatives':
-                refImageFile = glob(os.path.join(DATA_DIR,'derivatives','sub-' + subName,'ses-' + sesNum,'bet','anat','*' + ref_regexStr + '*'))
+                refImageFile = glob(os.path.join(DATA_DIR,'derivatives','sub-' + st.subject.id,'ses-' + st.subject.sesNum,'bet','anat','*' + ref_regexStr + '*'))
             else:
                 print('ERROR: structural file "bids_location" not supported')
                 print('/tCannot perform FLIRT... exiting')
@@ -155,11 +155,11 @@ def dti_flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, overwrite: bool=Fa
                 if len(refImageFile) > 0:
                     refImageFile = refImageFile[0]
                 elif refImageParams['input_bids_location'] == 'rawdata':
-                    print('ERROR: structural file ' + os.path.join(DATA_DIR,'rawdata','sub-' + subName,'ses-' + sesNum,'anat','*' + ref_regexStr + '*') + ' not found')
+                    print('ERROR: structural file ' + os.path.join(DATA_DIR,'rawdata','sub-' + st.subject.id,'ses-' + st.subject.sesNum,'anat','*' + ref_regexStr + '*') + ' not found')
                     print('/tCannot perform FLIRT... exiting')
                     return
                 elif refImageParams['input_bids_location'] == 'derivatives':
-                    print('ERROR: structural file ' + os.path.join(DATA_DIR,'derivatives','sub-' + subName,'ses-' + sesNum,'bet','anat','*' + ref_regexStr + '*') + ' not found')
+                    print('ERROR: structural file ' + os.path.join(DATA_DIR,'derivatives','sub-' + st.subject.id,'ses-' + st.subject.sesNum,'bet','anat','*' + ref_regexStr + '*') + ' not found')
                     print('/tCannot perform FLIRT... exiting')
                     return
 
@@ -175,11 +175,11 @@ def dti_flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, overwrite: bool=Fa
             return
         
 
-        mainBidsLabels = st.bids_commands.get_bids_labels(mainFile)
+        mainBidsLabels = st.bids.get_bids_labels(mainFile)
         secBidsLabels = mainBidsLabels.copy()
-        secFiles = glob(os.path.join(DATA_DIR,'derivatives','sub-' + subName,'ses-' + sesNum,'dtifit',mainParams['output_bids_location'],'*.nii.gz'))
+        secFiles = glob(os.path.join(DATA_DIR,'derivatives','sub-' + st.subject.id,'ses-' + st.subject.sesNum,'dtifit',mainParams['output_bids_location'],'*.nii.gz'))
         if not secFiles:
-            print('WARNING: secondary image files not found in  ' + os.path.join(DATA_DIR,'derivatives','sub-' + subName,'ses-' + sesNum,'dtifit',mainParams['output_bids_location'],'*.nii.gz'))
+            print('WARNING: secondary image files not found in  ' + os.path.join(DATA_DIR,'derivatives','sub-' + st.subject.id,'ses-' + st.subject.sesNum,'dtifit',mainParams['output_bids_location'],'*.nii.gz'))
             print('\tSKIPPING application of transforms to secondary images')
             
         if progress and secFiles:
@@ -191,7 +191,7 @@ def dti_flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, overwrite: bool=Fa
 
                 # apply brain mask to secondary images? - already dont
                 # -------------------------------
-        # brainMask = glob(os.path.join(DATA_DIR,'derivatives','sub-' + subName,'ses-' + sesNum,'bet',mainParams['output_bids_location'],'*brain*mask.nii.gz'))
+        # brainMask = glob(os.path.join(DATA_DIR,'derivatives','sub-' + st.subject.id,'ses-' + st.subject.sesNum,'bet',mainParams['output_bids_location'],'*brain*mask.nii.gz'))
         # if len(brainMask) == 1:
         #     brainMask = brainMask[0]
         # for secFile in secFiles:
@@ -200,7 +200,7 @@ def dti_flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, overwrite: bool=Fa
         #     secBidsLabels['resolution'] = 'lo'
         #     secBidsLabels['description'] = secBidsLabels + '-brain'
         #     secBidsLabels['extension'] = 'nii.gz'
-        #     secFile_brain = os.path.join(os.path.dirname(secFile),get_bids_filename(subject=subName,session=sesNum,**secBidsLabels))
+        #     secFile_brain = os.path.join(os.path.dirname(secFile),get_bids_filename(subject=st.subject.id,session=st.subject.sesNum,**secBidsLabels))
         #     os.system('fslmaths ' + secFile + ' -mas ' + brainmask + ' ' + secFile_brain)
 
         #     #write corresponding JSON file
@@ -243,7 +243,7 @@ def dti_flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, overwrite: bool=Fa
                     fltBidsLabels[k] = refImageParams['output_bids_labels'][k]
                 if 'brain' in mainFile:
                     fltBidsLabels['description'] = 'brain'
-            flt.inputs.out_file = os.path.join(mainFlirtOutputDir,st.bids_commands.get_bids_filename(subject=subName,session=sesNum,**fltBidsLabels))
+            flt.inputs.out_file = os.path.join(mainFlirtOutputDir,st.bids.get_bids_filename(subject=st.subject.id,session=st.subject.sesNum, **fltBidsLabels))
             if refImageParams['type'] == 'std':
                 flt.inputs.out_matrix_file = os.path.join(mainFlirtOutputDir,mainParams['out_matrix_base'] + '2' + stdImageParams['out_matrix_suffix'] + '.mat')
             else:
@@ -323,10 +323,10 @@ def dti_flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, overwrite: bool=Fa
                 applyxfm.inputs.in_file = secFile
                 applyxfm.inputs.reference = refImageFile
                 applyxfm.inputs.apply_xfm = True
-                applyBidsLabels = st.bids_commands.get_bids_labels(secFile)
+                applyBidsLabels = st.bids.get_bids_labels(secFile)
                 applyBidsLabels = refImageParams['output_bids_labels'].copy()
-                applyBidsLabels['suffix'] = 'dwi_' + st.bids_commands.get_bids_labels(secFile)['suffix']
-                applyxfm.inputs.out_file = os.path.join(mainFlirtOutputDir,st.bids_commands.get_bids_filename(subject=subName,session=sesNum,**applyBidsLabels))
+                applyBidsLabels['suffix'] = 'dwi_' + st.bids.get_bids_labels(secFile)['suffix']
+                applyxfm.inputs.out_file = os.path.join(mainFlirtOutputDir,st.bids.get_bids_filename(subject=st.subject.id,session=st.subject.sesNum,**applyBidsLabels))
                 applyxfm.inputs.in_matrix_file = flt.inputs.out_matrix_file
 
 
@@ -410,7 +410,7 @@ def dti_flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, overwrite: bool=Fa
                 applyBidsLabels = mainBidsLabels.copy()
                 for k in refImageParams['output_bids_labels'].keys():
                     applyBidsLabels[k] = stdImageParams['output_bids_labels'][k]
-                applyxfm.inputs.out_file = os.path.join(mainFlirtOutputDir,st.bids_commands.get_bids_filename(subject=subName,session=sesNum,**applyBidsLabels))
+                applyxfm.inputs.out_file = os.path.join(mainFlirtOutputDir,st.bids.get_bids_filename(subject=st.subject.id,session=st.subject.sesNum,**applyBidsLabels))
                 applyxfm.inputs.in_matrix_file = os.path.join(mainFlirtOutputDir,mainParams['out_matrix_base'] + '2' + stdImageParams['out_matrix_suffix'] + '.mat')
 
 
@@ -452,10 +452,10 @@ def dti_flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, overwrite: bool=Fa
                     applyxfm.inputs.in_file = secFile
                     applyxfm.inputs.reference = refImageFile
                     applyxfm.inputs.apply_xfm = True
-                    applyBidsLabels = st.bids_commands.get_bids_labels(secFile)
+                    applyBidsLabels = st.bids.get_bids_labels(secFile)
                     applyBidsLabels = stdImageParams['output_bids_labels'].copy()
-                    applyBidsLabels['suffix'] = 'dwi_' + st.bids_commands.get_bids_labels(secFile)['suffix']
-                    applyxfm.inputs.out_file = os.path.join(mainFlirtOutputDir,st.bids_commands.get_bids_filename(subject=subName,session=sesNum,**applyBidsLabels))
+                    applyBidsLabels['suffix'] = 'dwi_' + st.bids.get_bids_labels(secFile)['suffix']
+                    applyxfm.inputs.out_file = os.path.join(mainFlirtOutputDir,st.bids.get_bids_filename(subject=st.subject.id,session=st.subject.sesNum,**applyBidsLabels))
                     applyxfm.inputs.in_matrix_file = flt.inputs.out_matrix_file
 
 
@@ -480,7 +480,7 @@ def dti_flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, overwrite: bool=Fa
             print(*outputFileList, sep = "\n\t")
 
             #remove lingering matrix files left in the current working directory
-            for f in glob(os.path.join(os.getcwd(),'sub-' + subName + '*.mat')):
+            for f in glob(os.path.join(os.getcwd(),'sub-' + st.subject.id + '*.mat')):
                 os.remove(f)
 
 
