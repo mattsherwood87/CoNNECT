@@ -145,7 +145,7 @@ Python Implementation
 flirt.py
 ========
 
-.. autoprogram:: support_tools.flirt:parser
+.. .. autoprogram:: support_tools.flirt:parser
     :prog: flirt.py
 
 Python Implementation
@@ -161,7 +161,7 @@ Python Implementation
 fsreconall_stage1.py
 ====================
 
-.. .. autoprogram:: support_tools.fsreconall_stage1:parser
+.. autoprogram:: support_tools.fsreconall_stage1:parser
     :prog: fsreconall_stage1.py
 
 Python Implementation
