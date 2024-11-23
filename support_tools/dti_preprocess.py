@@ -1,5 +1,4 @@
-#!/resshare/wsuconnect/python3_venv/bin/python
-# the command above ^^^ sets python 3.10.9 python venv environment
+# dti_preprocess.py
 
 # Created by Matthew Sherwood (matt.sherwood@wright.edu, matthew.sherwood.7.ctr@us.af.mil)
 # Created on 23 June 2023
@@ -109,11 +108,11 @@ def dti_preprocess(IN_FILE: str, DATA_DIR: str, DTI_PARAMS: str, overwrite: bool
         
         # create file inputs and outputs
         mainFileDir = os.path.dirname(mainFile)
-        subName, fullSesNum, sesNum = st.get_dir_identifiers_new(mainFileDir)
-        mainBetOutputDir = os.path.join(DATA_DIR,'derivatives','sub-' + subName,'ses-' + sesNum,'bet',mainParams['output_bids_location'])#create base path and filename for move
-        mainTopupOutputDir = os.path.join(DATA_DIR,'derivatives','sub-' + subName,'ses-' + sesNum,'topup',mainParams['output_bids_location'])#create base path and filename for move
-        mainEddyOutputDir = os.path.join(DATA_DIR,'derivatives','sub-' + subName,'ses-' + sesNum,'eddy',mainParams['output_bids_location'])#create base path and filename for move
-        mainDtifitOutputDir = os.path.join(DATA_DIR,'derivatives','sub-' + subName,'ses-' + sesNum,'dtifit',mainParams['output_bids_location'])#create base path and filename for move
+        st.subject.get_id(mainFileDir)
+        mainBetOutputDir = os.path.join(DATA_DIR,'derivatives','sub-' + st.subject.id,'ses-' + st.subject.sesNum,'bet',mainParams['output_bids_location'])#create base path and filename for move
+        mainTopupOutputDir = os.path.join(DATA_DIR,'derivatives','sub-' + st.subject.id,'ses-' + st.subject.sesNum,'topup',mainParams['output_bids_location'])#create base path and filename for move
+        mainEddyOutputDir = os.path.join(DATA_DIR,'derivatives','sub-' + st.subject.id,'ses-' + st.subject.sesNum,'eddy',mainParams['output_bids_location'])#create base path and filename for move
+        mainDtifitOutputDir = os.path.join(DATA_DIR,'derivatives','sub-' + st.subject.id,'ses-' + st.subject.sesNum,'dtifit',mainParams['output_bids_location'])#create base path and filename for move
 
         #make output directory structure if it does not exist
         if not os.path.isdir(mainBetOutputDir):
@@ -132,7 +131,7 @@ def dti_preprocess(IN_FILE: str, DATA_DIR: str, DTI_PARAMS: str, overwrite: bool
             os.makedirs(mainDtifitOutputDir)
 
 
-        mainBidsLabels = st.bids_commands.get_bids_labels(mainFile)
+        mainBidsLabels = st.bids.get_bids_labels(mainFile)
         outputFileList = []
 
         #********************************************************
@@ -142,7 +141,7 @@ def dti_preprocess(IN_FILE: str, DATA_DIR: str, DTI_PARAMS: str, overwrite: bool
         roi_mainBidsLabels = mainBidsLabels.copy()
         roi_mainBidsLabels['process'] = 'fslroi'
         roi_mainBidsLabels['description'] = 'vol-' + str(vols)
-        outMainVolFile = os.path.join(mainTopupOutputDir,st.bids.get_bids_filename(subject=subName,session=sesNum,**roi_mainBidsLabels))
+        outMainVolFile = os.path.join(mainTopupOutputDir,st.bids.get_bids_filename(subject=st.subject.id,session=st.subject.sesNum,**roi_mainBidsLabels))
         nodifFile = outMainVolFile
 
         if os.path.isfile(outMainVolFile) and not overwrite:
@@ -187,7 +186,7 @@ def dti_preprocess(IN_FILE: str, DATA_DIR: str, DTI_PARAMS: str, overwrite: bool
         merge_mainBidsLabels = mainBidsLabels.copy()
         merge_mainBidsLabels['process'] = 'fslmerge'
         merge_mainBidsLabels['description'] = 'AP-PA'
-        outMergeFile = os.path.join(mainTopupOutputDir,st.bids.get_bids_filename(subject=subName,session=sesNum,**merge_mainBidsLabels))
+        outMergeFile = os.path.join(mainTopupOutputDir,st.bids.get_bids_filename(subject=st.subject.id,session=st.subject.sesNum,**merge_mainBidsLabels))
 
 
         if os.path.isfile(outMergeFile) and not overwrite:
@@ -219,17 +218,17 @@ def dti_preprocess(IN_FILE: str, DATA_DIR: str, DTI_PARAMS: str, overwrite: bool
         tu_corr_mainBidsLabels['process'] = 'topup'
         tu_corr_mainBidsLabels['description'] = 'iout'
         tu_corr_mainBidsLabels['extension'] = None
-        outCorrFile = os.path.join(mainTopupOutputDir,st.bids.get_bids_filename(subject=subName,session=sesNum,**tu_corr_mainBidsLabels))
+        outCorrFile = os.path.join(mainTopupOutputDir,st.bids.get_bids_filename(subject=st.subject.id,session=st.subject.sesNum,**tu_corr_mainBidsLabels))
         tu_base_mainBidsLabels = mainBidsLabels.copy()
         tu_base_mainBidsLabels['process'] = 'topup'
         tu_base_mainBidsLabels['description'] = 'B1'
         tu_base_mainBidsLabels['extension'] = None
-        outBaseFile = os.path.join(mainTopupOutputDir,st.bids.get_bids_filename(subject=subName,session=sesNum,**tu_base_mainBidsLabels))
+        outBaseFile = os.path.join(mainTopupOutputDir,st.bids.get_bids_filename(subject=st.subject.id,session=st.subject.sesNum,**tu_base_mainBidsLabels))
         tu_field_mainBidsLabels = mainBidsLabels.copy()
         tu_field_mainBidsLabels['process'] = 'topup'
         tu_field_mainBidsLabels['description'] = 'fout'
         tu_field_mainBidsLabels['extension'] = None
-        outFieldFile = os.path.join(mainTopupOutputDir,st.bids.get_bids_filename(subject=subName,session=sesNum,**tu_field_mainBidsLabels))
+        outFieldFile = os.path.join(mainTopupOutputDir,st.bids.get_bids_filename(subject=st.subject.id,session=st.subject.sesNum,**tu_field_mainBidsLabels))
 
         # create topup object
         #first copy acqp input to local eddy output directory
@@ -267,7 +266,7 @@ def dti_preprocess(IN_FILE: str, DATA_DIR: str, DTI_PARAMS: str, overwrite: bool
         tmean_mainBidsLabels['process'] = 'topup'
         tmean_mainBidsLabels['description'] = 'iout-tmean'
         tmean_mainBidsLabels['extension'] = None
-        outTmeanFile = os.path.join(mainTopupOutputDir,st.bids.get_bids_filename(subject=subName,session=sesNum,**tmean_mainBidsLabels))
+        outTmeanFile = os.path.join(mainTopupOutputDir,st.bids.get_bids_filename(subject=st.subject.id,session=st.subject.sesNum,**tmean_mainBidsLabels))
 
         # has fslmaths already been ran?
         if os.path.isfile(outTmeanFile + '.nii.gz') and not overwrite:
@@ -295,7 +294,7 @@ def dti_preprocess(IN_FILE: str, DATA_DIR: str, DTI_PARAMS: str, overwrite: bool
         tmean_brain_mainBidsLabels['process'] = 'fslbet'
         tmean_brain_mainBidsLabels['description'] = 'iout-tmean-brain'
         tmean_brain_mainBidsLabels['extension'] = None
-        outTmeanBrainFile = os.path.join(mainBetOutputDir,st.bids_commands.get_bids_filename(subject=subName,session=sesNum,**tmean_brain_mainBidsLabels))    
+        outTmeanBrainFile = os.path.join(mainBetOutputDir,st.bids.get_bids_filename(subject=st.subject.id,session=st.subject.sesNum,**tmean_brain_mainBidsLabels))    
 
         # has bet already been ran?
         if os.path.isfile(outTmeanBrainFile + '.nii.gz') and not overwrite:
@@ -328,7 +327,7 @@ def dti_preprocess(IN_FILE: str, DATA_DIR: str, DTI_PARAMS: str, overwrite: bool
         eddy_mainBidsLabels['process'] = 'eddy-gpu'
         eddy_mainBidsLabels['description'] = 'unwarped'
         eddy_mainBidsLabels['extension'] = None
-        outEddyFile = os.path.join(mainEddyOutputDir,st.bids_commands.get_bids_filename(subject=subName,session=sesNum,**eddy_mainBidsLabels)) 
+        outEddyFile = os.path.join(mainEddyOutputDir,st.bids.get_bids_filename(subject=st.subject.id,session=st.subject.sesNum,**eddy_mainBidsLabels)) 
         
         # produce base eddy command-line argument
         if dtiFullParams['type'] == 'gpu':
@@ -445,7 +444,7 @@ def dti_preprocess(IN_FILE: str, DATA_DIR: str, DTI_PARAMS: str, overwrite: bool
         dtifit_mainBidsLabels['process'] = 'dtifit'
         eddy_mainBidsLabels['description'] = 'dti'
         dtifit_mainBidsLabels['extension'] = None
-        outDtifitFile = os.path.join(mainDtifitOutputDir,st.bids.get_bids_filename(subject=subName,session=sesNum,**dtifit_mainBidsLabels)) 
+        outDtifitFile = os.path.join(mainDtifitOutputDir,st.bids.get_bids_filename(subject=st.subject.id,session=st.subject.sesNum,**dtifit_mainBidsLabels)) 
 
         #create dtifit object
         dtifit = fsl.DTIFit(dwi=outEddyFile + '.nii.gz',
