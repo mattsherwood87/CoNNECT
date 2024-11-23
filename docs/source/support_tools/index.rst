@@ -126,7 +126,7 @@ Python Implementation
 feat_full_firstlevel.py
 =======================
 
-.. autoprogram:: support_tools.feat_full_firstlevel:parser
+.. .. autoprogram:: support_tools.feat_full_firstlevel:parser
     :prog: feat_full_firstlevel.py
 
 Python Implementation
@@ -157,7 +157,7 @@ Python Implementation
 flirt.py
 ========
 
-.. autoprogram:: support_tools.flirt:parser
+.. .. autoprogram:: support_tools.flirt:parser
     :prog: flirt.py
 
 Python Implementation
@@ -173,7 +173,7 @@ Python Implementation
 fsreconall_stage1.py
 ====================
 
-.. autoprogram:: support_tools.fsreconall_stage1:parser
+.. .. autoprogram:: support_tools.fsreconall_stage1:parser
     :prog: fsreconall_stage1.py
 
 Python Implementation
@@ -189,7 +189,7 @@ Python Implementation
 fsreconall_stage2.py
 ====================
 
-.. autoprogram:: support_tools.fsreconall_stage2:parser
+.. .. autoprogram:: support_tools.fsreconall_stage2:parser
     :prog: fsreconall_stage2.py
 
 Python Implementation
