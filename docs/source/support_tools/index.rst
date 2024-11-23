@@ -8,35 +8,10 @@ CoNNECT Support Tools
 Several custom support tools have been created to aid in the batch processing. These tools support parallel processing via HTCondor and SGE implemented in the custom batch processing 
 described in the previous section.
 
-.. automodule:: support_tools
-    :members:
-
-
-.. automodule:: support_tools.bids
-    :members:
-
 
 .. note:: FIGURE TO BE INSERTED
 
 
-.. _init_python:
-
-__init__.py
-===========
-
-.. note:: the functions of support_tools.__init__ does not support command line operation.
-
-Python Implementation
----------------------
-
-.. autoclass:: support_tools.creds 
-    :members:
-
-    .. automethod:: support_tools.__init__
-
-.. automodule:: support_tools.__init__
-    :members:
-    :special-members:
 
 
 .. _bids_commands_python:
@@ -44,7 +19,7 @@ Python Implementation
 bids
 ====
 
-.. note:: the functions of support_tools.bids_commands do not support command line operation.
+.. note:: the functions of support_tools.bids do not support command line operation.
 
 Python Implementation
 ---------------------
