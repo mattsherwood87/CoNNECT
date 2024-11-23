@@ -79,7 +79,7 @@ Python Implementation
 dti_flirt.py
 ============
 
-.. .. autoprogram:: support_tools.dti_flirt:parser
+.. autoprogram:: support_tools.dti_flirt:parser
     :prog: dti_flirt.py
 
 Python Implementation
@@ -95,7 +95,7 @@ Python Implementation
 dti_preprocess.py
 =================
 
-.. autoprogram:: support_tools.dti_preprocess:parser
+.. .. autoprogram:: support_tools.dti_preprocess:parser
     :prog: dti_preprocess.py
 
 Python Implementation
@@ -126,7 +126,7 @@ Python Implementation
 feat_full_firstlevel.py
 =======================
 
-.. autoprogram:: support_tools.feat_full_firstlevel:parser
+.. .. autoprogram:: support_tools.feat_full_firstlevel:parser
     :prog: feat_full_firstlevel.py
 
 Python Implementation
