@@ -187,7 +187,7 @@ def main():
     """
     The entry point of this program.
     """
-    options = parser.parse_arguments()
+    options = parser.parse_args()
     argsDict = {}
     if options.REFERENCE:
         argsDict['reference'] = options.REFERENCE

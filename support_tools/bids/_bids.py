@@ -6,7 +6,7 @@
 #
 # v2.0.0 on 1 April 2023 - simplify code
 
-import os
+import os as _os
 
 def get_bids_filename(subject: str=None, session: str=None, acquisition: str=None, task: str=None, direction: str=None, run: str=None, process: str=None, resolution: str=None, space: str=None, description: str=None, suffix: str=None, extension: str=None) -> str:
     """
@@ -97,7 +97,7 @@ def get_bids_labels(IN_FILE: str) -> dict:
 
     labels = {}
     
-    filename = os.path.basename(IN_FILE)
+    filename = _os.path.basename(IN_FILE)
 
     #see if there is an extension
     idx = filename.find('.')

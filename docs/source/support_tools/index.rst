@@ -41,10 +41,10 @@ Python Implementation
 
 .. _bids_commands_python:
 
-bids_commands.py
-================
+bids
+====
 
-.. note:: the functions of support_tools.bids_commands does not support command line operation.
+.. note:: the functions of support_tools.bids_commands do not support command line operation.
 
 Python Implementation
 ---------------------
@@ -56,10 +56,10 @@ Python Implementation
 
 .. _condor_python:
 
-condor.py
-=========
+condor
+======
 
-.. note:: the functions of support_tools.condor does not support command line operation.
+.. note:: the functions of support_tools.condor do not support command line operation.
 
 Python Implementation
 ---------------------
@@ -90,7 +90,7 @@ Python Implementation
 copy_dirs.py
 ============
 
-.. note:: the functions of support_tools.copy_dirs does not support command line operation.
+.. note:: the function of support_tools.copy_dirs does not support command line operation.
 
 Python Implementation
 ---------------------
@@ -137,7 +137,7 @@ Python Implementation
 evaluate_raw_file_transfer.py
 =============================
 
-.. note:: the functions of support_tools.evaluate_raw_file_transfer does not support command line operation.
+.. note:: the function of support_tools.evaluate_raw_file_transfer does not support command line operation.
 
 Python Implementation
 ---------------------
@@ -232,7 +232,7 @@ Python Implementation
 get_scan_id.py
 ==============
 
-.. note:: the functions of support_tools.get_scan_id does not support command line operation.
+.. note:: the function of support_tools.get_scan_id does not support command line operation.
 
 Python Implementation
 ---------------------
@@ -247,7 +247,7 @@ Python Implementation
 mysql.py
 ========
 
-.. note:: the functions of support_tools.mysql does not support command line operation.
+.. note:: the functions of support_tools.mysql do not support command line operation.
 
 Python Implementation
 ---------------------
@@ -262,7 +262,7 @@ Python Implementation
 prepare_examcard_html.py
 ========================
 
-.. note:: the functions of support_tools.prepare_examcard_html does not support command line operation.
+.. note:: the function of support_tools.prepare_examcard_html does not support command line operation.
 
 Python Implementation
 ---------------------
@@ -277,7 +277,7 @@ Python Implementation
 remove_dirs.py
 ==============
 
-.. note:: the functions of support_tools.remove_dirs does not support command line operation.
+.. note:: the function of support_tools.remove_dirs does not support command line operation.
 
 Python Implementation
 ---------------------
@@ -292,7 +292,7 @@ Python Implementation
 RestToolbox.py
 ==============
 
-.. note:: the functions of support_tools.RestToolbox does not support command line operation.
+.. note:: the functions of support_tools.RestToolbox do not support command line operation.
 
 Python Implementation
 ---------------------
