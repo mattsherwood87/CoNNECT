@@ -126,7 +126,7 @@ Python Implementation
 feat_full_firstlevel.py
 =======================
 
-.. .. autoprogram:: support_tools.feat_full_firstlevel:parser
+.. autoprogram:: support_tools.feat_full_firstlevel:parser
     :prog: feat_full_firstlevel.py
 
 Python Implementation
@@ -157,7 +157,7 @@ Python Implementation
 flirt.py
 ========
 
-.. .. autoprogram:: support_tools.flirt:parser
+.. autoprogram:: support_tools.flirt:parser
     :prog: flirt.py
 
 Python Implementation

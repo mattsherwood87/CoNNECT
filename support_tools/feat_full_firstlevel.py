@@ -183,9 +183,9 @@ def feat_full_firstlevel(DATADIR: str, SUBNAME: str, SESNUM: str, FEATDESIGNDIR:
         return
 
 
-def main():
+if __name__ == '__main__':
     """
-    The entry point of this program.
+    The entry point of this program for command-line utilization.
     """
     options = parser.parse_args()
     argsDict = {}
@@ -199,9 +199,3 @@ def main():
         argsDict['progress'] = options.progress
     feat_full_firstlevel(options.DATADIR,options.SUBNAME,options.SESNUM,options.FEATDESIGNDIR,options.FEATOUTPUTDIR,options.DESIGNBASENAME,**argsDict)
 
-
-if __name__ == '__main__':
-    """
-    The entry point of this program for command-line utilization.
-    """
-    main()

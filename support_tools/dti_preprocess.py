@@ -499,7 +499,7 @@ def dti_preprocess(IN_FILE: str, DATA_DIR: str, DTI_PARAMS: str, overwrite: bool
             return
 
 
-def main():
+if __name__ == '__main__':
     """
     The entry point of this program for command-line utilization.
     """
@@ -515,8 +515,6 @@ def main():
     dti_preprocess(options.IN_FILE,options.DATA_DIR,options.DTI_PARAMS,**argsDict)
 
 
-if __name__ == '__main__':
-    main()
 
     
 
