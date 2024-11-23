@@ -142,7 +142,7 @@ def dti_preprocess(IN_FILE: str, DATA_DIR: str, DTI_PARAMS: str, overwrite: bool
         roi_mainBidsLabels = mainBidsLabels.copy()
         roi_mainBidsLabels['process'] = 'fslroi'
         roi_mainBidsLabels['description'] = 'vol-' + str(vols)
-        outMainVolFile = os.path.join(mainTopupOutputDir,st.bids_commands.get_bids_filename(subject=subName,session=sesNum,**roi_mainBidsLabels))
+        outMainVolFile = os.path.join(mainTopupOutputDir,st.bids.get_bids_filename(subject=subName,session=sesNum,**roi_mainBidsLabels))
         nodifFile = outMainVolFile
 
         if os.path.isfile(outMainVolFile) and not overwrite:
@@ -187,7 +187,7 @@ def dti_preprocess(IN_FILE: str, DATA_DIR: str, DTI_PARAMS: str, overwrite: bool
         merge_mainBidsLabels = mainBidsLabels.copy()
         merge_mainBidsLabels['process'] = 'fslmerge'
         merge_mainBidsLabels['description'] = 'AP-PA'
-        outMergeFile = os.path.join(mainTopupOutputDir,st.bids_commands.get_bids_filename(subject=subName,session=sesNum,**merge_mainBidsLabels))
+        outMergeFile = os.path.join(mainTopupOutputDir,st.bids.get_bids_filename(subject=subName,session=sesNum,**merge_mainBidsLabels))
 
 
         if os.path.isfile(outMergeFile) and not overwrite:
@@ -219,17 +219,17 @@ def dti_preprocess(IN_FILE: str, DATA_DIR: str, DTI_PARAMS: str, overwrite: bool
         tu_corr_mainBidsLabels['process'] = 'topup'
         tu_corr_mainBidsLabels['description'] = 'iout'
         tu_corr_mainBidsLabels['extension'] = None
-        outCorrFile = os.path.join(mainTopupOutputDir,st.bids_commands.get_bids_filename(subject=subName,session=sesNum,**tu_corr_mainBidsLabels))
+        outCorrFile = os.path.join(mainTopupOutputDir,st.bids.get_bids_filename(subject=subName,session=sesNum,**tu_corr_mainBidsLabels))
         tu_base_mainBidsLabels = mainBidsLabels.copy()
         tu_base_mainBidsLabels['process'] = 'topup'
         tu_base_mainBidsLabels['description'] = 'B1'
         tu_base_mainBidsLabels['extension'] = None
-        outBaseFile = os.path.join(mainTopupOutputDir,st.bids_commands.get_bids_filename(subject=subName,session=sesNum,**tu_base_mainBidsLabels))
+        outBaseFile = os.path.join(mainTopupOutputDir,st.bids.get_bids_filename(subject=subName,session=sesNum,**tu_base_mainBidsLabels))
         tu_field_mainBidsLabels = mainBidsLabels.copy()
         tu_field_mainBidsLabels['process'] = 'topup'
         tu_field_mainBidsLabels['description'] = 'fout'
         tu_field_mainBidsLabels['extension'] = None
-        outFieldFile = os.path.join(mainTopupOutputDir,st.bids_commands.get_bids_filename(subject=subName,session=sesNum,**tu_field_mainBidsLabels))
+        outFieldFile = os.path.join(mainTopupOutputDir,st.bids.get_bids_filename(subject=subName,session=sesNum,**tu_field_mainBidsLabels))
 
         # create topup object
         #first copy acqp input to local eddy output directory
@@ -267,7 +267,7 @@ def dti_preprocess(IN_FILE: str, DATA_DIR: str, DTI_PARAMS: str, overwrite: bool
         tmean_mainBidsLabels['process'] = 'topup'
         tmean_mainBidsLabels['description'] = 'iout-tmean'
         tmean_mainBidsLabels['extension'] = None
-        outTmeanFile = os.path.join(mainTopupOutputDir,st.bids_commands.get_bids_filename(subject=subName,session=sesNum,**tmean_mainBidsLabels))
+        outTmeanFile = os.path.join(mainTopupOutputDir,st.bids.get_bids_filename(subject=subName,session=sesNum,**tmean_mainBidsLabels))
 
         # has fslmaths already been ran?
         if os.path.isfile(outTmeanFile + '.nii.gz') and not overwrite:
@@ -445,7 +445,7 @@ def dti_preprocess(IN_FILE: str, DATA_DIR: str, DTI_PARAMS: str, overwrite: bool
         dtifit_mainBidsLabels['process'] = 'dtifit'
         eddy_mainBidsLabels['description'] = 'dti'
         dtifit_mainBidsLabels['extension'] = None
-        outDtifitFile = os.path.join(mainDtifitOutputDir,st.bids_commands.get_bids_filename(subject=subName,session=sesNum,**dtifit_mainBidsLabels)) 
+        outDtifitFile = os.path.join(mainDtifitOutputDir,st.bids.get_bids_filename(subject=subName,session=sesNum,**dtifit_mainBidsLabels)) 
 
         #create dtifit object
         dtifit = fsl.DTIFit(dwi=outEddyFile + '.nii.gz',

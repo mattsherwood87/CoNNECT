@@ -250,7 +250,7 @@ def dti_flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, overwrite: bool=Fa
                 flt.inputs.out_matrix_file = os.path.join(mainFlirtOutputDir,mainParams['out_matrix_base'] + '2' + refImageParams['out_matrix_base'] + '.mat')
 
 
-            if os.path.isfile(flt.inputs.out_matrix_file) and not overwriteFlag:
+            if os.path.isfile(flt.inputs.out_matrix_file) and not overwrite:
                 if progress:
                     print('Skipping FLIRT: registration matrix file found: ' + flt.inputs.out_matrix_file)
                     
@@ -301,7 +301,7 @@ def dti_flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, overwrite: bool=Fa
                     json.dump(d, fp, indent=4)  
 
 
-                if not os.path.isfile(invt.inputs.out_file) or overwriteFlag:
+                if not os.path.isfile(invt.inputs.out_file) or overwrite:
                     invt.run() 
                     outputFileList.append(invt.inputs.out_file) 
 
@@ -330,7 +330,7 @@ def dti_flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, overwrite: bool=Fa
                 applyxfm.inputs.in_matrix_file = flt.inputs.out_matrix_file
 
 
-                if os.path.isfile(applyxfm.inputs.out_file) and not overwriteFlag:
+                if os.path.isfile(applyxfm.inputs.out_file) and not overwrite:
                     if progress:
                         print('Skipping APPLYXFM: output transformed file already exists: ' + applyxfm.inputs.out_file)
                         
@@ -384,7 +384,7 @@ def dti_flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, overwrite: bool=Fa
                     print('\tOut File: ' + invt.inputs.out_file)
 
 
-                if not os.path.isfile(invt.inputs.out_file) or overwriteFlag:
+                if not os.path.isfile(invt.inputs.out_file) or overwrite:
                     invt.run()
                     outputFileList.append(invt.inputs.out_file)
                     if progress:
@@ -397,7 +397,7 @@ def dti_flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, overwrite: bool=Fa
                 invt.inputs.out_file = os.path.join(mainFlirtOutputDir,stdImageParams['out_matrix_suffix'] + '2' + mainParams['out_matrix_base'] + '.mat')
 
 
-                if not os.path.isfile(invt.inputs.out_file) or overwriteFlag:
+                if not os.path.isfile(invt.inputs.out_file) or overwrite:
                     invt.run()
                     outputFileList.append(invt.inputs.out_file)
 
@@ -414,7 +414,7 @@ def dti_flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, overwrite: bool=Fa
                 applyxfm.inputs.in_matrix_file = os.path.join(mainFlirtOutputDir,mainParams['out_matrix_base'] + '2' + stdImageParams['out_matrix_suffix'] + '.mat')
 
 
-                if os.path.isfile(applyxfm.inputs.out_file) and not overwriteFlag:
+                if os.path.isfile(applyxfm.inputs.out_file) and not overwrite:
                     if progress:
                         print('Skipping APPLYXFM: output transformed file already exists: ' + applyxfm.inputs.out_file)
 
@@ -459,7 +459,7 @@ def dti_flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, overwrite: bool=Fa
                     applyxfm.inputs.in_matrix_file = flt.inputs.out_matrix_file
 
 
-                    if os.path.isfile(applyxfm.inputs.out_file) and not overwriteFlag:
+                    if os.path.isfile(applyxfm.inputs.out_file) and not overwrite:
                         if progress:
                             print('Skipping APPLYXFM: output transformed file already exists: ' + applyxfm.inputs.out_file)
                             
