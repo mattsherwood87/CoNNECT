@@ -5,13 +5,7 @@ convert_dicoms.py
 ===============
 
 
-
-.. .. argparse::
-..     :module: helper_functions.convert_dicoms
-..     :func: parse_arguments
-..     :prog: convert_dicoms.py
-
-.. autoprogram:: support_tools.convert_dicoms:parser 
+.. autoprogram:: support_tools.convert_dicoms
     :prog: convert_dicoms.py
 
 Python Implementation
