@@ -89,7 +89,7 @@ dti_preprocess.py
 Python Implementation
 ---------------------
 
-.. automodule:: support_tools.dti_preprocess
+.. .. automodule:: support_tools.dti_preprocess
     :members:
     :special-members:
 
@@ -145,7 +145,7 @@ Python Implementation
 flirt.py
 ========
 
-.. .. autoprogram:: support_tools.flirt:parser
+.. autoprogram:: support_tools.flirt:parser
     :prog: flirt.py
 
 Python Implementation
