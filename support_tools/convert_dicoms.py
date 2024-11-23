@@ -65,7 +65,8 @@ def convert_dicoms(INDIR: str,PROGRESS: bool=False):
     else:
         print('ERROR: cannot confirm input directory on disk')
 
-def main():
+
+if __name__ == '__main__':
     """
     The entry point of this program for command-line utilization.
     """
@@ -73,6 +74,3 @@ def main():
     # print('Converting dicoms in ' + options.INDIR + ' to ')
     convert_dicoms(options.INDIR,options.PROGRESS)
 
-
-if __name__ == '__main__':
-    main()
