@@ -161,7 +161,7 @@ Python Implementation
 fsreconall_stage1.py
 ====================
 
-.. autoprogram:: support_tools.conver_dicoms:parser
+.. .. autoprogram:: support_tools.fsreconall_stage1:parser
     :prog: fsreconall_stage1.py
 
 Python Implementation
@@ -177,7 +177,7 @@ Python Implementation
 fsreconall_stage2.py
 ====================
 
-.. .. autoprogram:: support_tools.fsreconall_stage2:parser
+.. autoprogram:: support_tools.fsreconall_stage2:parser
     :prog: fsreconall_stage2.py
 
 Python Implementation
