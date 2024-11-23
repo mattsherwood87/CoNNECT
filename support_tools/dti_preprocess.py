@@ -505,7 +505,7 @@ if __name__ == '__main__':
     """
 
     print('1')
-    options = parser.parse_arguments()
+    options = parser.parse_args()
     print('2')
     argsDict = {}
     if options.OVERWRITE:
