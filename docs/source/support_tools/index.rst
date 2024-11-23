@@ -49,7 +49,7 @@ Python Implementation
 convert_dicoms.py
 =================
 
-.. autoprogram:: support_tools.convert_dicoms
+.. autoprogram:: support_tools.convert_dicoms:parser
     :prog: convert_dicoms.py
 
 Python Implementation
@@ -80,7 +80,7 @@ Python Implementation
 dti_flirt.py
 ============
 
-.. autoprogram:: support_tools.dti_flirt
+.. autoprogram:: support_tools.dti_flirt:parser
     :prog: dti_flirt.py
 
 Python Implementation
@@ -96,7 +96,7 @@ Python Implementation
 dti_preprocess.py
 =================
 
-.. autoprogram:: support_tools.dti_preprocess
+.. autoprogram:: support_tools.dti_preprocess:parser
     :prog: dti_preprocess.py
 
 Python Implementation
@@ -127,7 +127,7 @@ Python Implementation
 feat_full_firstlevel.py
 =======================
 
-.. autoprogram:: support_tools.feat_full_firstlevel 
+.. autoprogram:: support_tools.feat_full_firstlevel:parser
     :prog: feat_full_firstlevel.py
 
 Python Implementation
@@ -140,16 +140,15 @@ Python Implementation
 
 .. _feat_full_firstlevel_python:
 
-feat_full_firstlevel.py
-=======================
+flirt_pngappend.py
+==================
 
-.. autoprogram:: support_tools.feat_full_firstlevel
-    :prog: feat_full_firstlevel.py
+.. note:: the function of support_tools.evaluate_raw_file_transfer does not support command line operation.
 
 Python Implementation
 ---------------------
 
-.. automodule:: support_tools.feat_full_firstlevel
+.. automodule:: support_tools.flirt_pngappend
     :members:
     :special-members:
 
@@ -159,7 +158,7 @@ Python Implementation
 flirt.py
 ========
 
-.. autoprogram:: support_tools.flirt 
+.. autoprogram:: support_tools.flirt:parser
     :prog: flirt.py
 
 Python Implementation
@@ -175,7 +174,7 @@ Python Implementation
 fsreconall_stage1.py
 ====================
 
-.. autoprogram:: support_tools.fsreconall_stage1
+.. autoprogram:: support_tools.fsreconall_stage1:parser
     :prog: fsreconall_stage1.py
 
 Python Implementation
@@ -191,7 +190,7 @@ Python Implementation
 fsreconall_stage2.py
 ====================
 
-.. autoprogram:: support_tools.fsreconall_stage2
+.. autoprogram:: support_tools.fsreconall_stage2:parser
     :prog: fsreconall_stage2.py
 
 Python Implementation

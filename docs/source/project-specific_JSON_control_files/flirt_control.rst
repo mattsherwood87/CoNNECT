@@ -13,7 +13,7 @@ available input data types). The available parameters are provided in :numref:`f
 
 **Sample FLIRT JSON control files**
 
-* :download:`T1w <../_sample_docs/sample_struc_flirt_input.json>` (or available `here <https://connect-tutorial.readthedocs.io/en/latest/_downloads/6fdb0f4aee89e2227f4a3d99772ae134/sample_struc_flirt_input.json>`__)
+* :download:`T1w <../_sample_docs/sample_struc_flirt_input.json>` (or available `here <https://connect-tutorial.readthedocs.io/en/latest/_downloads/deea14e11e9fd8c4bdd03b583289ef30/sample_struc_flirt_input.json>`__)
 * :download:`ASL <../_sample_docs/sample_asl_flirt_input.json>` (or available `here <https://connect-tutorial.readthedocs.io/en/latest/_downloads/821452cbbc736702b5b4f252387be3a9/sample_asl_flirt_input.json>`__)
 * :download:`3D APTw <../_sample_docs/sample_apt_flirt_input.json>` (or available `here <https://connect-tutorial.readthedocs.io/en/latest/_downloads/7fdc5c6fc48c2cff03a9b55bdf29ada9/sample_apt_flirt_input.json>`__)
 
