@@ -38,9 +38,9 @@ parser.add_argument('--overwrite',action='store_true',dest='OVERWRITE',default=F
 parser.add_argument('--progress',action='store_true',dest='progress',default=False)
 
 
-class InvalidJsonInput(Exception):
-    "Raised when the input JSON control file does not contain the appropriate mandatory definitions"
-    pass
+# class InvalidJsonInput(Exception):
+#     "Raised when the input JSON control file does not contain the appropriate mandatory definitions"
+#     pass
 
 
 # ******************* s3 bucket check ********************
@@ -89,12 +89,12 @@ def fsreconall_stage2(STAGE1_DIR: str, DATA_DIR: str, RECONALL_PARAMS: str, over
             if 'reconall_params' in reconallFullParams:
                 reconallParams = reconallFullParams.pop('reconall_params')
             else:
-                raise InvalidJsonInput
+                raise Exception #InvalidJsonInput
 
             if 'main_image_params' in reconallFullParams:
                 mainParams = reconallFullParams.pop('main_image_params')
             else:
-                raise InvalidJsonInput
+                raise Exception #InvalidJsonInput
         
         # create file inputs and outputs
         st.get_dir_identifiers_new(STAGE1_DIR)
@@ -203,9 +203,9 @@ def fsreconall_stage2(STAGE1_DIR: str, DATA_DIR: str, RECONALL_PARAMS: str, over
     except OSError as e:
         print("Error Message: {0}".format(e))
         return
-    except InvalidJsonInput:
-        print("Invalid JSON INput: {0}".format(e))
-        return
+    # except InvalidJsonInput:
+    #     print("Invalid JSON INput: {0}".format(e))
+    #     return
     except Exception as e:
         print("Error Message: {0}".format(e))
         return
