@@ -14,7 +14,7 @@ described in the previous section.
 
 
 
-.. _bids_commands_python:
+.. _bids_python:
 
 bids
 ====
@@ -43,8 +43,21 @@ Python Implementation
     :special-members:
 
 
+.. _convert_dicoms_python:
 
-.. include:: convert_dicoms.rst
+convert_dicoms.py
+=================
+
+
+.. autoprogram:: support_tools.convert_dicoms:parser
+    :prog: convert_dicoms.py
+
+Python Implementation
+---------------------
+
+.. automodule:: support_tools.convert_dicoms
+    :members:
+    :special-members:
 
 
 .. _copy_dirs_python:
@@ -83,7 +96,7 @@ Python Implementation
 dti_preprocess.py
 =================
 
-.. autoprogram:: support_tools.dti_preprocess:parser
+.. .. autoprogram:: support_tools.dti_preprocess:parser
     :prog: dti_preprocess.py
 
 Python Implementation
