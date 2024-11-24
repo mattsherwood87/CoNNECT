@@ -33,7 +33,7 @@ FSLDIR = os.environ["FSLDIR"]
 
 parser.add_argument('-s','--stage1-dir', required=True, action='store', dest='STAGE1_DIR')
 parser.add_argument('-d','--data-dir', required=True, action='store', dest='DATA_DIR')
-parser.add_argument('-r','--reconall-param-file', require=True, action='store', dest='RECONALL_PARAMS')
+parser.add_argument('-r','--reconall-param-file', required=True, action='store', dest='RECONALL_PARAMS')
 parser.add_argument('--overwrite',action='store_true',dest='OVERWRITE',default=False)
 parser.add_argument('--progress',action='store_true',dest='progress',default=False)
 
