@@ -190,7 +190,7 @@ Python Implementation
 fsreconall_stage2.py
 ====================
 
-.. .. autoprogram:: support_tools.fsreconall_stage2:parser
+.. autoprogram:: support_tools.fsreconall_stage2:parser
     :prog: fsreconall_stage2.py
 
 Python Implementation
