@@ -1,5 +1,4 @@
-#!/resshare/wsuconnect/python3_venv/bin/python
-# the command above ^^^ sets python 3.10.10 as the interpreter for this program
+# dti_flirt.py
 
 # Created by Matthew Sherwood (matt.sherwood@wright.edu, matthew.sherwood.7.ctr@us.af.mil)
 # Created on 26 July 2023
@@ -26,13 +25,13 @@ VERSION = '1.0.0'
 DATE = '26 July 2023'
 
 
-parser = argparse.ArgumentParser('asl_flirt.py: perform FLIRT registration between 2D ASL and structural/standard brain images')
 FSLDIR = os.environ["FSLDIR"]
 
 
-parser.add_argument('IN_FILE', help='Input DTI file')
-parser.add_argument('DATA_DIR', help="Project's directory on disk (see dataDir key in credentials JSON file)")
-parser.add_argument('FLIRT_PARAMS', help='Path to the FLIRT parameter JSON control file')
+parser = argparse.ArgumentParser('asl_flirt.py: perform FLIRT registration between 2D ASL and structural/standard brain images')
+parser.add_argument('-i', required=True, action='store',dest='IN_FILE', help='Input DTI file')
+parser.add_argument('-d', required=True,action='store',dest='DATA_DIR', help="Project's directory on disk (see dataDir key in credentials JSON file)")
+parser.add_argument('-f', required=True, action='store',dest='FLIRT_PARAMS', help='Path to the FLIRT parameter JSON control file')
 parser.add_argument('--flirt-params',action='store',dest='FLIRT_PARAMS',default=None)
 parser.add_argument('--overwrite',action='store_true',dest='OVERWRITE',default=False)
 parser.add_argument('--progress',action='store_true',dest='progress',default=False)
