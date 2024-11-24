@@ -1,5 +1,4 @@
-#!/resshare/wsuconnect/python3_venv/bin/python
-# the command above ^^^ sets python 3.10.10 as the interpreter for this program
+# convert_dicoms.py
 
 # Created by Matthew Sherwood (matt.sherwood@wright.edu, matthew.sherwood.7.ctr@us.af.mil)
 # Created on 28 Dec 2020

@@ -8,7 +8,6 @@ import sys
 import os
 import argparse
 import json
-import platform
 from nipype.interfaces import fsl
 from glob import glob as glob
 import datetime
