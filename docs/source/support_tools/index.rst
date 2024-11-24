@@ -80,7 +80,7 @@ Python Implementation
 dti_flirt.py
 ============
 
-.. autoprogram:: support_tools.dti_flirt:parser
+.. .. autoprogram:: support_tools.dti_flirt:parser
     :prog: dti_flirt.py
 
 Python Implementation
