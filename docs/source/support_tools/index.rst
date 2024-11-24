@@ -49,7 +49,7 @@ convert_dicoms.py
 =================
 
 
-.. .. autoprogram:: support_tools.convert_dicoms:parser
+.. autoprogram:: support_tools.convert_dicoms:parser
     :prog: convert_dicoms.py
 
 Python Implementation
@@ -190,7 +190,7 @@ Python Implementation
 fsreconall_stage2.py
 ====================
 
-.. autoprogram:: support_tools.fsreconall_stage2:parser
+.. .. autoprogram:: support_tools.fsreconall_stage2:parser
     :prog: fsreconall_stage2.py
 
 Python Implementation
