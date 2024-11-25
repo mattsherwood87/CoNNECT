@@ -11,7 +11,6 @@ sphinxcontrib-plantuml==0.14
 sphinx-argparse
 sphinxcontrib-autoprogram
 sphinxcontrib-websupport==1.1.0
-sphinx-autoprogram
     # via -r requirements.in
 
 #sphinx==1.6.4
