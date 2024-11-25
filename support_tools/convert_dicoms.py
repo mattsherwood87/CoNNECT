@@ -67,14 +67,12 @@ def convert_dicoms(INDIR: str,PROGRESS: bool=False):
 
 
 
-def main():
+
+
+if __name__ == '__main__':
     """
     The entry point of this program for command-line utilization.
     """
     options = parser.parse_args()
     # print('Converting dicoms in ' + options.INDIR + ' to ')
     convert_dicoms(options.INDIR,options.PROGRESS)
-
-
-if __name__ == '__main__':
-    main()
