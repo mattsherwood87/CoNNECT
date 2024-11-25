@@ -8,3 +8,8 @@
     max-width: 100%;
     overflow: visible;
 }
+
+pre {                                 
+    white-space: pre-wrap !important; 
+    word-break: break-all;            
+}
