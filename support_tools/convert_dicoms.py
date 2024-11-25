@@ -17,11 +17,9 @@ DATE = '15 Nov 2024'
 
 
 # ******************* PARSE COMMAND LINE ARGUMENTS ********************
-def create_parser():
-    parser = argparse.ArgumentParser('convert_dicoms.py: Command-line execution of DICOM to NIfTI conversion via dcm2niix. Converted NIfTI images are placed in the directory containing the imput sourcedata directory.')
-    parser.add_argument('-i','--in-dir',required=True, action='store',dest='INDIR',help='(str) fullpath to a sourcedata directory containing DICOM images')
-    parser.add_argument('--progress',required=False,action='store_true',dest='PROGRESS',help='(bool) run in verbose mode')
-    return parser
+parser = argparse.ArgumentParser('convert_dicoms.py: Command-line execution of DICOM to NIfTI conversion via dcm2niix. Converted NIfTI images are placed in the directory containing the imput sourcedata directory.')
+parser.add_argument('-i','--in-dir',required=True, action='store',dest='INDIR',help='(str) fullpath to a sourcedata directory containing DICOM images')
+parser.add_argument('--progress',required=False,action='store_true',dest='PROGRESS',help='(bool) run in verbose mode')
 
 
 # ******************* CONVERT DICOMS ********************
@@ -68,7 +66,6 @@ def convert_dicoms(INDIR: str,PROGRESS: bool=False):
 
 
 
-parser = create_parser()
 
 def main():
     """
