@@ -6,6 +6,7 @@
 #
 links==1.0
 sphinx_adc_theme
+sphinx_rtd_theme
 nipype
 sphinxcontrib-plantuml==0.14
 sphinx-argparse

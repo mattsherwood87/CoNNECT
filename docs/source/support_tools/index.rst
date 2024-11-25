@@ -49,8 +49,9 @@ convert_dicoms.py
 =================
 
 
-.. autoprogram:: convert_dicoms:create_parser()
+.. autoprogram:: convert_dicoms:parser
     :prog: convert_dicoms.py
+
 
 Python Implementation
 ---------------------
@@ -80,7 +81,7 @@ Python Implementation
 dti_flirt.py
 ============
 
-.. .. autoprogram:: support_tools.dti_flirt:parser
+.. autoprogram:: dti_flirt:parser
     :prog: dti_flirt.py
 
 Python Implementation

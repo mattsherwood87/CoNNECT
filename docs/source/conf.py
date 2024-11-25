@@ -1,7 +1,8 @@
 # Configuration file for the Sphinx documentation builder.
 
 import sys, os
-import sphinx_adc_theme
+# import sphinx_adc_theme
+import sphinx_rtd_theme
 
 
 sys.path.append(os.path.abspath('ext'))
@@ -62,8 +63,10 @@ exclude_patterns = ['_build','Thumbs.db','.DS_Store']
 #     ],
 # }
 
+# html_theme = 'sphinx_adc_theme'
+# html_theme_path = [sphinx_adc_theme.get_html_theme_path()]
 html_theme = 'sphinx_adc_theme'
-html_theme_path = [sphinx_adc_theme.get_html_theme_path()]
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 html_sidebars = {
     '**': ['globaltoc.html', 'sourcelink.html', 'searchbox.html'],
 }
