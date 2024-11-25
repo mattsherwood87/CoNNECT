@@ -106,8 +106,6 @@ def create_freesurfer_condor_job(jobName: str,exeName: str,machineNames: list,su
     """
     Creates a pycondor job object to implement FreeSurfer functions. 
 
-    create_freesurfer_condor_job(jobName,exeName,machineNames,submit,error,output,log,dagman,docker=False,docker_image='wsuconenct/neuro',docker_mount_if='resshare20',request_cpus=1,request_memory='5g')
-
     :param jobName: name for the parallel htcondor job
     :type jobName: str
 
