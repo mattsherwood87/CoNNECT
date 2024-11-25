@@ -22,20 +22,22 @@ sys.path.append(REALPATH)
 import support_tools as st
 
 
+FSLDIR = os.environ["FSLDIR"]
+
+
 VERSION = '1.0.1'
 DATE = '17 May 2023'
 
 
 parser = argparse.ArgumentParser('fsreconall_stage1.py: perform recon-all - either all stages or autorecon1 if also running stage2')
-FSLDIR = os.environ["FSLDIR"]
 
-parser.add_argument('IN_FILE')
-parser.add_argument('DATA_DIR')
-parser.add_argument('RECONALL_PARAMS')
-parser.add_argument('MAINRECONALLOUTPUTDIR')
-parser.add_argument('--directive',action='store',dest='DIRECTIVE',default=None)
-parser.add_argument('--overwrite',action='store_true',dest='OVERWRITE',default=False)
-parser.add_argument('--progress',action='store_true',dest='progress',default=False)
+parser.add_argument('IN_FILE', help=' fullpath to a NIfTI file')
+parser.add_argument('DATA_DIR', help="fullpath to the project's data directory (project's 'dataDir' credential)")
+parser.add_argument('RECONALL_PARAMS', help="fullpath to project's RECONALL parameter control file")
+parser.add_argument('MAINRECONALLOUTPUTDIR', help='fullpath to the main reconall output directory')
+parser.add_argument('--directive',action='store',dest='DIRECTIVE',default=None, help='freesurfer manual workflow directive')
+parser.add_argument('--overwrite',action='store_true',dest='OVERWRITE',default=False, help='overwrite existing files')
+parser.add_argument('--progress',action='store_true',dest='progress',default=False, help='verbose mode')
 
 
 class InvalidJsonInput(Exception):
@@ -47,8 +49,6 @@ class InvalidJsonInput(Exception):
 def fsreconall_stage1(IN_FILE: str,DATA_DIR: str,RECONALL_PARAMS: str, MAINRECONALLOUTPUTDIR: str,directive: str=None, overwrite: bool=False, progress: bool=False):
     """
     This function performs stage 1 of FreeSurfer reconall freesurfer_recon-all_input.json control file. 
-
-    fsreconall_stage1(IN_FILE,DATA_DIR,RECONALL_PARAMS,AINRECONALLOUTPUTDIR,directive=None,overwrite=False,progress=False)
 
     :param IN_FILE: fullpath to a NIfTI file
     :type IN_FILE: str

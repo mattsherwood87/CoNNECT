@@ -26,9 +26,7 @@ parser.add_argument('--progress',required=False,action='store_true',dest='PROGRE
 # ******************* CONVERT DICOMS ********************
 def convert_dicoms(INDIR: str,PROGRESS: bool=False):
     """
-    This function converts sourcedata DICOM images to NIfTI images in the input sourcedata directory. This function requires the installation of dcm2niix. Converted NIfTI images are placed in the directory containing the imput sourcedata directory.
-
-    convert_dicoms(INDIR,PROGRESS=False)
+    Converts sourcedata DICOM images to NIfTI images in the input sourcedata directory using dcm2niix. Converted NIfTI images are placed in the directory containing the imput sourcedata directory.
 
     :param INDIR: fullpath to a sourcedata directory containing DICOM images for conversion
     :type INDIR: str
@@ -44,8 +42,8 @@ def convert_dicoms(INDIR: str,PROGRESS: bool=False):
         #setup dcm2niix inputs
         converter.inputs.source_dir = INDIR
         #converter.inputs.compression = 5
-        # converter.inputs.output_dir = os.path.dirname(INDIR)
-        converter.inputs.output_dir = INDIR
+        converter.inputs.output_dir = os.path.dirname(INDIR)
+        # converter.inputs.output_dir = INDIR
         #converter.source_in_filename = 'y'
         converter.inputs.has_private = True
         converter.inputs.compress = 'y'
@@ -64,7 +62,7 @@ def convert_dicoms(INDIR: str,PROGRESS: bool=False):
         converter.run() 
     else:
         print('ERROR: cannot confirm input directory on disk')
-
+        
 
 
 if __name__ == '__main__':

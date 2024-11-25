@@ -39,8 +39,7 @@ class creds:
 
     def read(self, project: str):
         """
-        Read the user's credential file 'credentials.json'.
-        This file should be located /resshare/wsuconnect.
+        Read the user's credential file 'credentials.json' loacted in the wsuconnect module directory.
 
         This program returns the Project credentials into the custom creds class inside of the support_tools module, which should be imported prior to calling read().
 

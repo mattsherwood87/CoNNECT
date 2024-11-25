@@ -32,9 +32,7 @@ def get_scan_id(inDir: str,basename: str) -> Tuple[str, str, dict]:
     """
     Get metadata from a source NIfTI file
 
-    This program return associated scan information into the custom 
-
-    get_scan_id(inDir,basename)
+    This program determines the key specified in the projects scan_id JSON control file associated with NIfTI images. A JSON sidecar must exist in the same directory as the NIfTI.
 
     :param inDir: fullpath to directory containing NIfTI file
     :type inDir: str

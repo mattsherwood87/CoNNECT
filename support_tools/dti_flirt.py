@@ -1,4 +1,5 @@
-# dti_flirt.py
+#!/resshare/wsuconnect/python3_venv/bin/python
+# the command above ^^^ sets python 3.10.10 as the interpreter for this program
 
 # Created by Matthew Sherwood (matt.sherwood@wright.edu, matthew.sherwood.7.ctr@us.af.mil)
 # Created on 26 July 2023
@@ -25,24 +26,21 @@ VERSION = '1.0.0'
 DATE = '26 July 2023'
 
 
+parser = argparse.ArgumentParser('asl_flirt.py: perform FLIRT registration between 2D ASL and structural/standard brain images')
 FSLDIR = os.environ["FSLDIR"]
 
 
-parser = argparse.ArgumentParser('asl_flirt.py: perform FLIRT registration between 2D ASL and structural/standard brain images')
-parser.add_argument('-i', required=True, action='store',dest='IN_FILE', help='Input DTI file')
-parser.add_argument('-d', required=True,action='store',dest='DATA_DIR', help="Project's directory on disk (see dataDir key in credentials JSON file)")
-parser.add_argument('-f', required=True, action='store',dest='FLIRT_PARAMS', help='Path to the FLIRT parameter JSON control file')
-parser.add_argument('--flirt-params',action='store',dest='FLIRT_PARAMS',default=None)
-parser.add_argument('--overwrite',action='store_true',dest='OVERWRITE',default=False)
-parser.add_argument('--progress',action='store_true',dest='progress',default=False)
+parser.add_argument('IN_FILE', help=' fullpath to a NIfTI file')
+parser.add_argument('DATA_DIR', help="fullpath to the project's data directory (project's 'dataDir' credential)")
+parser.add_argument('FLIRT_PARAMS', help="fullpath to project's FLIRT parameter file")
+parser.add_argument('--overwrite',action='store_true',dest='OVERWRITE',default=False, help='flag to overwrite existing files')
+parser.add_argument('--progress',action='store_true',dest='progress',default=False, help='flag to display command line output providing additional details on the processing status')
 
 
 # ******************* s3 bucket check ********************
 def dti_flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, overwrite: bool=False, progress: bool=False):
     """
     This function performs FLIRT registration between IN_FILE and structural/standard brain images similar to flirt.py. Registration will be applied to all secondary images in the same directory as IN_FILE.
-
-    dti_flirt(IN_FILE,DATA_DIR,FLIRT_PARAMS,overwrite=False,progress=False)
 
     :param IN_FILE: fullpath to a NIfTI file
     :type IN_FILE: str
@@ -53,17 +51,15 @@ def dti_flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, overwrite: bool=Fa
     :param FLIRT_PARAMS: fullpath to project's 2D ASL FLIRT parameter file
     :type FLIRT_PARAMS: str
 
-    :param overwrite: OPTIONAL flag to overwrite existing files (default=False)
+    :param overwrite: OPTIONAL flag to overwrite existing files, defaults to False
     :type overwrite: bool
 
-    :param progress: OPTIONAL flag to display command line output providing additional details on the processing status
+    :param progress: OPTIONAL flag to display command line output providing additional details on the processing status, defaults to False
     :type progress: bool
 
     :raises FileNotFoundError: FLIRT_PARAMS file not found on disk
 
     :raises Exception: general error encountered during execution
-
-    :return: None
     """
     
     outputFileList = []
@@ -242,7 +238,7 @@ def dti_flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, overwrite: bool=Fa
                     fltBidsLabels[k] = refImageParams['output_bids_labels'][k]
                 if 'brain' in mainFile:
                     fltBidsLabels['description'] = 'brain'
-            flt.inputs.out_file = os.path.join(mainFlirtOutputDir,st.bids.get_bids_filename(subject=st.subject.id,session=st.subject.sesNum, **fltBidsLabels))
+            flt.inputs.out_file = os.path.join(mainFlirtOutputDir,st.bids.get_bids_filename(subject=st.subject.id,session=st.subject.sesNum,**fltBidsLabels))
             if refImageParams['type'] == 'std':
                 flt.inputs.out_matrix_file = os.path.join(mainFlirtOutputDir,mainParams['out_matrix_base'] + '2' + stdImageParams['out_matrix_suffix'] + '.mat')
             else:

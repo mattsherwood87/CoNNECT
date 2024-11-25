@@ -1,4 +1,5 @@
-# dti_preprocess.py
+#!/resshare/wsuconnect/python3_venv/bin/python
+# the command above ^^^ sets python 3.10.9 python venv environment
 
 # Created by Matthew Sherwood (matt.sherwood@wright.edu, matthew.sherwood.7.ctr@us.af.mil)
 # Created on 23 June 2023
@@ -8,6 +9,7 @@ import sys
 import os
 import argparse
 import json
+import platform
 from nipype.interfaces import fsl
 from glob import glob as glob
 import datetime
@@ -30,7 +32,7 @@ FSLDIR = os.environ["FSLDIR"]
 parser.add_argument('IN_FILE',help='Input DTI file')
 parser.add_argument('DATA_DIR',help="fullpath to the Project's data directory (see 'dataDir' key in credentials JSON file)")
 parser.add_argument('DTI_PARAMS',help='fullpath to the DTI JSON control JSON file')
-parser.add_argument('--overwrite',action='store_true',dest='OVERWRITE',default=False,help='overwrite existing output files')
+parser.add_argument('--overwrite',action='store_true',dest='OVERWRITE',default=False,help='overwrite existing files')
 parser.add_argument('--progress',action='store_true',dest='progress',default=False,help='verbose mode')
 
 
@@ -50,10 +52,10 @@ def dti_preprocess(IN_FILE: str, DATA_DIR: str, DTI_PARAMS: str, overwrite: bool
     :param DTI_PARAMS: fullpath to project's 2D ASL FLIRT parameter file
     :type DTI_PARAMS: str
 
-    :param overwrite: flag to overwrite existing files, defaults to False
+    :param overwrite: overwrite existing files, defaults to False
     :type overwrite: bool, optional
 
-    :param progress: flag to display command line output providing additional details on the processing status, defaults to False
+    :param progress: verbose mode, defaults to False
     :type progress: bool, optional
 
     :raises FileNotFoundError: FLIRT_PARAMS file not found on disk
@@ -107,7 +109,7 @@ def dti_preprocess(IN_FILE: str, DATA_DIR: str, DTI_PARAMS: str, overwrite: bool
         
         # create file inputs and outputs
         mainFileDir = os.path.dirname(mainFile)
-        st.subject.get_id(mainFileDir)
+        st.subject.get_it(mainFileDir)
         mainBetOutputDir = os.path.join(DATA_DIR,'derivatives','sub-' + st.subject.id,'ses-' + st.subject.sesNum,'bet',mainParams['output_bids_location'])#create base path and filename for move
         mainTopupOutputDir = os.path.join(DATA_DIR,'derivatives','sub-' + st.subject.id,'ses-' + st.subject.sesNum,'topup',mainParams['output_bids_location'])#create base path and filename for move
         mainEddyOutputDir = os.path.join(DATA_DIR,'derivatives','sub-' + st.subject.id,'ses-' + st.subject.sesNum,'eddy',mainParams['output_bids_location'])#create base path and filename for move
@@ -497,13 +499,14 @@ def dti_preprocess(IN_FILE: str, DATA_DIR: str, DTI_PARAMS: str, overwrite: bool
             return
 
 
+
 if __name__ == '__main__':
     """
     The entry point of this program for command-line utilization.
     """
 
     print('1')
-    options = parser.parse_args()
+    options = parser.parse_arguments()
     print('2')
     argsDict = {}
     if options.OVERWRITE:
@@ -511,8 +514,6 @@ if __name__ == '__main__':
     if options.progress:
         argsDict['progress'] = options.progress
     dti_preprocess(options.IN_FILE,options.DATA_DIR,options.DTI_PARAMS,**argsDict)
-
-
 
     
 

@@ -43,8 +43,6 @@ def feat_full_firstlevel(DATADIR: str, SUBNAME: str, SESNUM: str, FEATDESIGNDIR:
     """
     This function moves or copies input (source) directories to a single output directory.
 
-    feat_full_firstlevel(DATADIR,SUBNAME,SESNUM,FEATDESIGNDIR,FEATOUTPUTDIR,DESIGNBASENAME,reference=None,step2_design=None,struc_reg_matrix=None,progress=False)
-
     :param DATADIR: fullpath to the project's data directory (<dataDir> key in credentials.json)
     :type DATADIR: str
 
@@ -183,11 +181,13 @@ def feat_full_firstlevel(DATADIR: str, SUBNAME: str, SESNUM: str, FEATDESIGNDIR:
         return
 
 
+
+
 if __name__ == '__main__':
     """
     The entry point of this program for command-line utilization.
     """
-    options = parser.parse_args()
+    options = parser.parse_arguments()
     argsDict = {}
     if options.REFERENCE:
         argsDict['reference'] = options.REFERENCE
@@ -198,4 +198,3 @@ if __name__ == '__main__':
     if options.progress:
         argsDict['progress'] = options.progress
     feat_full_firstlevel(options.DATADIR,options.SUBNAME,options.SESNUM,options.FEATDESIGNDIR,options.FEATOUTPUTDIR,options.DESIGNBASENAME,**argsDict)
-

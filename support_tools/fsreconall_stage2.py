@@ -23,32 +23,30 @@ REALPATH = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 sys.path.append(REALPATH)
 import support_tools as st
 
+FSLDIR = os.environ["FSLDIR"]
+
 
 VERSION = '1.1.0'
 DATE = '17 Nov 2024'
 
 
 parser = argparse.ArgumentParser('fsreconall_stage2.py: perform FLIRT registration between 2D ASL and structural/standard brain images')
-FSLDIR = os.environ["FSLDIR"]
-
-parser.add_argument('-s','--stage1-dir', required=True, action='store', dest='STAGE1_DIR')
-parser.add_argument('-d','--data-dir', required=True, action='store', dest='DATA_DIR')
-parser.add_argument('-r','--reconall-param-file', required=True, action='store', dest='RECONALL_PARAMS')
-parser.add_argument('--overwrite',action='store_true',dest='OVERWRITE',default=False)
-parser.add_argument('--progress',action='store_true',dest='progress',default=False)
+parser.add_argument('STAGE1_DIR',help='fullpath to the output directory for freesurfer reconall stage1 (autorecon1)')
+parser.add_argument('DATA_DIR', help="fullpath to the project's data directory (project's 'dataDir' credential)")
+parser.add_argument('RECONALL_PARAMS', help="fullpath to project's RECONALL parameter control file")
+parser.add_argument('--overwrite',action='store_true',dest='OVERWRITE',default=False, help='overwrite existing files')
+parser.add_argument('--progress',action='store_true',dest='progress',default=False, help='verbose mode')
 
 
-# class InvalidJsonInput(Exception):
-#     "Raised when the input JSON control file does not contain the appropriate mandatory definitions"
-#     pass
+class InvalidJsonInput(Exception):
+    "Raised when the input JSON control file does not contain the appropriate mandatory definitions"
+    pass
 
 
 # ******************* s3 bucket check ********************
 def fsreconall_stage2(STAGE1_DIR: str, DATA_DIR: str, RECONALL_PARAMS: str, overwrite: bool=False, progress: bool=False):
     """
     This function performs stage 2 and 3 of FreeSurfer reconall freesurfer_recon-all_input.json control file. 
-
-    fsreconall_stage2(IN_FILE,DATA_DIR,RECONALL_PARAMS,AINRECONALLOUTPUTDIR,directive=None,overwrite=False,progress=False)
 
     :param STAGE1_DIR: fullpath to a single subject/session reconall Stage 1 directory
     :type STAGE1_DIR: str
@@ -89,12 +87,12 @@ def fsreconall_stage2(STAGE1_DIR: str, DATA_DIR: str, RECONALL_PARAMS: str, over
             if 'reconall_params' in reconallFullParams:
                 reconallParams = reconallFullParams.pop('reconall_params')
             else:
-                raise Exception #InvalidJsonInput
+                raise InvalidJsonInput
 
             if 'main_image_params' in reconallFullParams:
                 mainParams = reconallFullParams.pop('main_image_params')
             else:
-                raise Exception #InvalidJsonInput
+                raise InvalidJsonInput
         
         # create file inputs and outputs
         st.get_dir_identifiers_new(STAGE1_DIR)
@@ -203,9 +201,9 @@ def fsreconall_stage2(STAGE1_DIR: str, DATA_DIR: str, RECONALL_PARAMS: str, over
     except OSError as e:
         print("Error Message: {0}".format(e))
         return
-    # except InvalidJsonInput:
-    #     print("Invalid JSON INput: {0}".format(e))
-    #     return
+    except InvalidJsonInput:
+        print("Invalid JSON INput: {0}".format(e))
+        return
     except Exception as e:
         print("Error Message: {0}".format(e))
         return

@@ -1,7 +1,6 @@
-#!/resshare/wsuconnect/python3_venv/bin/python
-# the command above ^^^ sets python 3.10.9 venv as the interpreter for this program
+# remove_dirs.py
 
-# Created by Matthew Sherwood (matt.sherwood@wright.edu, matthew.sherwood.7.ctr@us.af.mil)
+# Copywrite Matthew Sherwood (matt.sherwood@wright.edu, matthew.sherwood.7.ctr@us.af.mil)
 # Created on 10 July 2023
 #
 # Modified on 
@@ -21,7 +20,7 @@ DATE = '10 July 2023'
 # 
 
 #input argument parser
-parser = argparse.ArgumentParser('connect_neuro_db_query.py: Query tables in the MySQL databases to search the AWS S3 bucket for specific files.')
+parser = argparse.ArgumentParser('Moves or copies input (source) directories to a single output directory.')
 parser.add_argument('-i','--in-dir', required=True,action='store', dest="INDIR", help="input directories to copy", default=None)
    
 
@@ -29,9 +28,7 @@ parser.add_argument('-i','--in-dir', required=True,action='store', dest="INDIR",
 # *******************  MAIN  ********************    
 def remove_dirs(INDIR: str): 
     """
-    This function moves or copies input (source) directories to a single output directory.
-
-    copy_dirs(OUTDIR,INDIR,move=False)
+    Moves or copies input (source) directories to a single output directory.
 
     :param INDIR: fullpath to input (source) directory(ies)
     :type INDIR: str

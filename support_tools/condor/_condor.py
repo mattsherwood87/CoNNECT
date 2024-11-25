@@ -1,6 +1,6 @@
 # condor.py
 
-# Created by Matthew Sherwood (matt.sherwood@wright.edu, matthew.sherwood.7.ctr@us.af.mil)
+# Copywrite Matthew Sherwood (matt.sherwood@wright.edu, matthew.sherwood.7.ctr@us.af.mil)
 # Created on 22 Jan 2021
 #
 # Modified on 15 Nov 2024 - implement docker within condor jobs
@@ -9,7 +9,7 @@ import os,sys
 from pycondor import Job
 
 #local import
-REALPATH = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+REALPATH = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 sys.path.append(REALPATH)
 # print(REALPATH)
 
@@ -27,7 +27,7 @@ def create_bin_condor_job(jobName: str,exeName: str,machineNames: list,submit: s
     """
     Creates a pycondor job object to implement a binary from /usr/bin.     
 
-    create_bin_condor_job(jobName, exeName, machineNames, submit, error, output, log, dagman, docker=False, docker_image='wsuconenct/neuro', docker_mount_if=None, request_cpus=1, request_memory='5g')
+    create_bin_condor_job(jobName,exeName,machineNames,submit,error,output,log,dagman,docker=False,docker_image='wsuconenct/neuro',docker_mount_if='resshare20',request_cpus=1,request_memory='5g')
 
     :param jobName: name for the parallel htcondor job
     :type jobName: str
@@ -105,6 +105,8 @@ def create_bin_condor_job(jobName: str,exeName: str,machineNames: list,submit: s
 def create_freesurfer_condor_job(jobName: str,exeName: str,machineNames: list,submit: str,error: str,output: str,log:str,dagman: str,docker: bool = False, docker_image: str = 'wsuconnect/neuro', docker_mount_if: str = None, request_cpus: int = 1, request_memory: str = '5g'):
     """
     Creates a pycondor job object to implement FreeSurfer functions. 
+
+    create_freesurfer_condor_job(jobName,exeName,machineNames,submit,error,output,log,dagman,docker=False,docker_image='wsuconenct/neuro',docker_mount_if='resshare20',request_cpus=1,request_memory='5g')
 
     :param jobName: name for the parallel htcondor job
     :type jobName: str

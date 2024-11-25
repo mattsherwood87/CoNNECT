@@ -38,8 +38,6 @@ def copy_dirs(INDIR: str|list,OUTDIR: str,*args,**kwargs):
     """ 
     This function moves or copies input (source) directories to a single output directory.
 
-    copy_dirs(OUTDIR,INDIR,move=False)
-
     :param INDIR: fullpath to input (source) directory (str) or list of directories
     :type INDIR: str | list
 

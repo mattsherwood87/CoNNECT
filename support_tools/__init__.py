@@ -16,18 +16,23 @@ with open(_credentialsFilePath) as _j:
     _fullCredentials = _json.load(_j)
 
 # from .get_dir_identifiers_new import get_dir_identifiers_new
+from .creds import creds
+from .subject import subject
+creds = creds()
+subject = subject()
+creds.projects = _fullCredentials['projects']
+creds.masterMachineName = _fullCredentials['master_machine_name']
 
 from . import bids
 from . import condor
 # from . import creds
 from . import RestToolbox
 
-from .creds import creds
 from .convert_dicoms import convert_dicoms
 from .copy_dirs import copy_dirs
 from .dti_flirt import dti_flirt
 from .dti_preprocess import dti_preprocess
-from .evaluate_raw_file_transfer import evaluate_raw_file_transfer
+from .evaluate_source_file_transfer import evaluate_source_file_transfer
 from .feat_full_firstlevel import feat_full_firstlevel
 from .flirt_pngappend import flirt_pngappend
 from .fsreconall_stage1 import fsreconall_stage1
@@ -36,13 +41,8 @@ from .get_scan_id import get_scan_id
 from . import mysql
 from .prepare_examcard_html import prepare_examcard_html
 from .remove_dirs import remove_dirs
-from .subject import subject
 
 
-creds = creds()
-subject = subject()
-creds.projects = _fullCredentials['projects']
-creds.masterMachineName = _fullCredentials['master_machine_name']
 
 
 class specBase:

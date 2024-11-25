@@ -23,9 +23,9 @@ FSLDIR = os.environ["FSLDIR"]
 
 parser = argparse.ArgumentParser()
     #input options for main()
-parser.add_argument('in_file')
-parser.add_argument('reference')
-parser.add_argument('out_file')
+parser.add_argument('in_file', help='fullpath to the input NIfTI image in reference space')
+parser.add_argument('reference', help='fullpath to the reference space NIfTI image')
+parser.add_argument('out_file', help='fullpath to output png to contain the overlay images')
 
 
 # ******************* python utilization ********************
@@ -35,8 +35,6 @@ def flirt_pngappend(in_file: str,reference: str,out_file: str):
     
     Top row contains a background image of in_file in reference space overlaid with the edges of reference
     Bottom row contains a background image of reference overlaid  with the edges of in_file in reference space
-
-    flirt_pngappend(in_file,reference,out_file)
 
     :param in_file: fullpath to the input NIfTI image in reference space
     :type in_file: str

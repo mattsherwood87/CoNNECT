@@ -10,18 +10,7 @@
 
 def prepare_examcard_html():
     """
-    This function .
-
-    query_file(INDIR,PROGRESS=False)
-
-    Arguments:
-
-        INDIR (str): fullpath to a sourcedata directory containing DICOM images for conversion
-            
-        PROGRESS (BOOL): OPTIONAL flag to display command line output providing additional details on the processing status
-
-    Returns:
-        None
+    Prepares the html header for the examcard html file when converting examcards from txt to html.
     """
     newD = []
     newD.append('<!DOCTYPE html>')

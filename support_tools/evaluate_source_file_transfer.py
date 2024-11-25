@@ -27,20 +27,18 @@ import support_tools as st
 # ******************* PARSE COMMAND LINE ARGUMENTS ********************
 parser = argparse.ArgumentParser('evaluate_raw_file_transfer.py: checks to ensure all rawdata exists for given input directory')
 
-parser.add_argument('-p','--project', required=True, action="store", dest="PROJECT", help='select a project from the credentials.json file', default=None)
-parser.add_argument('-i','--in-dir', required=True, action="store", dest="IN_DIR", help="path to individual subject/session to search for raw nifti images", default=None)
+parser.add_argument('-p','--project', required=True, action="store", dest="PROJECT", help='select a project: ' + ' '.join(st.creds.projects), default=None)
+parser.add_argument('-i','--in-dir', required=True, action="store", dest="IN_DIR", help="fullpath to a single subject/session rawdata directory", default=None)
 
 # parser.add_argument('-m','--multiple', action="store_true", dest="MULTIPLE", help="process all directories supplied by -i|--in-dir -> path to directory containing multiple subject/session raw directories", default=False)
 
-parser.add_argument('--progress', help="Show progress (default FALSE)", action="store_true", dest="progress", default=False)
-parser.add_argument('-v', '--version', help="Display the current version", action="store_true", dest="version")
+parser.add_argument('--progress', help="verbose mode", action="store_true", dest="progress", default=False)
+parser.add_argument('-v', '--version', help="display the current version", action="store_true", dest="version")
 
 
-def evaluate_raw_file_transfer(project: str,inDir: str) -> bool:
+def evaluate_source_file_transfer(project: str,inDir: str) -> bool:
     """
     This program evaluates files appearing in a single subject/session rawdata directory (inDir). Filenames expected to appear in the rawdata directory are determined from the project's scan_id.json file found in the project's code directory.
-
-    evaluate_raw_file_transfer(project,inDir)
 
     :param project:  target Project's <project identifier>
     :type project: str
@@ -183,4 +181,4 @@ if __name__ == '__main__':
     The entry point of this program for command-line utilization.
     """
     options = parser.parse_args()
-    evaluate_raw_file_transfer(options.PROJECT,options.IN_DIR)
+    evaluate_source_file_transfer(options.PROJECT,options.IN_DIR)

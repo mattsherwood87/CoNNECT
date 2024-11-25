@@ -31,6 +31,7 @@ sys.path.append(REALPATH)
 os.environ['MPLCONFIGDIR'] = os.path.join(REALPATH,'.config','matplotlib')
 
 import support_tools as st
+FSLDIR = os.environ["FSLDIR"]
 
 
 VERSION = '3.1.0'
@@ -38,15 +39,13 @@ DATE = '15 Nov 2024'
 
 
 parser = argparse.ArgumentParser('flirt.py: perform FLIRT registration between input and reference/standard brain images')
-FSLDIR = os.environ["FSLDIR"]
 
-parser.add_argument('IN_FILE')
-parser.add_argument('DATA_DIR')
-parser.add_argument('FLIRT_PARAMS')
-parser.add_argument('--bet-params',action='store',dest='BET_PARAMS',default=None)
-parser.add_argument('--flirt-params',action='store',dest='FLIRT_PARAMS',default=None)
-parser.add_argument('--overwrite',action='store_true',dest='OVERWRITE',default=False)
-parser.add_argument('--progress',action='store_true',dest='progress',default=False)
+parser.add_argument('IN_FILE', help=' fullpath to a NIfTI file')
+parser.add_argument('DATA_DIR', help="fullpath to the project's data directory (project's 'dataDir' credential)")
+parser.add_argument('FLIRT_PARAMS', help="fullpath to project's FLIRT parameter control file")
+parser.add_argument('--bet-params',action='store',dest="fullpath to project's BET parameter control file",default=None)
+parser.add_argument('--overwrite',action='store_true',dest='OVERWRITE',default=False, help='overwrite existing files')
+parser.add_argument('--progress',action='store_true',dest='progress',default=False, help='verbose mode')
 
 
 def get_total_vols(main_file: str,FSLDIR: str) -> int:
@@ -128,8 +127,6 @@ def do_antspynet_bet(main_file: str, main_file_brain: str, main_file_brainmask: 
 def flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, bet_params_file: str=None, overwrite: bool=False, progress: bool=False):
     """
     This function performs FLIRT registration between IN_FILE and structural/standard brain images. Brain extraction will be performed on IN_FILE prior to registration if bet_params is specified.
-
-    flirt(IN_FILE,DATA_DIR,FLIRT_PARAMS,overwrite=False,bet_params_file=None,progress=False)
 
     :param IN_FILE: fullpath to a NIfTI file
     :type IN_FILE: str
@@ -246,7 +243,7 @@ def flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, bet_params_file: str=N
     
         # create file inputs and outputs
         mainFileDir = os.path.dirname(mainFile)
-        st.get_dir_identifiers_new(mainFileDir)
+        st.subject.get_id(mainFileDir)
         mainFlirtOutputDir = os.path.join(DATA_DIR,'derivatives','sub-' + st.subject.id,'ses-' + st.subject.fullSesNum,mainParams['output_bids_location'],workFlow.name)#create base path and filename for move
         mainBetOutputDir = os.path.join(DATA_DIR,'derivatives','sub-' + st.subject.id,'ses-' + st.subject.fullSesNum,mainParams['output_bids_location'],workFlow.name)#create base path and filename for move
 
@@ -262,7 +259,7 @@ def flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, bet_params_file: str=N
 
         #look for accompanying structural data on disk in derivatives
         if refImage and not refImageParams['type'] == 'std':
-            ref_regexStr = st.get_bids_filename(**refImageParams['input_bids_labels'])
+            ref_regexStr = st.bids.get_bids_filename(**refImageParams['input_bids_labels'])
             if refImageParams['input_bids_location'] == 'rawdata':
                 refImageFile = glob(os.path.join(os.path.dirname(os.path.dirname(mainFileDir)),'**','*' + ref_regexStr + '*'), recursive=True)
             elif refImageParams['input_bids_location'] == 'derivatives':
@@ -296,7 +293,7 @@ def flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, bet_params_file: str=N
             return
         
 
-        mainBidsLabels = st.get_bids_labels(mainFile)
+        mainBidsLabels = st.bids.bids_labels(mainFile)
         if secImage:
             # secBidsLabels = mainBidsLabels.copy()
             secBidsLabels = {}
@@ -305,7 +302,7 @@ def flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, bet_params_file: str=N
             for k in mainBidsLabels.keys():
                 if 'task' in k or 'run' in k:
                     secBidsLabels[k] = mainBidsLabels[k]
-            sec_regexStr = st.get_bids_filename(**secBidsLabels)
+            sec_regexStr = st.bids.get_bids_filename(**secBidsLabels)
             secFile = glob(os.path.join(mainFileDir,'*' + sec_regexStr))
             # secFile = [x for x in secFile if 'acq-' + mainBidsLabels['acquisition'].split('-')[0] in 
             if len(secFile) > 0:
@@ -349,7 +346,7 @@ def flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, bet_params_file: str=N
                 roi_mainBidsLabels['description'] = 'vol-' + str(vols)
                 for k in mainParams['output_bids_labels'].keys():
                     roi_mainBidsLabels[k] = mainParams['output_bids_labels'][k]
-                outMainVolFile = os.path.join(mainBetOutputDir,st.get_bids_filename(subject=st.subject.id,session=st.subject.fullSesNum,**roi_mainBidsLabels))
+                outMainVolFile = os.path.join(mainBetOutputDir,st.bids.bids_filename(subject=st.subject.id,session=st.subject.fullSesNum,**roi_mainBidsLabels))
 
 
                 if os.path.isfile(outMainVolFile) and not overwrite:
@@ -405,10 +402,10 @@ def flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, bet_params_file: str=N
             for k in mainParams['output_bids_labels'].keys():
                 bet_mainBidsLabels[k] = mainParams['output_bids_labels'][k]
 
-            mainFile_brain = os.path.join(mainBetOutputDir,st.get_bids_filename(subject=st.subject.id,session=st.subject.fullSesNum,**bet_mainBidsLabels))
+            mainFile_brain = os.path.join(mainBetOutputDir,st.bids.get_bids_filename(subject=st.subject.id,session=st.subject.fullSesNum,**bet_mainBidsLabels))
             
             bet_mainBidsLabels['suffix'] = 'mask'
-            mainFile_brainmask = os.path.join(mainBetOutputDir,st.get_bids_filename(subject=st.subject.id,session=st.subject.fullSesNum,**bet_mainBidsLabels))
+            mainFile_brainmask = os.path.join(mainBetOutputDir,st.bids.get_bids_filename(subject=st.subject.id,session=st.subject.fullSesNum,**bet_mainBidsLabels))
                         
             #continue with BET?
             if os.path.isfile(mainFile_brain) and not overwrite:
@@ -588,12 +585,12 @@ def flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, bet_params_file: str=N
                 # apply brain mask to secondary image?
                 # -------------------------------
                 if secImage:
-                    secBidsLabels = st.get_bids_labels(secFile)
+                    secBidsLabels = st.bids.get_bids_labels(secFile)
                     secBidsLabels['process'] = bet_mainBidsLabels['process']
                     secBidsLabels['resolution'] = 'lo'
                     secBidsLabels['description'] = 'brain'
                     secBidsLabels['extension'] = 'nii.gz'
-                    secFile_brain = os.path.join(mainBetOutputDir,st.get_bids_filename(subject=st.subject.id,session=st.subject.fullSesNum,**secBidsLabels))
+                    secFile_brain = os.path.join(mainBetOutputDir,st.bids.get_bids_filename(subject=st.subject.id,session=st.subject.fullSesNum,**secBidsLabels))
 
 
                     n_fslmaths = pe.Node(interface=fsl.ImageMaths(),name='sec_apply_brainmask')
@@ -660,8 +657,8 @@ def flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, bet_params_file: str=N
                     fltBidsLabels['description'] = 'vol-' + str(vols) 
                 elif 'brain' in mainFile:
                     fltBidsLabels['description'] = 'brain'
-            n_flt.inputs.out_file = os.path.join(mainFlirtOutputDir,st.get_bids_filename(subject=st.subject.id,session=st.subject.fullSesNum,**fltBidsLabels))
-            inputMatrixBase = st.get_bids_labels(IN_FILE)
+            n_flt.inputs.out_file = os.path.join(mainFlirtOutputDir,st.bids.bids_filename(subject=st.subject.id,session=st.subject.fullSesNum,**fltBidsLabels))
+            inputMatrixBase = st.bids.get_bids_labels(IN_FILE)
             if 'acquisition' in inputMatrixBase.keys():
                 inputMatrixBase = inputMatrixBase['acquisition'] + '-'
             else:
@@ -724,7 +721,7 @@ def flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, bet_params_file: str=N
                 applyBidsLabels = fltBidsLabels.copy()
                 for k in secImageParams['output_bids_labels'].keys():
                     applyBidsLabels[k] = secImageParams['output_bids_labels'][k]
-                n_applyXfm.inputs.out_file = os.path.join(mainFlirtOutputDir,st.get_bids_filename(subject=st.subject.id,session=st.subject.fullSesNum,**applyBidsLabels))
+                n_applyXfm.inputs.out_file = os.path.join(mainFlirtOutputDir,st.bids.get_bids_filename(subject=st.subject.id,session=st.subject.fullSesNum,**applyBidsLabels))
                 
                 workFlow.connect([(n_fslmaths,n_applyXfm,[('out_file','in_file')])])
                 n_applyXfm.inputs.reference = refImageFile
@@ -817,7 +814,7 @@ def flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, bet_params_file: str=N
                 applyBidsLabels = mainBidsLabels.copy()
                 for k in refImageParams['output_bids_labels'].keys():
                     applyBidsLabels[k] = stdImageParams['output_bids_labels'][k]
-                n_applyXfm2.inputs.out_file = os.path.join(mainFlirtOutputDir,st.get_bids_filename(subject=st.subject.id,session=st.subject.fullSesNum,**applyBidsLabels))
+                n_applyXfm2.inputs.out_file = os.path.join(mainFlirtOutputDir,st.bids.get_bids_filename(subject=st.subject.id,session=st.subject.fullSesNum,**applyBidsLabels))
                 
                 n_applyXfm2.inputs.reference = stdImageFile
 
@@ -873,7 +870,7 @@ def flirt(IN_FILE: str, DATA_DIR: str, FLIRT_PARAMS: str, bet_params_file: str=N
 
                     for k in secImageParams['output_bids_labels'].keys():
                         applyBidsLabels[k] = secImageParams['output_bids_labels'][k]
-                    n_applyXfm3.inputs.out_file = os.path.join(mainFlirtOutputDir,st.get_bids_filename(subject=st.subject.id,session=st.subject.fullSesNum,**applyBidsLabels))
+                    n_applyXfm3.inputs.out_file = os.path.join(mainFlirtOutputDir,st.bids.get_bids_filename(subject=st.subject.id,session=st.subject.fullSesNum,**applyBidsLabels))
                     
                     n_applyXfm3.inputs.reference = stdImageFile
 
