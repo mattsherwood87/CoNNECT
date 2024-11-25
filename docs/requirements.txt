@@ -9,7 +9,7 @@ sphinx_adc_theme
 nipype
 sphinxcontrib-plantuml==0.14
 sphinx-argparse
-sphinxcontrib-autoprogram==0.1.7
+sphinxcontrib-autoprogram
 sphinxcontrib-websupport==1.1.0
     # via -r requirements.in
 
