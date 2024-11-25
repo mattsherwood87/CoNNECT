@@ -49,7 +49,7 @@ convert_dicoms.py
 =================
 
 
-.. autoprogram:: support_tools.convert_dicoms:parser
+.. autoprogram:: convert_dicoms:parser
     :prog: convert_dicoms.py
 
 
@@ -97,13 +97,13 @@ Python Implementation
 dti_preprocess.py
 =================
 
-.. autoprogram:: dti_preprocess:parser
+.. .. autoprogram:: dti_preprocess:parser
     :prog: dti_preprocess.py
 
 Python Implementation
 ---------------------
 
-.. .. automodule:: support_tools.dti_preprocess
+.. automodule:: support_tools.dti_preprocess
     :members:
     :special-members:
 
@@ -128,7 +128,7 @@ Python Implementation
 feat_full_firstlevel.py
 =======================
 
-.. autoprogram:: feat_full_firstlevel:parser
+.. .. autoprogram:: feat_full_firstlevel:parser
     :prog: feat_full_firstlevel.py
 
 Python Implementation
@@ -159,7 +159,7 @@ Python Implementation
 flirt.py
 ========
 
-.. autoprogram:: flirt:parser
+.. .. autoprogram:: flirt:parser
     :prog: flirt.py
 
 Python Implementation
@@ -175,7 +175,7 @@ Python Implementation
 fsreconall_stage1.py
 ====================
 
-.. autoprogram:: fsreconall_stage1:parser
+.. .. autoprogram:: fsreconall_stage1:parser
     :prog: fsreconall_stage1.py
 
 Python Implementation
@@ -191,7 +191,7 @@ Python Implementation
 fsreconall_stage2.py
 ====================
 
-.. autoprogram:: fsreconall_stage2:parser
+.. .. autoprogram:: fsreconall_stage2:parser
     :prog: fsreconall_stage2.py
 
 Python Implementation
