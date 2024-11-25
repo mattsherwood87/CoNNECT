@@ -49,9 +49,8 @@ convert_dicoms.py
 =================
 
 
-.. autoprogram:: 
+.. autoprogram:: support_tools.convert_dicoms
     :prog: convert_dicoms.py
-    :module: support_tools.convert_dicoms
     :func: create_parser
 
 Python Implementation
