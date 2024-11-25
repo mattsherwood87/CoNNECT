@@ -97,7 +97,7 @@ Python Implementation
 dti_preprocess.py
 =================
 
-.. .. autoprogram:: dti_preprocess:parser
+.. autoprogram:: dti_preprocess:parser
     :prog: dti_preprocess.py
 
 Python Implementation
@@ -128,7 +128,7 @@ Python Implementation
 feat_full_firstlevel.py
 =======================
 
-.. .. autoprogram:: feat_full_firstlevel:parser
+.. autoprogram:: feat_full_firstlevel:parser
     :prog: feat_full_firstlevel.py
 
 Python Implementation
@@ -159,7 +159,7 @@ Python Implementation
 flirt.py
 ========
 
-.. .. autoprogram:: flirt:parser
+.. autoprogram:: flirt:parser
     :prog: flirt.py
 
 Python Implementation
@@ -175,7 +175,7 @@ Python Implementation
 fsreconall_stage1.py
 ====================
 
-.. .. autoprogram:: fsreconall_stage1:parser
+.. autoprogram:: fsreconall_stage1:parser
     :prog: fsreconall_stage1.py
 
 Python Implementation
@@ -191,7 +191,7 @@ Python Implementation
 fsreconall_stage2.py
 ====================
 
-.. .. autoprogram:: fsreconall_stage2:parser
+.. autoprogram:: fsreconall_stage2:parser
     :prog: fsreconall_stage2.py
 
 Python Implementation
