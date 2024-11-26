@@ -8,7 +8,7 @@
 
 
 
-def prepare_examcard_html():
+def prepare_examcard_html() -> list:
     """
     Prepares the html header for the examcard html file when converting examcards from txt to html.
     """

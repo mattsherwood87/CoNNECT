@@ -3,9 +3,8 @@
 {
 {T 
  +resshare
- ++general_processing_code
- +++helper_functions
- +++classes
+ ++wsuconnect
+ +++support_tools
  ++projects
  +++<contract>
  ++++<project>
@@ -13,7 +12,6 @@
  +++++sourcedata
  +++++rawdata
  +++++**code**
-
 }
 }
 

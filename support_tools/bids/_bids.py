@@ -12,8 +12,6 @@ def get_bids_filename(subject: str=None, session: str=None, acquisition: str=Non
     """
     return bids compliant filename from input labels
 
-    get_bids_filename(subject=SUBJECT,session=SESSION,acquisition=ACQUISITION,task=TASK,direction=DIRECTION,run=RUN,process=PROCESS,resolution=RESOLUTION,space=SPACE,description=DESCRIPTION,suffix=SUFFIX,extension=EXTENSION)
-
     :param subject: subject identifier, defaults to None
     :type subject: str, optional
 
@@ -85,8 +83,6 @@ def get_bids_filename(subject: str=None, session: str=None, acquisition: str=Non
 def get_bids_labels(IN_FILE: str) -> dict:
     """
     Get bids compliant filename labels from a file
-
-    get_bids_labels(IN_FILE)
 
     :param IN_FILE: BIDS-compliant filename or filepath
     :type IN_FILE: str

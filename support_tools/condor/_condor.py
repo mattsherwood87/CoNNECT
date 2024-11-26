@@ -27,8 +27,6 @@ def create_bin_condor_job(jobName: str,exeName: str,machineNames: list,submit: s
     """
     Creates a pycondor job object to implement a binary from /usr/bin.     
 
-    create_bin_condor_job(jobName,exeName,machineNames,submit,error,output,log,dagman,docker=False,docker_image='wsuconenct/neuro',docker_mount_if='resshare20',request_cpus=1,request_memory='5g')
-
     :param jobName: name for the parallel htcondor job
     :type jobName: str
 
@@ -106,8 +104,6 @@ def create_freesurfer_condor_job(jobName: str,exeName: str,machineNames: list,su
     """
     Creates a pycondor job object to implement FreeSurfer functions. 
 
-    create_freesurfer_condor_job(jobName,exeName,machineNames,submit,error,output,log,dagman,docker=False,docker_image='wsuconenct/neuro',docker_mount_if='resshare20',request_cpus=1,request_memory='5g')
-
     :param jobName: name for the parallel htcondor job
     :type jobName: str
 
@@ -181,8 +177,6 @@ def create_freesurfer_condor_job(jobName: str,exeName: str,machineNames: list,su
 def create_fsl_condor_job(jobName: str,exeName: str,machineNames: list,submit: str,error: str,output: str,log:str,dagman: str,docker: bool = False, docker_image: str = 'wsuconnect/neuro', docker_mount_if: str = None, request_cpus: int = 1, request_memory: str = '5g'):
     """
     Creates a pycondor job object to implement FSL functions. 
-
-    create_fsl_condor_job(jobName,exeName,machineNames,submit,error,output,log,dagman,docker=False,docker_image='wsuconenct/neuro',docker_mount_if='resshare20',request_cpus=1,request_memory='5g')
 
     :param jobName: name for the parallel htcondor job
     :type jobName: str
@@ -258,8 +252,6 @@ def create_python_condor_job(jobName: str,exeName: str,machineNames: list,submit
     """
     Creates a pycondor job object to implement python functions from support_tools. 
 
-    create_python_condor_job(jobName,exeName,machineNames,submit,error,output,log,dagman,docker=False,docker_image='wsuconenct/neuro',docker_mount_if='resshare20',request_cpus=1,request_memory='5g')
-
     :param jobName: name for the parallel htcondor job
     :type jobName: str
 
@@ -334,8 +326,6 @@ def create_python_condor_job(jobName: str,exeName: str,machineNames: list,submit
 def create_python_venv_condor_job(jobName: str,exeName: str,machineNames: list,submit: str,error: str,output: str,log:str,dagman: str,docker: bool = False, docker_image: str = 'wsuconnect/neuro', docker_mount_if: str = None, request_cpus: int = 1, request_memory: str = '5g'):
     """
     Creates a pycondor job object to implement python functions from wsuconnect/python3_venv. 
-
-    create_python_venv_condor_job(jobName,exeName,machineNames,submit,error,output,log,dagman,docker=False,docker_image='wsuconenct/neuro',docker_mount_if='resshare20',request_cpus=1,request_memory='5g')
 
     :param jobName: name for the parallel htcondor job
     :type jobName: str

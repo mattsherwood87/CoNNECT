@@ -51,9 +51,12 @@ class subject:
         else:
             self.sesNum = self.fullSesNum
 
-    def check(self,dataDir):
-        """
+    def check(self,dataDir: str):
+        """        
         Check participants.tsv file to determine if the participant should be discarded (discard column is True). Requires support_tools.creds object to be complete (support_tools.creds.read(<project identifier>))
+
+        :param dataDir: fullpath to a Project's data directory (support_tools.creds.dataDir)
+        :type dataDir: str
         """        
         
         #get participants.tsv file

@@ -50,7 +50,7 @@ convert_dicoms.py
 
 
 .. autoprogram:: convert_dicoms:parser
-    :prog: convert_dicoms.py
+    :prog: command line implementation
 
 
 Python Implementation
