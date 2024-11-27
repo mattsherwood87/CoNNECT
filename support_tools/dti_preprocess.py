@@ -41,8 +41,6 @@ def dti_preprocess(IN_FILE: str, DATA_DIR: str, DTI_PARAMS: str, overwrite: bool
     """
     This function performs FSL-based DTI preprocessing according to the FDT DTI pipeline (https://open.win.ox.ac.uk/pages/fslcourse/practicals/fdt1/index.html) prior to FLIRT/FNIRT and TBSS. 
 
-    dti_preprocess(IN_FILE,DATA_DIR,FLIRT_PARAMS,overwrite=False,progress=False)
-
     :param IN_FILE: fullpath to a DTI rawdata NIfTI file
     :type IN_FILE: str
 
